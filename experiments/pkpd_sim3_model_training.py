@@ -282,7 +282,7 @@ for i in range(itr):
     )
     if not use_lasso:
         return_code = train_utils.train_B_self_expressive(
-            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune, model_path=model_path
+            nsc, x_full, t_full, mask_full, batch_ind_full, niters=itr_fine_tune, model_path=model_path_save
         )
         if return_code != 0:
             control_error_list.append(1e9)
@@ -290,7 +290,7 @@ for i in range(itr):
     else:
         # we use the lasso method with does not place restrictions on coefficients
         return_code = train_utils.train_B_self_expressive_lasso(
-            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune,
+            nsc, x_full, t_full, mask_full, batch_ind_full, niters=itr_fine_tune,
         )
         if return_code[0] != 0:
             control_error_list.append(1e9)

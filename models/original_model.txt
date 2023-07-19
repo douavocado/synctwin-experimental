@@ -4,151 +4,221 @@ Iteration 0
 Pretrain
 Eval
 Matching on validation set
-Iter 1000 | Total Loss 0.066938
-Iter 2000 | Total Loss 0.056698
-Iter 3000 | Total Loss 0.048988
-Iter 4000 | Total Loss 0.040712
-Iter 5000 | Total Loss 0.031400
-Iter 6000 | Total Loss 0.026286
-Iter 7000 | Total Loss 0.022487
-Iter 8000 | Total Loss 0.019355
-Iter 9000 | Total Loss 0.014437
-Iter 10000 | Total Loss 0.010720
-Iter 11000 | Total Loss 0.008735
-Iter 12000 | Total Loss 0.008620
-Iter 13000 | Total Loss 0.005269
-Iter 14000 | Total Loss 0.005071
-Iter 15000 | Total Loss 0.004475
-Iter 16000 | Total Loss 0.004227
-Iter 17000 | Total Loss 0.003412
-Iter 18000 | Total Loss 0.003070
-Iter 19000 | Total Loss 0.003377
-Iter 20000 | Total Loss 0.002476
---- Training done in 154.5594072341919 seconds ---
-Control Y MAE: 0.10756728798151016
+Iter 1000 | Total Loss 0.054028
+Iter 2000 | Total Loss 0.045760
+Iter 3000 | Total Loss 0.039594
+Iter 4000 | Total Loss 0.032892
+Iter 5000 | Total Loss 0.025731
+Iter 6000 | Total Loss 0.021297
+Iter 7000 | Total Loss 0.018656
+Iter 8000 | Total Loss 0.016141
+Iter 9000 | Total Loss 0.012015
+Iter 10000 | Total Loss 0.008873
+Iter 11000 | Total Loss 0.007399
+Iter 12000 | Total Loss 0.007050
+Iter 13000 | Total Loss 0.004438
+Iter 14000 | Total Loss 0.004510
+Iter 15000 | Total Loss 0.003890
+Iter 16000 | Total Loss 0.003623
+Iter 17000 | Total Loss 0.002808
+Iter 18000 | Total Loss 0.002588
+Iter 19000 | Total Loss 0.002765
+Iter 20000 | Total Loss 0.002130
+--- Training done in 133.73990106582642 seconds ---
+estimated y tensor([[ 0.4802, -1.1422,  1.9709, -1.9399, -0.2730],
+        [ 0.5369, -1.1703,  2.0082, -2.0185, -0.3446],
+        [ 0.5756, -1.2876,  2.0571, -2.0863, -0.4024],
+        [ 0.6298, -1.4175,  2.2445, -2.2614, -0.3982],
+        [ 0.6943, -1.4510,  2.2637, -2.2706, -0.4774]])
+actual y tensor([[ 0.4403, -1.2195,  1.5079, -1.7739, -0.2773],
+        [ 0.5967, -0.9580,  1.8402, -1.8903, -0.2410],
+        [ 0.5646, -1.2822,  1.9972, -1.8861, -0.2584],
+        [ 0.6439, -1.4182,  2.1132, -1.9699, -0.6441],
+        [ 0.6308, -1.5685,  2.2434, -2.1325, -0.3077]])
+Control Y MAE: 0.11438361555337906
 Iteration 1
 Pretrain
 Eval
 Matching on validation set
-Iter 1000 | Total Loss 0.049964
-Iter 2000 | Total Loss 0.046790
-Iter 3000 | Total Loss 0.040693
-Iter 4000 | Total Loss 0.033414
-Iter 5000 | Total Loss 0.027405
-Iter 6000 | Total Loss 0.022465
-Iter 7000 | Total Loss 0.018869
-Iter 8000 | Total Loss 0.016587
-Iter 9000 | Total Loss 0.012104
-Iter 10000 | Total Loss 0.009543
-Iter 11000 | Total Loss 0.007422
-Iter 12000 | Total Loss 0.006344
-Iter 13000 | Total Loss 0.004332
-Iter 14000 | Total Loss 0.004096
-Iter 15000 | Total Loss 0.003868
-Iter 16000 | Total Loss 0.003613
-Iter 17000 | Total Loss 0.002609
-Iter 18000 | Total Loss 0.003403
-Iter 19000 | Total Loss 0.002415
-Iter 20000 | Total Loss 0.002020
---- Training done in 141.3957166671753 seconds ---
-Control Y MAE: 0.11953064054250717
+Iter 1000 | Total Loss 0.046215
+Iter 2000 | Total Loss 0.043298
+Iter 3000 | Total Loss 0.037742
+Iter 4000 | Total Loss 0.030730
+Iter 5000 | Total Loss 0.024895
+Iter 6000 | Total Loss 0.019974
+Iter 7000 | Total Loss 0.016353
+Iter 8000 | Total Loss 0.014597
+Iter 9000 | Total Loss 0.010573
+Iter 10000 | Total Loss 0.008519
+Iter 11000 | Total Loss 0.006175
+Iter 12000 | Total Loss 0.005130
+Iter 13000 | Total Loss 0.003689
+Iter 14000 | Total Loss 0.003182
+Iter 15000 | Total Loss 0.003394
+Iter 16000 | Total Loss 0.002984
+Iter 17000 | Total Loss 0.001964
+Iter 18000 | Total Loss 0.002637
+Iter 19000 | Total Loss 0.001880
+Iter 20000 | Total Loss 0.001374
+--- Training done in 139.392080783844 seconds ---
+estimated y tensor([[ 0.4600, -1.1320,  1.9223, -1.7720, -0.2719],
+        [ 0.5234, -1.1611,  2.0150, -1.8801, -0.3343],
+        [ 0.5592, -1.2709,  2.0550, -1.9430, -0.3997],
+        [ 0.6136, -1.3535,  2.2389, -2.1063, -0.3981],
+        [ 0.6985, -1.4088,  2.2672, -2.1523, -0.4836]])
+actual y tensor([[ 0.4403, -1.2195,  1.5079, -1.7739, -0.2773],
+        [ 0.5967, -0.9580,  1.8402, -1.8903, -0.2410],
+        [ 0.5646, -1.2822,  1.9972, -1.8861, -0.2584],
+        [ 0.6439, -1.4182,  2.1132, -1.9699, -0.6441],
+        [ 0.6308, -1.5685,  2.2434, -2.1325, -0.3077]])
+Control Y MAE: 0.11015462130308151
 Iteration 2
 Pretrain
 Eval
 Matching on validation set
-Iter 1000 | Total Loss 0.051905
-Iter 2000 | Total Loss 0.045339
-Iter 3000 | Total Loss 0.041179
-Iter 4000 | Total Loss 0.033784
-Iter 5000 | Total Loss 0.027722
-Iter 6000 | Total Loss 0.022766
-Iter 7000 | Total Loss 0.018906
-Iter 8000 | Total Loss 0.016496
-Iter 9000 | Total Loss 0.011878
-Iter 10000 | Total Loss 0.009567
-Iter 11000 | Total Loss 0.006922
-Iter 12000 | Total Loss 0.006478
-Iter 13000 | Total Loss 0.005475
-Iter 14000 | Total Loss 0.006026
-Iter 15000 | Total Loss 0.003402
-Iter 16000 | Total Loss 0.003414
-Iter 17000 | Total Loss 0.002974
-Iter 18000 | Total Loss 0.002619
-Iter 19000 | Total Loss 0.002030
-Iter 20000 | Total Loss 0.002154
---- Training done in 137.13715958595276 seconds ---
-Control Y MAE: 0.11605238914489746
+Iter 1000 | Total Loss 0.043209
+Iter 2000 | Total Loss 0.037484
+Iter 3000 | Total Loss 0.034121
+Iter 4000 | Total Loss 0.027860
+Iter 5000 | Total Loss 0.022798
+Iter 6000 | Total Loss 0.018831
+Iter 7000 | Total Loss 0.015632
+Iter 8000 | Total Loss 0.013682
+Iter 9000 | Total Loss 0.010279
+Iter 10000 | Total Loss 0.008338
+Iter 11000 | Total Loss 0.006276
+Iter 12000 | Total Loss 0.005802
+Iter 13000 | Total Loss 0.004978
+Iter 14000 | Total Loss 0.005428
+Iter 15000 | Total Loss 0.003221
+Iter 16000 | Total Loss 0.003215
+Iter 17000 | Total Loss 0.002766
+Iter 18000 | Total Loss 0.002615
+Iter 19000 | Total Loss 0.001940
+Iter 20000 | Total Loss 0.002047
+--- Training done in 147.94243550300598 seconds ---
+estimated y tensor([[ 0.4852, -1.1070,  1.9119, -1.9320, -0.2960],
+        [ 0.5370, -1.1273,  2.0247, -2.0000, -0.3673],
+        [ 0.5867, -1.2670,  2.0587, -2.0605, -0.4483],
+        [ 0.6304, -1.3711,  2.2177, -2.2267, -0.4521],
+        [ 0.7087, -1.4148,  2.2704, -2.2322, -0.5384]])
+actual y tensor([[ 0.4403, -1.2195,  1.5079, -1.7739, -0.2773],
+        [ 0.5967, -0.9580,  1.8402, -1.8903, -0.2410],
+        [ 0.5646, -1.2822,  1.9972, -1.8861, -0.2584],
+        [ 0.6439, -1.4182,  2.1132, -1.9699, -0.6441],
+        [ 0.6308, -1.5685,  2.2434, -2.1325, -0.3077]])
+Control Y MAE: 0.12096080183982849
 Testing
 Iteration 0
-Iter 1000 | Total Loss 0.064172
-Iter 2000 | Total Loss 0.061200
-Iter 3000 | Total Loss 0.046975
-Iter 4000 | Total Loss 0.041417
-Iter 5000 | Total Loss 0.029125
-Iter 6000 | Total Loss 0.025226
-Iter 7000 | Total Loss 0.021352
-Iter 8000 | Total Loss 0.018036
-Iter 9000 | Total Loss 0.014248
-Iter 10000 | Total Loss 0.012304
-Iter 11000 | Total Loss 0.008999
-Iter 12000 | Total Loss 0.007534
-Iter 13000 | Total Loss 0.006326
-Iter 14000 | Total Loss 0.006506
-Iter 15000 | Total Loss 0.005103
-Iter 16000 | Total Loss 0.004930
-Iter 17000 | Total Loss 0.003807
-Iter 18000 | Total Loss 0.003514
-Iter 19000 | Total Loss 0.003344
-Iter 20000 | Total Loss 0.003028
+Iter 1000 | Total Loss 0.048160
+Iter 2000 | Total Loss 0.043240
+Iter 3000 | Total Loss 0.033933
+Iter 4000 | Total Loss 0.030313
+Iter 5000 | Total Loss 0.021796
+Iter 6000 | Total Loss 0.018789
+Iter 7000 | Total Loss 0.014161
+Iter 8000 | Total Loss 0.012579
+Iter 9000 | Total Loss 0.010333
+Iter 10000 | Total Loss 0.008428
+Iter 11000 | Total Loss 0.005738
+Iter 12000 | Total Loss 0.005535
+Iter 13000 | Total Loss 0.004158
+Iter 14000 | Total Loss 0.004051
+Iter 15000 | Total Loss 0.003830
+Iter 16000 | Total Loss 0.003042
+Iter 17000 | Total Loss 0.002635
+Iter 18000 | Total Loss 0.002071
+Iter 19000 | Total Loss 0.002318
+Iter 20000 | Total Loss 0.002095
+estimated y tensor([[-3.0680,  0.3607, -1.1347, -0.8397,  0.2992],
+        [-3.2239,  0.4142, -1.0880, -0.8571,  0.3461],
+        [-3.4167,  0.4260, -1.1036, -0.8604,  0.3581],
+        [-3.6947,  0.4832, -1.1040, -0.8844,  0.3976],
+        [-3.9099,  0.5401, -1.1615, -0.9605,  0.4556]])
+actual y tensor([[-2.8451,  0.0934, -1.2573, -0.7231,  0.2683],
+        [-3.1876,  0.2861, -1.1750, -0.6259,  0.5054],
+        [-3.4182,  0.5217, -1.1534, -0.8783,  0.1845],
+        [-3.5333,  0.4398, -1.1020, -0.9690,  0.3187],
+        [-3.8721,  0.5502, -1.2021, -0.9245,  0.2675]])
 Iteration 1
-Iter 1000 | Total Loss 0.062749
-Iter 2000 | Total Loss 0.056946
-Iter 3000 | Total Loss 0.044866
-Iter 4000 | Total Loss 0.038847
-Iter 5000 | Total Loss 0.033455
-Iter 6000 | Total Loss 0.026245
-Iter 7000 | Total Loss 0.021036
-Iter 8000 | Total Loss 0.017417
-Iter 9000 | Total Loss 0.014596
-Iter 10000 | Total Loss 0.011317
-Iter 11000 | Total Loss 0.009908
-Iter 12000 | Total Loss 0.007931
-Iter 13000 | Total Loss 0.006516
-Iter 14000 | Total Loss 0.005846
-Iter 15000 | Total Loss 0.004574
-Iter 16000 | Total Loss 0.003875
-Iter 17000 | Total Loss 0.003591
-Iter 18000 | Total Loss 0.003376
-Iter 19000 | Total Loss 0.002874
-Iter 20000 | Total Loss 0.003465
+Iter 1000 | Total Loss 0.046467
+Iter 2000 | Total Loss 0.043849
+Iter 3000 | Total Loss 0.034982
+Iter 4000 | Total Loss 0.028171
+Iter 5000 | Total Loss 0.025755
+Iter 6000 | Total Loss 0.021158
+Iter 7000 | Total Loss 0.016701
+Iter 8000 | Total Loss 0.013355
+Iter 9000 | Total Loss 0.010190
+Iter 10000 | Total Loss 0.007129
+Iter 11000 | Total Loss 0.007157
+Iter 12000 | Total Loss 0.005761
+Iter 13000 | Total Loss 0.004093
+Iter 14000 | Total Loss 0.004511
+Iter 15000 | Total Loss 0.003341
+Iter 16000 | Total Loss 0.002992
+Iter 17000 | Total Loss 0.002696
+Iter 18000 | Total Loss 0.001994
+Iter 19000 | Total Loss 0.001931
+Iter 20000 | Total Loss 0.002089
+estimated y tensor([[-3.0832,  0.3720, -1.1080, -0.7992,  0.2873],
+        [-3.1959,  0.4137, -1.0758, -0.8139,  0.3416],
+        [-3.4153,  0.4328, -1.0892, -0.8309,  0.3575],
+        [-3.7008,  0.4958, -1.1364, -0.8572,  0.3965],
+        [-3.9102,  0.5650, -1.1692, -0.9287,  0.4496]])
+actual y tensor([[-2.8451,  0.0934, -1.2573, -0.7231,  0.2683],
+        [-3.1876,  0.2861, -1.1750, -0.6259,  0.5054],
+        [-3.4182,  0.5217, -1.1534, -0.8783,  0.1845],
+        [-3.5333,  0.4398, -1.1020, -0.9690,  0.3187],
+        [-3.8721,  0.5502, -1.2021, -0.9245,  0.2675]])
 Iteration 2
-Iter 1000 | Total Loss 0.063812
-Iter 2000 | Total Loss 0.054447
-Iter 3000 | Total Loss 0.049137
-Iter 4000 | Total Loss 0.040727
-Iter 5000 | Total Loss 0.035266
-Iter 6000 | Total Loss 0.025726
-Iter 7000 | Total Loss 0.021104
-Iter 8000 | Total Loss 0.017703
-Iter 9000 | Total Loss 0.011488
-Iter 10000 | Total Loss 0.011066
-Iter 11000 | Total Loss 0.009418
-Iter 12000 | Total Loss 0.006722
-Iter 13000 | Total Loss 0.007176
-Iter 14000 | Total Loss 0.005805
-Iter 15000 | Total Loss 0.004028
-Iter 16000 | Total Loss 0.003797
-Iter 17000 | Total Loss 0.003511
-Iter 18000 | Total Loss 0.003176
-Iter 19000 | Total Loss 0.003686
-Iter 20000 | Total Loss 0.003239
+Iter 1000 | Total Loss 0.049622
+Iter 2000 | Total Loss 0.040408
+Iter 3000 | Total Loss 0.036581
+Iter 4000 | Total Loss 0.031555
+Iter 5000 | Total Loss 0.024388
+Iter 6000 | Total Loss 0.019946
+Iter 7000 | Total Loss 0.014852
+Iter 8000 | Total Loss 0.012549
+Iter 9000 | Total Loss 0.008391
+Iter 10000 | Total Loss 0.008144
+Iter 11000 | Total Loss 0.005691
+Iter 12000 | Total Loss 0.004341
+Iter 13000 | Total Loss 0.004688
+Iter 14000 | Total Loss 0.003844
+Iter 15000 | Total Loss 0.003319
+Iter 16000 | Total Loss 0.002537
+Iter 17000 | Total Loss 0.002696
+Iter 18000 | Total Loss 0.002251
+Iter 19000 | Total Loss 0.002352
+Iter 20000 | Total Loss 0.001926
+estimated y tensor([[-3.0824,  0.3508, -1.0894, -0.7959,  0.3090],
+        [-3.1901,  0.4223, -1.0315, -0.8067,  0.3443],
+        [-3.4082,  0.4059, -1.0719, -0.8248,  0.3731],
+        [-3.7082,  0.4643, -1.0628, -0.8706,  0.4105],
+        [-3.9171,  0.5146, -1.1130, -0.9256,  0.4777]])
+actual y tensor([[-2.8451,  0.0934, -1.2573, -0.7231,  0.2683],
+        [-3.1876,  0.2861, -1.1750, -0.6259,  0.5054],
+        [-3.4182,  0.5217, -1.1534, -0.8783,  0.1845],
+        [-3.5333,  0.4398, -1.1020, -0.9690,  0.3187],
+        [-3.8721,  0.5502, -1.2021, -0.9245,  0.2675]])
+estimated y tensor([[-3.0637,  0.3512, -1.0792, -0.7966,  0.3006],
+        [-3.1750,  0.4204, -1.0291, -0.8031,  0.3384],
+        [-3.3937,  0.4074, -1.0623, -0.8217,  0.3658],
+        [-3.6934,  0.4633, -1.0527, -0.8613,  0.4038],
+        [-3.8955,  0.5134, -1.1044, -0.9167,  0.4667]])
+actual y tensor([[-2.8451,  0.0934, -1.2573, -0.7231,  0.2683],
+        [-3.1876,  0.2861, -1.1750, -0.6259,  0.5054],
+        [-3.4182,  0.5217, -1.1534, -0.8783,  0.1845],
+        [-3.5333,  0.4398, -1.1020, -0.9690,  0.3187],
+        [-3.8721,  0.5502, -1.2021, -0.9245,  0.2675]])
 Best model: 2
-Treatment effect MAE: (0.13822246374522307, 0.009636916679918147)
-Control Y MAE: 0.11979047954082489
-Gini 0.597 (0.019)
-Ent 1.665 (0.062)
-N Matched 3.295 (0.108)
-MIS 0.145 (0.025)
-Wrong proba 0.186 (0.019)
-Average Training Time: 144.36409449577332
-Std Training Time: 7.415844680103441
+Treatment effect MAE: (0.11486957363401598, 0.008186831184354912)
+Control Y MAE: 0.11472293734550476
+Gini 0.628 (0.018)
+Ent 1.769 (0.062)
+N Matched 3.395 (0.110)
+MIS 0.155 (0.026)
+Wrong proba 0.200 (0.019)
+Average Training Time: 140.3581391175588
+Std Training Time: 5.838261592741612
