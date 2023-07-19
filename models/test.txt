@@ -1,0 +1,54 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.002390
+--- Training done in 5.867498397827148 seconds ---
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Control Y MAE: 0.1216161921620369
+Iteration 1
+Pretrain
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.002871
+--- Training done in 5.512681722640991 seconds ---
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Control Y MAE: 0.10276058316230774
+Iteration 2
+Pretrain
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.003561
+--- Training done in 5.2885072231292725 seconds ---
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Control Y MAE: 0.12166006118059158
+Testing
+Iteration 0
+After Lasso procedure | Total Loss 0.003135
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Iteration 1
+After Lasso procedure | Total Loss 0.003135
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Iteration 2
+After Lasso procedure | Total Loss 0.003135
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+estimated y torch.Size([5, 400, 1])
+actual y torch.Size([5, 400, 1])
+Best model: 0
+Treatment effect MAE: (2.1540658906837358, 0.1154228108655701)
+Control Y MAE: 1.5249701738357544
+Gini 0.596 (0.018)
+Ent 1.677 (0.063)
+N Matched 3.115 (0.107)
+MIS 0.165 (0.026)
+Wrong proba 0.185 (0.019)
+Average Training Time: 5.556229114532471
+Std Training Time: 0.23836942840881692

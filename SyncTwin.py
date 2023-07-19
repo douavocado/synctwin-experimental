@@ -28,6 +28,7 @@ class SyncTwin(nn.Module):
         dtype=D_TYPE,
         reduce_gpu_memory=False,
         inference_only=False,
+        use_lasso=False,
     ):
         super(SyncTwin, self).__init__()
         assert not (reduce_gpu_memory and inference_only)
@@ -54,7 +55,13 @@ class SyncTwin(nn.Module):
         self.lam_prognostic = lam_prognostic
         self.lam_express = lam_express
         self.tau = tau
-
+        self.use_lasso = use_lasso
+        self.lasso_classifier = None
+    
+    def set_synthetic_control(self, classifier):
+        assert self.use_lasso # we are not using gumble softmax
+        self.lasso_classifier = classifier
+    
     def check_device(self, *args):
         a_list = []
         for a in args:
@@ -188,8 +195,11 @@ class SyncTwin(nn.Module):
         ) = self.check_device(x, t, mask, batch_ind, y_batch, y_control, y_mask)
         C = self.get_representation(x, t, mask)
         x_hat = self.get_reconstruction(C, t, mask)
-
-        B_reduced = self.get_B_reduced(batch_ind)
+        
+        if not self.use_lasso:
+            B_reduced = self.get_B_reduced(batch_ind)
+        else:
+            B_reduced = self.lasso_classifier
         self_expressive_loss = self.self_expressive_loss(C, B_reduced)
         reconstruction_loss = self.reconstruction_loss(x, x_hat, mask)
         prognostic_loss = self.prognostic_loss(B_reduced, y_batch, y_control, y_mask)

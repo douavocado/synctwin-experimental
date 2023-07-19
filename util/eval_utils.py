@@ -41,7 +41,10 @@ def get_treatment_effect(nsc, batch_ind_full, y_full, y_control, itr=500):
     y_hat_list = list()
     for i in range(itr):
         with torch.no_grad():
-            B_reduced = nsc.get_B_reduced(batch_ind_full)
+            if nsc.use_lasso:
+                B_reduced = nsc.lasso_classifier
+            else:
+                B_reduced = nsc.get_B_reduced(batch_ind_full)
             y_hat = torch.matmul(B_reduced, y_control)
             if torch.sum(torch.isinf(y_hat)).item() == 0:
                 y_hat_list.append(y_hat)
@@ -49,6 +52,8 @@ def get_treatment_effect(nsc, batch_ind_full, y_full, y_control, itr=500):
     y_hat_mat = torch.stack(y_hat_list, dim=-1)
     y_hat_mat[torch.isinf(y_hat_mat)] = 0.0
     y_hat2 = torch.mean(y_hat_mat, dim=-1)
+    print('estimated y', y_hat2[:,0:5,0])
+    print('actual y', y_full[:,0:5,0])
     return (y_full - y_hat2)[:, nsc.n_unit :, :], y_hat2
 
 

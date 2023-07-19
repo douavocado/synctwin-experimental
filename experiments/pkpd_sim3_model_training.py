@@ -27,6 +27,7 @@ parser.add_argument("--n_hidden", type=str, default="20")
 parser.add_argument("--sim_id", type=str)
 parser.add_argument("--regular", type=str, choices=["False", "True"], default="True")
 parser.add_argument("--robustness", type=str, choices=["0", "1", "2"], default="0")
+parser.add_argument("--lasso", type=str, choices=["False", "True"], default="False")
 
 
 args = parser.parse_args()
@@ -48,6 +49,7 @@ regular = args.regular == "True"
 if not regular:
     n_hidden = n_hidden * 2
 robustness = int(args.robustness)
+use_lasso = args.lasso == "True"
 
 print("Running simulation with seed {}".format(seed))
 numpy.random.seed(seed)
@@ -130,6 +132,7 @@ for i in range(itr):
         encoder=enc,
         decoder=dec,
         decoder_Y=dec_Y,
+        use_lasso=use_lasso,
     )
 
     print("Pretrain")
@@ -185,13 +188,24 @@ for i in range(itr):
     train_utils.load_pre_train_and_init(
         nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, model_path=model_path, init_decoder_Y=pretrain_Y
     )
-    return_code = train_utils.train_B_self_expressive(
-        nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune, model_path=model_path
-    )
-
-    if return_code != 0:
-        control_error_list.append(1e9)
-        continue
+    if not use_lasso:
+        return_code = train_utils.train_B_self_expressive(
+            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune, model_path=model_path
+        )
+        if return_code != 0:
+            control_error_list.append(1e9)
+            continue
+    else:
+        # we use the lasso method with does not place restrictions on coefficients
+        return_code = train_utils.train_B_self_expressive_lasso(
+            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune,
+        )
+        if return_code[0] != 0:
+            control_error_list.append(1e9)
+            continue
+        else:
+            nsc.set_synthetic_control(return_code[1])
+    
 
     end_time = time.time()
     training_time = end_time - start_time
@@ -261,16 +275,28 @@ for i in range(itr):
         encoder=enc,
         decoder=dec,
         decoder_Y=dec_Y,
+        use_lasso=use_lasso
     )
     train_utils.load_pre_train_and_init(
         nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path, init_decoder_Y=pretrain_Y
     )
-    return_code = train_utils.train_B_self_expressive(
-        nsc, x_full, t_full, mask_full, batch_ind_full, niters=itr_fine_tune, model_path=model_path_save
-    )
-    if return_code != 0:
-        control_error_list.append(1e9)
-        continue
+    if not use_lasso:
+        return_code = train_utils.train_B_self_expressive(
+            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune, model_path=model_path
+        )
+        if return_code != 0:
+            control_error_list.append(1e9)
+            continue
+    else:
+        # we use the lasso method with does not place restrictions on coefficients
+        return_code = train_utils.train_B_self_expressive_lasso(
+            nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, niters=itr_fine_tune,
+        )
+        if return_code[0] != 0:
+            control_error_list.append(1e9)
+            continue
+        else:
+            nsc.set_synthetic_control(return_code[1])
     train_utils.load_nsc(nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path_save)
 
     effect_est, y_hat = eval_utils.get_treatment_effect(nsc, batch_ind_full, y_full, y_control)

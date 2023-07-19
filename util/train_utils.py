@@ -1,5 +1,6 @@
 import os
 
+from sklearn import linear_model
 import numpy as np
 import torch
 import torch.optim as optim
@@ -309,6 +310,45 @@ def train_B_self_expressive(
                     best_loss = loss
                     torch.save(nsc.state_dict(), model_path.format("nsc.pth"))
     return 0
+
+def train_B_self_expressive_lasso(
+    nsc,
+    x_full,
+    t_full,
+    mask_full,
+    batch_ind_full,
+    niters=20000,
+    lr=1e-3,
+    test_freq=1000,
+    alpha=.01
+):
+    clf = linear_model.Lasso(alpha=alpha, fit_intercept=False,max_iter=10000)
+
+    with torch.no_grad():
+        C = nsc.get_representation(x_full, t_full, mask_full)
+
+        #print('C0:', nsc.C0.shape)
+        #print('C', C.shape)
+        
+        B_reduced = torch.ones((C.shape[0], nsc.C0.shape[0]))
+        #print(B_reduced.device)
+        #print('B-reduced', B_reduced.shape)
+        for i in range(C.shape[0]):
+            clf.fit(torch.transpose(nsc.C0,0,1), C[i,:])
+            #print(C[i,:])
+            #print(torch.transpose(nsc.C0,0,1)[:,6:])
+            B_reduced[i,:] = torch.tensor(clf.coef_)
+        #print(torch.count_nonzero(B_reduced))
+        #raise Exception('stop')
+    
+    
+        loss = nsc.self_expressive_loss(C, B_reduced)
+
+
+        print("After Lasso procedure | Total Loss {:.6f}".format(loss.item()))
+        if np.isnan(loss.item()):
+            return [1,None]
+    return [0, B_reduced]
 
 
 def train_all_losses(
