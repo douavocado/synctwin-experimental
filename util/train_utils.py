@@ -334,7 +334,7 @@ def train_B_self_expressive_lasso(
         #print(B_reduced.device)
         #print('B-reduced', B_reduced.shape)
         for i in range(C.shape[0]):
-            clf.fit(torch.transpose(nsc.C0,0,1), C[i,:])
+            clf.fit(torch.transpose(nsc.C0.detach(),0,1), C[i,:].detach())
             #print(C[i,:])
             #print(torch.transpose(nsc.C0,0,1)[:,6:])
             B_reduced[i,:] = torch.tensor(clf.coef_)
