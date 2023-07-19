@@ -29,6 +29,7 @@ class SyncTwin(nn.Module):
         reduce_gpu_memory=False,
         inference_only=False,
         use_lasso=False,
+        pre_decoder_Y=None,
     ):
         super(SyncTwin, self).__init__()
         assert not (reduce_gpu_memory and inference_only)
@@ -57,6 +58,8 @@ class SyncTwin(nn.Module):
         self.tau = tau
         self.use_lasso = use_lasso
         self.lasso_classifier = None
+        if pre_decoder_Y is not None:
+            self.pre_decoder_Y = pre_decoder_Y.to(device)
     
     def set_synthetic_control(self, classifier):
         assert self.use_lasso # we are not using gumble softmax
@@ -83,10 +86,14 @@ class SyncTwin(nn.Module):
         x_hat = self.decoder(C, t, mask)
         return x_hat
 
-    def get_prognostics(self, C, t, mask):
+    def get_prognostics(self, C, t, mask, robust=0):
         C, t, mask = self.check_device(C, t, mask)  # pylint: disable=unbalanced-tuple-unpacking
         y_hat = self.decoder_Y(C, t, mask)
-        return y_hat
+        if robust == 2:
+            y_pre_hat = self.pre_decoder_Y(C, t, mask)
+        else:
+            y_pre_hat = None
+        return y_hat, y_pre_hat
 
     def _wrap_index(self, ind_0, ind_1, tensor):
         assert ind_0.dim() == ind_1.dim() == 1
@@ -169,7 +176,7 @@ class SyncTwin(nn.Module):
         y_hat = torch.matmul(B_reduced, y_control)
         return torch.sum(((y_batch - y_hat) ** 2) * y_mask.unsqueeze(-1)) / torch.sum(y_mask) * self.lam_prognostic
 
-    def prognostic_loss2(self, y, y_hat, mask, robust=0):
+    def prognostic_loss2(self, y, y_hat, mask, y_pre_hat=None, y_pre_full=None, robust=0):
         y, y_hat, mask = self.check_device(y, y_hat, mask)  # pylint: disable=unbalanced-tuple-unpacking
         if robust == 0:
             err = (y - y_hat) * mask
@@ -181,6 +188,20 @@ class SyncTwin(nn.Module):
             err2 = (y - y_hat) * (1-mask)
             err2_mse = torch.sum(err2 ** 2) / torch.sum(1-mask)
             err_mse = (err1_mse + err2_mse)/2
+        elif robust == 2:
+            assert y_pre_full is not None
+            assert y_pre_hat is not None
+            err1 = (y - y_hat) * mask
+            err1_mse = torch.sum(err1 ** 2) / torch.sum(mask)
+            
+            err2 = (y - y_hat) * (1-mask)
+            err2_mse = torch.sum(err2 ** 2) / torch.sum(1-mask)
+            
+            err_pre = torch.sum((y_pre_hat - y_pre_full) ** 2) / torch.sum(torch.ones_like(y_pre_hat))
+            err_mse = (err1_mse + err2_mse + err_pre)/3
+        else:
+            print("robust levels only accepts 0,1,2")
+            raise NotImplementedError()
         return err_mse * self.lam_prognostic
 
     def forward(self, x, t, mask, batch_ind, y_batch, y_control, y_mask):

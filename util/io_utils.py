@@ -30,7 +30,8 @@ def load_tensor(data_path, fold="train"):
     m = torch.load(data_path.format(fold, "m", "pth"))
     sd = torch.load(data_path.format(fold, "sd", "pth"))
     treatment_effect = torch.load(data_path.format(fold, "treatment_effect", "pth"))
-    return x_full, t_full, mask_full, batch_ind_full, y_full, y_control, y_mask_full, m, sd, treatment_effect
+    y_pre_full = torch.load(data_path.format(fold, "y_pre_full", "pth"))
+    return x_full, t_full, mask_full, batch_ind_full, y_full, y_control, y_mask_full, m, sd, treatment_effect, y_pre_full
 
 
 def load_data_dict(version=1):

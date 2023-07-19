@@ -163,6 +163,7 @@ def get_covariate(
     y_full = covariates[pretreatment_time:, :, 2:3].detach().clone()
     y_full_all = covariates[pretreatment_time:, :, :]
     y_control = covariates[pretreatment_time:, :n_units, 2:3]
+    y_pre_full = covariates[:pretreatment_time, :, 2:3]
 
     t_full = torch.ones_like(x_full)
     mask_full = torch.ones_like(x_full)
@@ -180,6 +181,7 @@ def get_covariate(
         y_full_all,
         m,
         sd,
+        y_pre_full,
     )
 
 

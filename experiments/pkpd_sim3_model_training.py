@@ -78,6 +78,7 @@ n_units, n_treated, n_units_total, step, train_step, control_sample, noise, n_ba
     m,
     sd,
     treatment_effect,
+    y_pre_full,
 ) = io_utils.load_tensor(data_path, "train")
 (
     x_full_val,
@@ -90,6 +91,7 @@ n_units, n_treated, n_units_total, step, train_step, control_sample, noise, n_ba
     _,
     _,
     _,
+    y_pre_full_val,
 ) = io_utils.load_tensor(data_path, "val")
 
 control_error_list = []
@@ -114,12 +116,19 @@ for i in range(itr):
             dec_Y = SyncTwin.RegularDecoder(
                 hidden_dim=enc.hidden_dim, output_dim=y_full.shape[-1], max_seq_len=step - train_step
             )
+            pre_dec_Y = SyncTwin.RegularDecoder(
+                hidden_dim=enc.hidden_dim, output_dim=y_pre_full.shape[-1], max_seq_len=train_step
+            )
         else:
             dec_Y = SyncTwin.LinearDecoder(
                 hidden_dim=enc.hidden_dim, output_dim=y_full.shape[-1], max_seq_len=step - train_step
             )
+            pre_dec_Y = SyncTwin.LinearDecoder(
+                hidden_dim=enc.hidden_dim, output_dim=y_pre_full.shape[-1], max_seq_len=train_step
+            )
     else:
         dec_Y = None
+        pre_dec_Y = None
 
     nsc = SyncTwin.SyncTwin(
         n_units,
@@ -132,6 +141,7 @@ for i in range(itr):
         encoder=enc,
         decoder=dec,
         decoder_Y=dec_Y,
+        pre_decoder_Y=pre_dec_Y,
         use_lasso=use_lasso,
     )
 
@@ -162,6 +172,8 @@ for i in range(itr):
             mask_full_val,
             y_full_val,
             y_mask_full_val,
+            y_pre_full,
+            y_pre_full_val,
             niters=itr_pretrain,
             model_path=model_path,
             batch_size=batch_size,
@@ -205,6 +217,7 @@ for i in range(itr):
             continue
         else:
             nsc.set_synthetic_control(return_code[1])
+        torch.save(nsc.state_dict(), model_path.format("nsc.pth"))
     
 
     end_time = time.time()
@@ -212,7 +225,7 @@ for i in range(itr):
     training_time_list.append(training_time)
     print("--- Training done in %s seconds ---" % training_time)
 
-    train_utils.load_nsc(nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, model_path=model_path)
+    #train_utils.load_nsc(nsc, x_full_val, t_full_val, mask_full_val, batch_ind_full_val, model_path=model_path)
 
     effect_est, y_hat = eval_utils.get_treatment_effect(nsc, batch_ind_full_val, y_full_val, y_control_val)
     y_control_val = y_control_val.to(y_hat.device)
@@ -238,12 +251,19 @@ if pretrain_Y:
         dec_Y = SyncTwin.RegularDecoder(
             hidden_dim=enc.hidden_dim, output_dim=y_full.shape[-1], max_seq_len=step - train_step
         )
+        pre_dec_Y = SyncTwin.RegularDecoder(
+            hidden_dim=enc.hidden_dim, output_dim=y_pre_full.shape[-1], max_seq_len=train_step
+        )
     else:
         dec_Y = SyncTwin.LinearDecoder(
             hidden_dim=enc.hidden_dim, output_dim=y_full.shape[-1], max_seq_len=step - train_step
         )
+        pre_dec_Y = SyncTwin.LinearDecoder(
+            hidden_dim=enc.hidden_dim, output_dim=y_pre_full.shape[-1], max_seq_len=train_step
+        )
 else:
     dec_Y = None
+    pre_dec_Y = None
 
 (
     x_full,
@@ -256,6 +276,7 @@ else:
     m,
     sd,
     treatment_effect,
+    y_pre_full
 ) = io_utils.load_tensor(data_path, "test")
 
 
@@ -275,7 +296,8 @@ for i in range(itr):
         encoder=enc,
         decoder=dec,
         decoder_Y=dec_Y,
-        use_lasso=use_lasso
+        use_lasso=use_lasso,
+        pre_decoder_Y=pre_dec_Y,
     )
     train_utils.load_pre_train_and_init(
         nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path, init_decoder_Y=pretrain_Y
@@ -297,6 +319,7 @@ for i in range(itr):
             continue
         else:
             nsc.set_synthetic_control(return_code[1])
+        torch.save(nsc.state_dict(), model_path_save.format("nsc.pth"))
     train_utils.load_nsc(nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path_save)
 
     effect_est, y_hat = eval_utils.get_treatment_effect(nsc, batch_ind_full, y_full, y_control)
@@ -320,8 +343,10 @@ print("Treatment effect MAE: ({}, {})".format(mae_effect, mae_sd))
 print("Control Y MAE: {}".format(np.min(control_error)))
 
 # eval_utils.summary_simulation(nsc, None, x_full, t_full, mask_full, batch_ind_full, y_full, y_control, plot_path=plot_path)
-
-mat_b = nsc.get_B_reduced(batch_ind_full).detach().cpu().numpy()
+if nsc.use_lasso == False:
+    mat_b = nsc.get_B_reduced(batch_ind_full).detach().cpu().numpy()
+else:
+    mat_b = nsc.lasso_classifier.detach().cpu().numpy()
 mat_b = mat_b[n_units:, :]
 
 eval_utils.summarize_B(mat_b)

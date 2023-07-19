@@ -87,6 +87,8 @@ def pre_train_reconstruction_prognostic_loss(
     mask_full_val=None,
     y_full_val=None,
     y_mask_full_val=None,
+    y_pre_full=None,
+    y_pre_full_val=None,
     niters=5000,
     model_path="models/sync/{}.pth",
     batch_size=None,
@@ -104,8 +106,13 @@ def pre_train_reconstruction_prognostic_loss(
 
     assert nsc.decoder_Y is not None
     dec_Y = nsc.decoder_Y
+    if robust == 2:
+        assert nsc.pre_decoder_Y is not None
+        pre_dec_Y = nsc.pre_decoder_Y
 
-    optimizer = optim.Adam(list(dec.parameters()) + list(enc.parameters()) + list(dec_Y.parameters()))
+        optimizer = optim.Adam(list(dec.parameters()) + list(enc.parameters()) + list(dec_Y.parameters()) + list(pre_dec_Y.parameters()))
+    else:
+        optimizer = optim.Adam(list(dec.parameters()) + list(enc.parameters()) + list(dec_Y.parameters()))
 
     y_mask_full = torch.stack([y_mask_full] * dec_Y.max_seq_len, dim=0).unsqueeze(-1)
 
@@ -118,18 +125,23 @@ def pre_train_reconstruction_prognostic_loss(
         optimizer.zero_grad()
 
         if batch_size is not None:
-            x, t, mask, y, y_mask = batching.get_batch_standard(  # pylint: disable=unbalanced-tuple-unpacking
-                batch_size, x_full, t_full, mask_full, y_full, y_mask_full
+            x, t, mask, y, y_mask, y_pre = batching.get_batch_standard(  # pylint: disable=unbalanced-tuple-unpacking
+                batch_size, x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
             )
         else:
-            x, t, mask, y, y_mask = x_full, t_full, mask_full, y_full, y_mask_full
+            x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
 
         C = nsc.get_representation(x, t, mask)
         x_hat = nsc.get_reconstruction(C, t, mask)
         loss_X = nsc.reconstruction_loss(x, x_hat, mask)
-
-        y_hat = nsc.get_prognostics(C, t, mask)
-        loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask,robust=robust)
+        
+        y_hat, y_pre_hat = nsc.get_prognostics(C, t, mask, robust=robust)
+        
+        # print("y.shape", y.shape)
+        # print("y_hat shape", y_hat.shape)
+        # print("y mask", y_mask)
+        # raise Exception('debug stop')
+        loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask, y_pre_hat=y_pre_hat, y_pre_full=y_pre, robust=robust)
 
         loss = loss_X + loss_Y
         loss.backward()
@@ -142,8 +154,8 @@ def pre_train_reconstruction_prognostic_loss(
                     x_hat = nsc.get_reconstruction(C, t_full_val, mask_full_val)
                     loss_X = nsc.reconstruction_loss(x_full_val, x_hat, mask_full_val)
 
-                    y_hat = nsc.get_prognostics(C, t_full_val, mask_full_val)
-                    loss_Y = nsc.prognostic_loss2(y_full_val, y_hat, y_mask_full_val,robust=robust)
+                    y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_val, mask_full_val, robust=robust)
+                    loss_Y = nsc.prognostic_loss2(y_full_val, y_hat, y_mask_full_val,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_val, robust=robust)
 
                     loss = loss_X + loss_Y
                 else:
@@ -157,19 +169,19 @@ def pre_train_reconstruction_prognostic_loss(
                             mask_full_vb,
                             y_full_vb,
                             y_mask_full_vb,
+                            y_pre_full_vb,
                         ) = batching.get_folds(
-                            fold, n_fold, x_full_val, t_full_val, mask_full_val, y_full_val, y_mask_full_val
+                            fold, n_fold, x_full_val, t_full_val, mask_full_val, y_full_val, y_mask_full_val, y_pre_full_val,
                         )
 
                         C = nsc.get_representation(x_full_vb, t_full_vb, mask_full_vb)
                         x_hat = nsc.get_reconstruction(C, t_full_vb, mask_full_vb)
                         loss_X = nsc.reconstruction_loss(x_full_vb, x_hat, mask_full_vb)
 
-                        y_hat = nsc.get_prognostics(C, t_full_vb, mask_full_vb)
-                        loss_Y = nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,robust=robust)
+                        y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_vb, mask_full_vb, robust=robust)
+                        loss_Y = nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust)
 
                         loss = loss_X + loss_Y + loss
-
                 print("Iter {:04d} | Total Loss {:.6f}".format(itr, loss.item()))
                 if loss < best_loss:
                     best_loss = loss
@@ -177,6 +189,7 @@ def pre_train_reconstruction_prognostic_loss(
                     torch.save(enc.state_dict(), model_path.format("encoder.pth"))
                     torch.save(dec.state_dict(), model_path.format("decoder.pth"))
                     torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+                    torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     return best_loss
 
 
@@ -242,7 +255,7 @@ def train_cfr(
 
 
 def load_pre_train_and_init(
-    nsc, x_full, t_full, mask_full, batch_ind_full, model_path="models/sync/{}.pth", init_decoder_Y=False
+    nsc, x_full, t_full, mask_full, batch_ind_full, model_path="models/sync/{}.pth", init_decoder_Y=False, init_pre_dec_Y=False,
 ):
     enc = nsc.encoder
     dec = nsc.decoder
@@ -253,6 +266,9 @@ def load_pre_train_and_init(
     if init_decoder_Y:
         dec_Y = nsc.decoder_Y
         dec_Y.load_state_dict(torch.load(model_path.format("decoder_Y.pth")))
+    if init_pre_dec_Y:
+        pre_dec_Y = nsc.pre_decoder_Y
+        pre_dec_Y.load_state_dict(torch.load(model_path.format("pre_decoder_Y.pth")))
 
     with torch.no_grad():
         C = nsc.get_representation(x_full, t_full, mask_full)

@@ -77,6 +77,7 @@ for fold in ["test", "val", "train"]:
         y_full_all,
         m,
         sd,
+        y_pre_full,
     ) = pkpd.get_covariate(
         control_Kin_b,
         treat_Kin_b,
@@ -118,6 +119,7 @@ for fold in ["test", "val", "train"]:
         torch.save(t_full, data_path.format(fold, "t_full", "pth"))
         torch.save(mask_full, data_path.format(fold, "mask_full", "pth"))
         torch.save(batch_ind_full, data_path.format(fold, "batch_ind_full", "pth"))
+        torch.save(y_pre_full, data_path.format(fold, "y_pre_full", "pth"))
         torch.save(y_full, data_path.format(fold, "y_full", "pth"))
         torch.save(y_full_all, data_path.format(fold, "y_full_all", "pth"))
         torch.save(y_control, data_path.format(fold, "y_control", "pth"))
