@@ -1,0 +1,184 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+Iter 0500 | Total Loss 270.349487
+Iter 1000 | Total Loss 256.405884
+Iter 1500 | Total Loss 263.277649
+Iter 2000 | Total Loss 264.007477
+Iter 2500 | Total Loss 273.183441
+Iter 3000 | Total Loss 285.252960
+Iter 3500 | Total Loss 276.207550
+Iter 4000 | Total Loss 298.095612
+Iter 4500 | Total Loss 292.454742
+Iter 5000 | Total Loss 325.263153
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.054028
+Iter 2000 | Total Loss 0.045760
+Iter 3000 | Total Loss 0.039594
+Iter 4000 | Total Loss 0.032892
+Iter 5000 | Total Loss 0.025731
+Iter 6000 | Total Loss 0.021297
+Iter 7000 | Total Loss 0.018656
+Iter 8000 | Total Loss 0.016141
+Iter 9000 | Total Loss 0.012015
+Iter 10000 | Total Loss 0.008873
+Iter 11000 | Total Loss 0.007399
+Iter 12000 | Total Loss 0.007050
+Iter 13000 | Total Loss 0.004438
+Iter 14000 | Total Loss 0.004510
+Iter 15000 | Total Loss 0.003890
+Iter 16000 | Total Loss 0.003623
+Iter 17000 | Total Loss 0.002808
+Iter 18000 | Total Loss 0.002588
+Iter 19000 | Total Loss 0.002765
+Iter 20000 | Total Loss 0.002130
+--- Training done in 331.9984347820282 seconds ---
+Control Y MAE: 0.11438361555337906
+Iteration 1
+Pretrain
+Iter 0500 | Total Loss 266.999359
+Iter 1000 | Total Loss 275.060669
+Iter 1500 | Total Loss 268.002808
+Iter 2000 | Total Loss 265.723846
+Iter 2500 | Total Loss 283.266541
+Iter 3000 | Total Loss 293.074371
+Iter 3500 | Total Loss 284.873138
+Iter 4000 | Total Loss 316.452393
+Iter 4500 | Total Loss 332.674713
+Iter 5000 | Total Loss 348.003967
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.049964
+Iter 2000 | Total Loss 0.046790
+Iter 3000 | Total Loss 0.040693
+Iter 4000 | Total Loss 0.033414
+Iter 5000 | Total Loss 0.027405
+Iter 6000 | Total Loss 0.022465
+Iter 7000 | Total Loss 0.018869
+Iter 8000 | Total Loss 0.016587
+Iter 9000 | Total Loss 0.012104
+Iter 10000 | Total Loss 0.009543
+Iter 11000 | Total Loss 0.007422
+Iter 12000 | Total Loss 0.006344
+Iter 13000 | Total Loss 0.004332
+Iter 14000 | Total Loss 0.004096
+Iter 15000 | Total Loss 0.003868
+Iter 16000 | Total Loss 0.003613
+Iter 17000 | Total Loss 0.002609
+Iter 18000 | Total Loss 0.003403
+Iter 19000 | Total Loss 0.002415
+Iter 20000 | Total Loss 0.002020
+--- Training done in 328.7267470359802 seconds ---
+Control Y MAE: 0.11953064054250717
+Iteration 2
+Pretrain
+Iter 0500 | Total Loss 271.066650
+Iter 1000 | Total Loss 262.268890
+Iter 1500 | Total Loss 268.657837
+Iter 2000 | Total Loss 283.957062
+Iter 2500 | Total Loss 287.022034
+Iter 3000 | Total Loss 266.702881
+Iter 3500 | Total Loss 290.412720
+Iter 4000 | Total Loss 304.304443
+Iter 4500 | Total Loss 309.114227
+Iter 5000 | Total Loss 317.170135
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.051905
+Iter 2000 | Total Loss 0.045339
+Iter 3000 | Total Loss 0.041179
+Iter 4000 | Total Loss 0.033784
+Iter 5000 | Total Loss 0.027722
+Iter 6000 | Total Loss 0.022766
+Iter 7000 | Total Loss 0.018906
+Iter 8000 | Total Loss 0.016496
+Iter 9000 | Total Loss 0.011878
+Iter 10000 | Total Loss 0.009567
+Iter 11000 | Total Loss 0.006922
+Iter 12000 | Total Loss 0.006478
+Iter 13000 | Total Loss 0.005475
+Iter 14000 | Total Loss 0.006026
+Iter 15000 | Total Loss 0.003402
+Iter 16000 | Total Loss 0.003414
+Iter 17000 | Total Loss 0.002974
+Iter 18000 | Total Loss 0.002619
+Iter 19000 | Total Loss 0.002030
+Iter 20000 | Total Loss 0.002154
+--- Training done in 318.34284925460815 seconds ---
+Control Y MAE: 0.11605238914489746
+Testing
+Iteration 0
+Iter 1000 | Total Loss 0.053390
+Iter 2000 | Total Loss 0.048007
+Iter 3000 | Total Loss 0.038244
+Iter 4000 | Total Loss 0.033939
+Iter 5000 | Total Loss 0.024905
+Iter 6000 | Total Loss 0.021657
+Iter 7000 | Total Loss 0.016563
+Iter 8000 | Total Loss 0.014525
+Iter 9000 | Total Loss 0.011998
+Iter 10000 | Total Loss 0.009798
+Iter 11000 | Total Loss 0.006913
+Iter 12000 | Total Loss 0.006548
+Iter 13000 | Total Loss 0.005047
+Iter 14000 | Total Loss 0.004860
+Iter 15000 | Total Loss 0.004413
+Iter 16000 | Total Loss 0.003675
+Iter 17000 | Total Loss 0.003246
+Iter 18000 | Total Loss 0.002650
+Iter 19000 | Total Loss 0.002766
+Iter 20000 | Total Loss 0.002587
+Iteration 1
+Iter 1000 | Total Loss 0.051534
+Iter 2000 | Total Loss 0.048913
+Iter 3000 | Total Loss 0.039343
+Iter 4000 | Total Loss 0.031501
+Iter 5000 | Total Loss 0.029135
+Iter 6000 | Total Loss 0.024297
+Iter 7000 | Total Loss 0.019228
+Iter 8000 | Total Loss 0.014965
+Iter 9000 | Total Loss 0.011674
+Iter 10000 | Total Loss 0.008703
+Iter 11000 | Total Loss 0.008376
+Iter 12000 | Total Loss 0.006723
+Iter 13000 | Total Loss 0.004780
+Iter 14000 | Total Loss 0.005067
+Iter 15000 | Total Loss 0.003926
+Iter 16000 | Total Loss 0.003478
+Iter 17000 | Total Loss 0.003199
+Iter 18000 | Total Loss 0.002494
+Iter 19000 | Total Loss 0.002441
+Iter 20000 | Total Loss 0.002524
+Iteration 2
+Iter 1000 | Total Loss 0.055074
+Iter 2000 | Total Loss 0.045162
+Iter 3000 | Total Loss 0.040930
+Iter 4000 | Total Loss 0.035665
+Iter 5000 | Total Loss 0.027517
+Iter 6000 | Total Loss 0.022963
+Iter 7000 | Total Loss 0.017576
+Iter 8000 | Total Loss 0.014662
+Iter 9000 | Total Loss 0.009886
+Iter 10000 | Total Loss 0.009785
+Iter 11000 | Total Loss 0.006788
+Iter 12000 | Total Loss 0.005195
+Iter 13000 | Total Loss 0.005249
+Iter 14000 | Total Loss 0.004573
+Iter 15000 | Total Loss 0.003847
+Iter 16000 | Total Loss 0.003114
+Iter 17000 | Total Loss 0.003059
+Iter 18000 | Total Loss 0.002726
+Iter 19000 | Total Loss 0.002854
+Iter 20000 | Total Loss 0.002332
+Best model: 0
+Treatment effect MAE: (0.12466419725405123, 0.008657868926988015)
+Control Y MAE: 0.11845752596855164
+Gini 0.597 (0.018)
+Ent 1.653 (0.062)
+N Matched 3.210 (0.112)
+MIS 0.165 (0.026)
+Wrong proba 0.197 (0.019)
+Average Training Time: 326.3560103575389
+Std Training Time: 5.8214573389058595

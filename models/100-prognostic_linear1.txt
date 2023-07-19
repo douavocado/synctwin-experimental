@@ -1,0 +1,22 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+Iter 0500 | Total Loss 610.364868
+Iter 1000 | Total Loss 587.015076
+Iter 1500 | Total Loss 603.422363
+Iter 2000 | Total Loss 589.384705
+Iter 2500 | Total Loss 607.648315
+Iter 3000 | Total Loss 589.806641
+Iter 3500 | Total Loss 589.962463
+Iter 4000 | Total Loss 587.744690
+Iter 4500 | Total Loss 614.442017
+Iter 5000 | Total Loss 580.526001
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.066938
+Iter 2000 | Total Loss 0.056698
+Iter 3000 | Total Loss 0.048988
+Iter 4000 | Total Loss 0.040712
+Iter 5000 | Total Loss 0.031400
+Iter 6000 | Total Loss 0.026286
