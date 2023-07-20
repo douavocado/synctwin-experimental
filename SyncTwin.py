@@ -176,34 +176,47 @@ class SyncTwin(nn.Module):
         y_hat = torch.matmul(B_reduced, y_control)
         return torch.sum(((y_batch - y_hat) ** 2) * y_mask.unsqueeze(-1)) / torch.sum(y_mask) * self.lam_prognostic
 
-    def prognostic_loss2(self, y, y_hat, mask, y_pre_hat=None, y_pre_full=None, robust=0):
+    def prognostic_loss2(self, y, y_hat, mask, y_pre_hat=None, y_pre_full=None, robust=0, verbose=False, use_treated=False):
         y, y_hat, mask = self.check_device(y, y_hat, mask)  # pylint: disable=unbalanced-tuple-unpacking
         if robust == 0:
-            err = (y - y_hat) * mask
-            err_mse = torch.sum(err ** 2) / torch.sum(mask)
+            if use_treated:
+                err = (y - y_hat).permute(0,2,1) *(1- mask)
+            else:
+                err = (y - y_hat).permute(0,2,1) * mask
+            err_mse = torch.sum(err ** 2) * self.lam_prognostic / torch.sum(mask)
+            if verbose:
+                print('control post error', err_mse)
         elif robust == 1:
-            err1 = (y - y_hat) * mask
-            err1_mse = torch.sum(err1 ** 2) / torch.sum(mask)
+            err1 = (y - y_hat).permute(0,2,1) * mask
+            err1_mse = torch.sum(err1 ** 2) #/ torch.sum(mask)
             
-            err2 = (y - y_hat) * (1-mask)
-            err2_mse = torch.sum(err2 ** 2) / torch.sum(1-mask)
-            err_mse = (err1_mse + err2_mse)/2
+            err2 = (y - y_hat).permute(0,2,1) * (1-mask)
+            err2_mse = torch.sum(err2 ** 2) #/ torch.sum(1-mask)
+            err_mse = (err1_mse + err2_mse)/torch.sum(torch.ones_like(mask)) * self.lam_prognostic #/2
+            if verbose:
+                print(torch.sum(mask), mask.shape, y.shape)
+                print('control post error', err1_mse/ torch.sum(mask))
+                print('treated post error', err2_mse/ torch.sum(1-mask))
         elif robust == 2:
             assert y_pre_full is not None
             assert y_pre_hat is not None
             y_pre_full, y_pre_hat = self.check_device(y_pre_full, y_pre_hat)
-            err1 = (y - y_hat) * mask
-            err1_mse = torch.sum(err1 ** 2) / torch.sum(mask)
+            err1 = (y - y_hat).permute(0,2,1) * mask
+            err1_mse = torch.sum(err1 ** 2) #/ torch.sum(mask)
             
-            err2 = (y - y_hat) * (1-mask)
-            err2_mse = torch.sum(err2 ** 2) / torch.sum(1-mask)
+            err2 = (y - y_hat).permute(0,2,1) * (1-mask)
+            err2_mse = torch.sum(err2 ** 2) #/ torch.sum(1-mask)
             
             err_pre = torch.sum((y_pre_hat - y_pre_full) ** 2) / torch.sum(torch.ones_like(y_pre_hat))
-            err_mse = (err1_mse + err2_mse + err_pre)/3
+            err_mse = ((err1_mse + err2_mse)/torch.sum(torch.ones_like(mask)) + err_pre) * self.lam_prognostic #/3
+            if verbose:
+                print('control post error', err1_mse/ torch.sum(mask))
+                print('treated post error', err2_mse/ torch.sum(1-mask))
+                print('pre error', err_pre)
         else:
             print("robust levels only accepts 0,1,2")
             raise NotImplementedError()
-        return err_mse * self.lam_prognostic
+        return err_mse
 
     def forward(self, x, t, mask, batch_ind, y_batch, y_control, y_mask):
         (  # pylint: disable=unbalanced-tuple-unpacking

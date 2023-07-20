@@ -93,6 +93,7 @@ def pre_train_reconstruction_prognostic_loss(
     model_path="models/sync/{}.pth",
     batch_size=None,
     robust=0,
+    use_treated=False,
 ):
     if x_full_val is None:
         x_full_val = x_full
@@ -141,7 +142,7 @@ def pre_train_reconstruction_prognostic_loss(
         # print("y_hat shape", y_hat.shape)
         # print("y mask", y_mask)
         # raise Exception('debug stop')
-        loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask, y_pre_hat=y_pre_hat, y_pre_full=y_pre, robust=robust)
+        loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask, y_pre_hat=y_pre_hat, y_pre_full=y_pre, robust=robust, use_treated=use_treated)
 
         loss = loss_X + loss_Y
         loss.backward()
@@ -155,7 +156,7 @@ def pre_train_reconstruction_prognostic_loss(
                     loss_X = nsc.reconstruction_loss(x_full_val, x_hat, mask_full_val)
 
                     y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_val, mask_full_val, robust=robust)
-                    loss_Y = nsc.prognostic_loss2(y_full_val, y_hat, y_mask_full_val,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_val, robust=robust)
+                    loss_Y = nsc.prognostic_loss2(y_full_val, y_hat, y_mask_full_val,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_val, robust=robust, verbose=True, use_treated=use_treated)
 
                     loss = loss_X + loss_Y
                 else:
@@ -180,7 +181,7 @@ def pre_train_reconstruction_prognostic_loss(
                         loss_X += nsc.reconstruction_loss(x_full_vb, x_hat, mask_full_vb)
 
                         y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_vb, mask_full_vb, robust=robust)
-                        loss_Y += nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust)
+                        loss_Y += nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust, verbose=True, use_treated=use_treated)
 
                     loss = loss_X + loss_Y
                 print("Iter {:04d} | Total Loss {:.6f}".format(itr, loss.item()))
@@ -192,7 +193,8 @@ def pre_train_reconstruction_prognostic_loss(
                     torch.save(enc.state_dict(), model_path.format("encoder.pth"))
                     torch.save(dec.state_dict(), model_path.format("decoder.pth"))
                     torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
-                    torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+                    if robust == 2:
+                        torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     return best_loss
 
 

@@ -26,7 +26,7 @@ parser.add_argument("--tau", type=str, default="1")
 parser.add_argument("--n_hidden", type=str, default="20")
 parser.add_argument("--sim_id", type=str)
 parser.add_argument("--regular", type=str, choices=["False", "True"], default="True")
-parser.add_argument("--robustness", type=str, choices=["0", "1", "2"], default="0")
+parser.add_argument("--robustness", type=str, choices=["0", "1", "2", "3"], default="0")
 parser.add_argument("--lasso", type=str, choices=["False", "True"], default="False")
 
 
@@ -300,7 +300,7 @@ for i in range(itr):
         pre_decoder_Y=pre_dec_Y,
     )
     train_utils.load_pre_train_and_init(
-        nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path, init_decoder_Y=pretrain_Y
+        nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path, init_decoder_Y=pretrain_Y, init_pre_dec_Y=robustness==2,
     )
     if not use_lasso:
         return_code = train_utils.train_B_self_expressive(
