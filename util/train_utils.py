@@ -116,7 +116,7 @@ def pre_train_reconstruction_prognostic_loss(
 
     y_mask_full = torch.stack([y_mask_full] * dec_Y.max_seq_len, dim=0).unsqueeze(-1)
 
-    test_freq = 500
+    test_freq = 100
 
     best_loss = 1e9
 
@@ -159,7 +159,8 @@ def pre_train_reconstruction_prognostic_loss(
 
                     loss = loss_X + loss_Y
                 else:
-                    loss = 0
+                    loss_X = 0
+                    loss_Y = 0
                     n_fold = x_full_val.shape[1] // 500
 
                     for fold in range(n_fold):
@@ -176,13 +177,15 @@ def pre_train_reconstruction_prognostic_loss(
 
                         C = nsc.get_representation(x_full_vb, t_full_vb, mask_full_vb)
                         x_hat = nsc.get_reconstruction(C, t_full_vb, mask_full_vb)
-                        loss_X = nsc.reconstruction_loss(x_full_vb, x_hat, mask_full_vb)
+                        loss_X += nsc.reconstruction_loss(x_full_vb, x_hat, mask_full_vb)
 
                         y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_vb, mask_full_vb, robust=robust)
-                        loss_Y = nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust)
+                        loss_Y += nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust)
 
-                        loss = loss_X + loss_Y + loss
+                    loss = loss_X + loss_Y
                 print("Iter {:04d} | Total Loss {:.6f}".format(itr, loss.item()))
+                print("Iter {:04d} | Reconstruction Loss {:.6f}".format(itr, loss_X.item()))
+                print("Iter {:04d} | Supervised Loss {:.6f}".format(itr, loss_Y.item()))
                 if loss < best_loss:
                     best_loss = loss
 
