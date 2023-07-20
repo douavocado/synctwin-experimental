@@ -191,6 +191,7 @@ class SyncTwin(nn.Module):
         elif robust == 2:
             assert y_pre_full is not None
             assert y_pre_hat is not None
+            y_pre_full, y_pre_hat = self.check_device(y_pre_full, y_pre_hat)
             err1 = (y - y_hat) * mask
             err1_mse = torch.sum(err1 ** 2) / torch.sum(mask)
             

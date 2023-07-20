@@ -323,7 +323,7 @@ for i in range(itr):
     train_utils.load_nsc(nsc, x_full, t_full, mask_full, batch_ind_full, model_path=model_path_save)
 
     effect_est, y_hat = eval_utils.get_treatment_effect(nsc, batch_ind_full, y_full, y_control)
-    control_error = torch.mean(torch.abs(y_control - y_hat[:, :control_sample, :])).item()
+    control_error = torch.mean(torch.abs(y_control - y_hat[:, :control_sample, :].cpu())).item()
     control_error_list.append(control_error)
 
 control_error = np.array(control_error_list)
@@ -336,8 +336,8 @@ torch.save(nsc.state_dict(), best_model_path.format("nsc.pth"))
 
 # evaluating best model
 effect_est, y_hat = eval_utils.get_treatment_effect(nsc, batch_ind_full, y_full, y_control)
-mae_effect = torch.mean(torch.abs(treatment_effect - effect_est)).item()
-mae_sd = torch.std(torch.abs(treatment_effect - effect_est)).item() / np.sqrt(n_treated)
+mae_effect = torch.mean(torch.abs(treatment_effect - effect_est.cpu())).item()
+mae_sd = torch.std(torch.abs(treatment_effect - effect_est.cpu())).item() / np.sqrt(n_treated)
 print("Best model: {}".format(str(best_itr)))
 print("Treatment effect MAE: ({}, {})".format(mae_effect, mae_sd))
 print("Control Y MAE: {}".format(np.min(control_error)))

@@ -45,7 +45,7 @@ def get_treatment_effect(nsc, batch_ind_full, y_full, y_control, itr=500):
                 B_reduced = nsc.lasso_classifier
             else:
                 B_reduced = nsc.get_B_reduced(batch_ind_full)
-            y_hat = torch.matmul(B_reduced, y_control)
+            y_hat = torch.matmul(B_reduced.to(nsc.device), y_control)
             if torch.sum(torch.isinf(y_hat)).item() == 0:
                 y_hat_list.append(y_hat)
 
