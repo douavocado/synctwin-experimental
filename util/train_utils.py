@@ -133,6 +133,8 @@ def pre_train_reconstruction_prognostic_loss(
             x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
 
         C = nsc.get_representation(x, t, mask)
+        print('C shape', C.shape)
+        print('x shape', x.shape)
         x_hat = nsc.get_reconstruction(C, t, mask)
         loss_X = nsc.reconstruction_loss(x, x_hat, mask)
         
@@ -195,6 +197,168 @@ def pre_train_reconstruction_prognostic_loss(
                     torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
                     if robust == 2:
                         torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+    return best_loss
+
+def pre_train_reconstruction_prognostic_loss_linear_helper(
+    nsc,
+    x_full,
+    t_full,
+    mask_full,
+    y_full,
+    y_mask_full,
+    x_full_val=None,
+    t_full_val=None,
+    mask_full_val=None,
+    y_full_val=None,
+    y_mask_full_val=None,
+    y_pre_full=None,
+    y_pre_full_val=None,
+    niters=5000,
+    model_path="models/sync/{}.pth",
+    batch_size=None,
+    robust=0,
+    use_treated=False,
+    linear_helper=None,
+    lam_helper=1.0,
+    itr_phase1=100,
+    itr_phase2=50,
+):
+    
+    # this function used only with combination of linear helper
+    assert linear_helper is not None
+    
+    if x_full_val is None:
+        x_full_val = x_full
+        t_full_val = t_full
+        mask_full_val = mask_full
+        y_full_val = y_full
+        y_mask_full_val = y_mask_full
+
+    enc = nsc.encoder
+    dec = nsc.decoder
+    
+    assert nsc.decoder_Y is not None
+    dec_Y = nsc.decoder_Y
+    if robust == 2:
+        assert nsc.pre_decoder_Y is not None
+        pre_dec_Y = nsc.pre_decoder_Y
+
+        optimizer1 = optim.Adam(list(dec.parameters()) + list(enc.parameters()) + list(dec_Y.parameters()) + list(pre_dec_Y.parameters()))
+    else:
+        optimizer1 = optim.Adam(list(dec.parameters()) + list(enc.parameters()) + list(dec_Y.parameters()))
+    
+    optimizer2 = optim.Adam(list(linear_helper.parameters()),lr=0.0001)
+    
+
+    y_mask_full = torch.stack([y_mask_full], dim=0).unsqueeze(-1)
+
+    best_loss = 1e9
+    torch.save(enc.state_dict(), model_path.format("encoder.pth"))
+    torch.save(dec.state_dict(), model_path.format("decoder.pth"))
+    torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+    if robust == 2:
+        torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+    for over_itr in range(1, niters//itr_phase1 + 1):
+        # first train the encoder/ decoder keeping linear helper as fixed
+        for itr1 in range(1, itr_phase1 + 1):
+           
+            optimizer1.zero_grad()
+            if batch_size is not None:
+                x, t, mask, y, y_mask, y_pre = batching.get_batch_standard(  # pylint: disable=unbalanced-tuple-unpacking
+                    batch_size, x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
+                )
+                y_mask = y_mask[0,:,0]
+            else:
+                x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
+
+            C = nsc.get_representation(x, t, mask)
+            x_hat = nsc.get_reconstruction(C, t, mask)
+            loss_X = nsc.reconstruction_loss(x, x_hat, mask)
+            
+            y_hat, y_pre_hat = nsc.get_prognostics(C, t, mask, robust=robust)
+            
+            
+            loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask, y_pre_hat=y_pre_hat, y_pre_full=y_pre, robust=robust, use_treated=use_treated, verbose=False)
+
+            errZ = (nsc.decoder(linear_helper(x,t,mask),t,mask) - x)*mask
+            loss_Z = torch.sum(errZ**2) / torch.sum(mask)
+
+            loss1 = loss_X + loss_Y + loss_Z
+            loss1.backward()
+            optimizer1.step()
+        
+        total_itr = (over_itr-1)*itr_phase1 + itr1
+        
+        print("Iter {:04d} | Training Total Loss {:.6f}".format(total_itr, loss1.item()))
+        print("Iter {:04d} | Training Reconstruction Loss {:.6f}".format(total_itr, loss_X.item()))
+        print("Iter {:04d} | Training Supervised Loss {:.6f}".format(total_itr, loss_Y.item()))
+        print("Iter {:04d} | Training Helper Loss {:.6f}".format(total_itr, loss_Z.item()))
+
+        # now train linear helper
+        for itr2 in range(1, itr_phase2 + 1):
+            optimizer2.zero_grad()
+            if batch_size is not None:
+                x, t, mask, y, y_mask, y_pre = batching.get_batch_standard(  # pylint: disable=unbalanced-tuple-unpacking
+                    batch_size, x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
+                )
+            else:
+                x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
+
+            C = nsc.get_representation(x, t, mask)
+            loss2 = torch.sum((linear_helper(x,t,mask) - C)**2)
+            loss2.backward()
+            optimizer2.step()
+
+        print("Iter {:04d} | Training Linear Helper Loss {:.6f}".format(total_itr, loss2.item()))
+
+        # evaluating on validation set
+
+        with torch.no_grad():
+            if x_full_val.shape[1] < 5000:
+                C = nsc.get_representation(x_full_val, t_full_val, mask_full_val)
+                x_hat = nsc.get_reconstruction(C, t_full_val, mask_full_val)
+                loss_X = nsc.reconstruction_loss(x_full_val, x_hat, mask_full_val)
+
+                y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_val, mask_full_val, robust=robust)
+                loss_Y = nsc.prognostic_loss2(y_full_val, y_hat, y_mask_full_val,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_val, robust=robust, verbose=True, use_treated=use_treated)
+
+                loss = loss_X + loss_Y
+            else:
+                loss_X = 0
+                loss_Y = 0
+                n_fold = x_full_val.shape[1] // 500
+
+                for fold in range(n_fold):
+                    (  # pylint: disable=unbalanced-tuple-unpacking
+                        x_full_vb,
+                        t_full_vb,
+                        mask_full_vb,
+                        y_full_vb,
+                        y_mask_full_vb,
+                        y_pre_full_vb,
+                    ) = batching.get_folds(
+                        fold, n_fold, x_full_val, t_full_val, mask_full_val, y_full_val, y_mask_full_val, y_pre_full_val,
+                    )
+
+                    C = nsc.get_representation(x_full_vb, t_full_vb, mask_full_vb)
+                    x_hat = nsc.get_reconstruction(C, t_full_vb, mask_full_vb)
+                    loss_X += nsc.reconstruction_loss(x_full_vb, x_hat, mask_full_vb)
+
+                    y_hat, y_pre_hat = nsc.get_prognostics(C, t_full_vb, mask_full_vb, robust=robust)
+                    loss_Y += nsc.prognostic_loss2(y_full_vb, y_hat, y_mask_full_vb,y_pre_hat=y_pre_hat, y_pre_full=y_pre_full_vb,robust=robust, verbose=True, use_treated=use_treated)
+
+                loss = loss_X + loss_Y
+            print("Iter {:04d} | Validation Total Loss {:.6f}".format(total_itr, loss.item()))
+            print("Iter {:04d} | Validation Reconstruction Loss {:.6f}".format(total_itr, loss_X.item()))
+            print("Iter {:04d} | Validation Supervised Loss {:.6f}".format(total_itr, loss_Y.item()))
+            if loss < best_loss:
+                best_loss = loss
+
+                torch.save(enc.state_dict(), model_path.format("encoder.pth"))
+                torch.save(dec.state_dict(), model_path.format("decoder.pth"))
+                torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+                if robust == 2:
+                    torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     return best_loss
 
 

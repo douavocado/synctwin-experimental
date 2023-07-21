@@ -28,7 +28,7 @@ parser.add_argument("--sim_id", type=str)
 parser.add_argument("--regular", type=str, choices=["False", "True"], default="True")
 parser.add_argument("--robustness", type=str, choices=["0", "1", "2", "3"], default="0")
 parser.add_argument("--lasso", type=str, choices=["False", "True"], default="False")
-
+parser.add_argument("--helper", type=str, choices=["False", "True"], default="False")
 
 args = parser.parse_args()
 seed = int(args.seed)
@@ -50,6 +50,7 @@ if not regular:
     n_hidden = n_hidden * 2
 robustness = int(args.robustness)
 use_lasso = args.lasso == "True"
+use_helper = args.helper == "True"
 
 print("Running simulation with seed {}".format(seed))
 numpy.random.seed(seed)
@@ -130,6 +131,12 @@ for i in range(itr):
         dec_Y = None
         pre_dec_Y = None
 
+    if use_helper:
+        if regular:
+            linear_helper = SyncTwin.LinearHelper(x_full.shape[-1]*x_full.shape[0], 2*n_hidden)
+        else:
+            linear_helper = SyncTwin.LinearHelper(x_full.shape[-1]*x_full.shape[0], n_hidden)
+
     nsc = SyncTwin.SyncTwin(
         n_units,
         n_treated,
@@ -160,25 +167,48 @@ for i in range(itr):
             batch_size=batch_size,
         )
     else:
-        train_utils.pre_train_reconstruction_prognostic_loss(
-            nsc,
-            x_full,
-            t_full,
-            mask_full,
-            y_full,
-            y_mask_full,
-            x_full_val,
-            t_full_val,
-            mask_full_val,
-            y_full_val,
-            y_mask_full_val,
-            y_pre_full,
-            y_pre_full_val,
-            niters=itr_pretrain,
-            model_path=model_path,
-            batch_size=batch_size,
-            robust=robustness
-        )
+        if not use_helper:
+            train_utils.pre_train_reconstruction_prognostic_loss(
+                nsc,
+                x_full,
+                t_full,
+                mask_full,
+                y_full,
+                y_mask_full,
+                x_full_val,
+                t_full_val,
+                mask_full_val,
+                y_full_val,
+                y_mask_full_val,
+                y_pre_full,
+                y_pre_full_val,
+                niters=itr_pretrain,
+                model_path=model_path,
+                batch_size=batch_size,
+                robust=robustness,
+            )
+        else:
+            
+            train_utils.pre_train_reconstruction_prognostic_loss_linear_helper(
+                nsc,
+                x_full,
+                t_full,
+                mask_full,
+                y_full,
+                y_mask_full,
+                x_full_val,
+                t_full_val,
+                mask_full_val,
+                y_full_val,
+                y_mask_full_val,
+                y_pre_full,
+                y_pre_full_val,
+                niters=itr_pretrain,
+                model_path=model_path,
+                batch_size=batch_size,
+                robust=robustness,
+                linear_helper=linear_helper,
+            )
 
     if not reduced_fine_tune:
         return_code = train_utils.train_all_losses(

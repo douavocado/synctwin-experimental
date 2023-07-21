@@ -3,11 +3,12 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
+from scipy.interpolate import CubicSpline
 
 import GRUD
 from config import D_TYPE, DEVICE
 
-WRAP_INDEX_ON = False  # To run old code set WRAP_INDEX_ON to True, otherwise keep this as False.
+WRAP_INDEX_ON = True  # To run old code set WRAP_INDEX_ON to True, otherwise keep this as False.
 
 
 # former NSC
@@ -384,5 +385,23 @@ class LinearDecoder(nn.Module):
         # C: B, Dh -> B, T
         out = self.lin(C)  # pylint: disable=not-callable
         out = out.T.unsqueeze(-1)
+
+        return out
+
+
+class LinearHelper(nn.Module):
+    def __init__(self, input_dim, output_dim, samples_taken=25, device=DEVICE):
+        super(LinearHelper, self).__init__()
+        self.device = device
+        self.lin = nn.Linear(input_dim, output_dim).to(device)
+        self.samples_taken = samples_taken
+
+    def forward(self, x, t, mask):
+        # C: B, Dh -> B, T
+        # temporary implementation for cubic spline interpolation
+        # since generated data is already of nice form
+        x = x.permute(1,0,2)
+        x = torch.flatten(x, start_dim=1)
+        out = self.lin(x)  # pylint: disable=not-callable
 
         return out
