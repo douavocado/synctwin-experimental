@@ -105,10 +105,10 @@ for i in range(itr):
     model_path = base_path_model + "/itr-" + str(i) + "-{}.pth"
 
     if regular:
-        enc = SyncTwin.RegularEncoder(input_dim=3, hidden_dim=n_hidden)
+        enc = SyncTwin.RegularEncoder(input_dim=x_full.shape[-1], hidden_dim=n_hidden)
         dec = SyncTwin.RegularDecoder(hidden_dim=enc.hidden_dim, output_dim=enc.input_dim, max_seq_len=train_step)
     else:
-        enc = SyncTwin.GRUDEncoder(input_dim=3, hidden_dim=n_hidden)
+        enc = SyncTwin.GRUDEncoder(input_dim=x_full.shape[-1], hidden_dim=n_hidden)
         dec = SyncTwin.LSTMTimeDecoder(hidden_dim=enc.hidden_dim, output_dim=enc.input_dim, max_seq_len=train_step)
 
     if pretrain_Y:
@@ -241,10 +241,10 @@ best_itr = np.argmin(control_error)
 
 model_path = base_path_model + "/itr-" + str(best_itr) + "-{}.pth"
 if regular:
-    enc = SyncTwin.RegularEncoder(input_dim=3, hidden_dim=n_hidden)
+    enc = SyncTwin.RegularEncoder(input_dim=x_full.shape[-1], hidden_dim=n_hidden)
     dec = SyncTwin.RegularDecoder(hidden_dim=enc.hidden_dim, output_dim=enc.input_dim, max_seq_len=train_step)
 else:
-    enc = SyncTwin.GRUDEncoder(input_dim=3, hidden_dim=n_hidden)
+    enc = SyncTwin.GRUDEncoder(input_dim=x_full.shape[-1], hidden_dim=n_hidden)
     dec = SyncTwin.LSTMTimeDecoder(hidden_dim=enc.hidden_dim, output_dim=enc.input_dim, max_seq_len=train_step)
 if pretrain_Y:
     if not linear_decoder:

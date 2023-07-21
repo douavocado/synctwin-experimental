@@ -154,7 +154,8 @@ def get_covariate(
 
     pretreatment_time = train_step
 
-    x_full = covariates[:pretreatment_time, :, :]
+    #x_full = covariates[:pretreatment_time, :, :]
+    x_full = covariates[:pretreatment_time, :, :2]
     if hidden_confounder == 1:
         x_full[:, :, 0] = 0
     if hidden_confounder == 2:

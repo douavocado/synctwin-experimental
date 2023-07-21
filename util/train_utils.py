@@ -104,7 +104,7 @@ def pre_train_reconstruction_prognostic_loss(
 
     enc = nsc.encoder
     dec = nsc.decoder
-
+    
     assert nsc.decoder_Y is not None
     dec_Y = nsc.decoder_Y
     if robust == 2:
