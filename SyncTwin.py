@@ -114,6 +114,7 @@ class SyncTwin(nn.Module):
 
         # B * N0
         batch_index = torch.stack([batch_ind] * self.n_unit, dim=-1)
+        #print('batch_index shape', batch_index.shape, self.n_unit, self.B.shape)
         B_reduced = torch.gather(self.B, 0, batch_index)
 
         # create mask for self

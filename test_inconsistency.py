@@ -8,17 +8,15 @@ Created on Thu Jul 20 15:25:09 2023
 
 # Quantifying the discrepancies between differently trained on counterfactuals
 # provided by the Synctwin paper
-import time
 
 import numpy as np
 import numpy.random
-import torch
 from scipy.spatial import procrustes
 
 import SyncTwin
 
 # from config import DEVICE
-from util import eval_utils, io_utils, train_utils
+from util import io_utils, train_utils
 
 seed = 100
 pretrain_Y = True

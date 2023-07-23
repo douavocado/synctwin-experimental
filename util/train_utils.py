@@ -444,8 +444,9 @@ def load_pre_train_and_init(
         nsc.update_C0(C, batch_ind_full)
 
 
-def load_nsc(nsc, x_full, t_full, mask_full, batch_ind_full, model_path="models/sync/{}.pth"):
-    nsc.load_state_dict(torch.load(model_path.format("nsc.pth")))
+def load_nsc(nsc, x_full, t_full, mask_full, batch_ind_full, model_path="models/sync/{}.pth", load_B=True):
+    if load_B:
+        nsc.load_state_dict(torch.load(model_path.format("nsc.pth")))
     with torch.no_grad():
         C = nsc.get_representation(x_full, t_full, mask_full)
         nsc.update_C0(C, batch_ind_full)
@@ -505,7 +506,8 @@ def train_B_self_expressive_lasso(
     niters=20000,
     lr=1e-3,
     test_freq=1000,
-    alpha=.01
+    alpha=.01,
+    calculate_loss=True,
 ):
     clf = linear_model.Lasso(alpha=alpha, fit_intercept=False,max_iter=10000)
 
@@ -526,13 +528,13 @@ def train_B_self_expressive_lasso(
         #print(torch.count_nonzero(B_reduced))
         #raise Exception('stop')
     
+        if calculate_loss:
+            loss = nsc.self_expressive_loss(C, B_reduced)
     
-        loss = nsc.self_expressive_loss(C, B_reduced)
-
-
-        print("After Lasso procedure | Total Loss {:.6f}".format(loss.item()))
-        if np.isnan(loss.item()):
-            return [1,None]
+    
+            print("After Lasso procedure | Total Loss {:.6f}".format(loss.item()))
+            if np.isnan(loss.item()):
+                return [1,None]
     return [0, B_reduced]
 
 
