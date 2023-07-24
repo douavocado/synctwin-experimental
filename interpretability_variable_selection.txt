@@ -1,2 +1,19 @@
-20+20 selection, 2-4
-robust_0, no lasso, no helper: 0.08183333333333334
+20+20 selection, 2-4 interp, n_hidden 20
+robust_0: 0.08183333333333334
+robust_1: 0.10250000000000002
+robust_2: 0.08800000000000001
+
+robust_2, lasso, helper: 0.20382380952380885
+robust_1, lasso, helper: 0.2051293650793644
+robust_0, lasso, helper: 0.2130690476190472
+
+robust_0, lasso: 0.21485357142857103
+robust_1, lasso: 0.2042214285714281
+robust_2, lasso: 0.20840634920634876
+
+robust_2, helper: 0.11969047619047618
+robust_1, helper: 0.11959523809523809
+robust_0, helper: 0.0930952380952381
+
+20+20 selection, 2-4 extrap, n_hidden 20
+robust_0: 0.10116666666666667

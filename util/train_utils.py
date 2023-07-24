@@ -464,6 +464,7 @@ def train_B_self_expressive(
     batch_size=None,
     lr=1e-3,
     test_freq=1000,
+    verbose=True,
 ):
 
     # mini-batch training not implemented
@@ -489,7 +490,8 @@ def train_B_self_expressive(
 
         if itr % test_freq == 0:
             with torch.no_grad():
-                print("Iter {:04d} | Total Loss {:.6f}".format(itr, loss.item()))
+                if verbose:
+                    print("Iter {:04d} | Total Loss {:.6f}".format(itr, loss.item()))
                 if np.isnan(loss.item()):
                     return 1
                 if loss < best_loss:
@@ -513,7 +515,7 @@ def train_B_self_expressive_lasso(
 
     with torch.no_grad():
         C = nsc.get_representation(x_full, t_full, mask_full)
-
+        nsc.update_C0(C, batch_ind_full)
         #print('C0:', nsc.C0.shape)
         #print('C', C.shape)
         
