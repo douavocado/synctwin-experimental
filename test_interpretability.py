@@ -92,7 +92,7 @@ simulated_itr = 100
 # robustness = 0
 # use_lasso = True
 # helper = False
-for extrapolate in [False, True]:
+for extrapolate in [True]:
     for small_sample_size in [10,20,40]:
         for use_lasso in [True, False]:
             for helper in [True, False]:
