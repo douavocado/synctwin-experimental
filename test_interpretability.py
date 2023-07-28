@@ -58,7 +58,7 @@ regular = True
 #     n_hidden = n_hidden * 2
 n_hidden=20
 
-results_file = 'interpretability_results.txt'
+results_file = 'interpretability_results_low_sample.txt'
 
 #loading config and data
 base_path_data = "data/{}-seed-".format(sim_id) + str(seed)
@@ -85,16 +85,16 @@ n_units, n_treated, n_units_total, step, train_step, control_sample, noise, n_ba
 
 
 
-simulated_itr = 100
+simulated_itr = 1000
 
 # small_sample_size = 20
 # extrapolate = True
 # robustness = 0
 # use_lasso = True
 # helper = False
-for extrapolate in [True]:
-    for small_sample_size in [10,20,40]:
-        for use_lasso in [True, False]:
+for extrapolate in [False, True]:
+    for small_sample_size in [5,10,15]:
+        for use_lasso in [True]:
             for helper in [True, False]:
                 for robustness in [0,1,2]:                
                     parameter_str = 'sample_size: ' + str(small_sample_size)+ ', extrapolate: ' + str(extrapolate) + ', ' + 'robust: ' + str(robustness) + ', lasso: ' + str(use_lasso) + ', helper: ' + str(helper) + '\n'

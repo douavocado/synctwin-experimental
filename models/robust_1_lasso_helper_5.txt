@@ -1,0 +1,682 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+Iter 0100 | Training Total Loss 65.750290
+Iter 0100 | Training Reconstruction Loss 34.567513
+Iter 0100 | Training Supervised Loss 7.030631
+Iter 0100 | Training Helper Loss 24.152145
+Iter 0100 | Training Linear Helper Loss 349.178070
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(10.3573)
+treated post error tensor(6.4683)
+Iter 0100 | Validation Total Loss 46.833473
+Iter 0100 | Validation Reconstruction Loss 38.420666
+Iter 0100 | Validation Supervised Loss 8.412808
+Iter 0200 | Training Total Loss 41.682945
+Iter 0200 | Training Reconstruction Loss 20.740219
+Iter 0200 | Training Supervised Loss 5.205731
+Iter 0200 | Training Helper Loss 15.736998
+Iter 0200 | Training Linear Helper Loss 248.982758
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(6.7620)
+treated post error tensor(3.0230)
+Iter 0200 | Validation Total Loss 26.972759
+Iter 0200 | Validation Reconstruction Loss 22.080221
+Iter 0200 | Validation Supervised Loss 4.892537
+Iter 0300 | Training Total Loss 21.326330
+Iter 0300 | Training Reconstruction Loss 10.581442
+Iter 0300 | Training Supervised Loss 2.882376
+Iter 0300 | Training Helper Loss 7.862512
+Iter 0300 | Training Linear Helper Loss 162.000412
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(4.3260)
+treated post error tensor(1.4157)
+Iter 0300 | Validation Total Loss 20.166220
+Iter 0300 | Validation Reconstruction Loss 17.295376
+Iter 0300 | Validation Supervised Loss 2.870843
+Iter 0400 | Training Total Loss 19.297501
+Iter 0400 | Training Reconstruction Loss 9.485699
+Iter 0400 | Training Supervised Loss 2.824047
+Iter 0400 | Training Helper Loss 6.987754
+Iter 0400 | Training Linear Helper Loss 142.188416
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(3.2336)
+treated post error tensor(1.0151)
+Iter 0400 | Validation Total Loss 14.193243
+Iter 0400 | Validation Reconstruction Loss 12.068924
+Iter 0400 | Validation Supervised Loss 2.124319
+Iter 0500 | Training Total Loss 10.151232
+Iter 0500 | Training Reconstruction Loss 4.636561
+Iter 0500 | Training Supervised Loss 1.351311
+Iter 0500 | Training Helper Loss 4.163360
+Iter 0500 | Training Linear Helper Loss 106.286011
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(2.5480)
+treated post error tensor(0.8288)
+Iter 0500 | Validation Total Loss 8.407982
+Iter 0500 | Validation Reconstruction Loss 6.719615
+Iter 0500 | Validation Supervised Loss 1.688367
+Iter 0600 | Training Total Loss 10.318382
+Iter 0600 | Training Reconstruction Loss 4.772688
+Iter 0600 | Training Supervised Loss 1.283520
+Iter 0600 | Training Helper Loss 4.262175
+Iter 0600 | Training Linear Helper Loss 94.849251
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(2.2414)
+treated post error tensor(0.7698)
+Iter 0600 | Validation Total Loss 6.652958
+Iter 0600 | Validation Reconstruction Loss 5.147387
+Iter 0600 | Validation Supervised Loss 1.505571
+Iter 0700 | Training Total Loss 7.285749
+Iter 0700 | Training Reconstruction Loss 3.323625
+Iter 0700 | Training Supervised Loss 0.736401
+Iter 0700 | Training Helper Loss 3.225724
+Iter 0700 | Training Linear Helper Loss 94.357941
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(2.0125)
+treated post error tensor(0.7128)
+Iter 0700 | Validation Total Loss 5.541099
+Iter 0700 | Validation Reconstruction Loss 4.178447
+Iter 0700 | Validation Supervised Loss 1.362652
+Iter 0800 | Training Total Loss 7.322057
+Iter 0800 | Training Reconstruction Loss 3.018334
+Iter 0800 | Training Supervised Loss 1.636510
+Iter 0800 | Training Helper Loss 2.667213
+Iter 0800 | Training Linear Helper Loss 78.463646
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.8373)
+treated post error tensor(0.6276)
+Iter 0800 | Validation Total Loss 4.797242
+Iter 0800 | Validation Reconstruction Loss 3.564808
+Iter 0800 | Validation Supervised Loss 1.232434
+Iter 0900 | Training Total Loss 7.318581
+Iter 0900 | Training Reconstruction Loss 3.113302
+Iter 0900 | Training Supervised Loss 1.008877
+Iter 0900 | Training Helper Loss 3.196402
+Iter 0900 | Training Linear Helper Loss 76.843979
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.6383)
+treated post error tensor(0.6095)
+Iter 0900 | Validation Total Loss 4.266200
+Iter 0900 | Validation Reconstruction Loss 3.142294
+Iter 0900 | Validation Supervised Loss 1.123906
+Iter 1000 | Training Total Loss 5.908934
+Iter 1000 | Training Reconstruction Loss 2.472848
+Iter 1000 | Training Supervised Loss 0.717399
+Iter 1000 | Training Helper Loss 2.718687
+Iter 1000 | Training Linear Helper Loss 75.740601
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.5267)
+treated post error tensor(0.5532)
+Iter 1000 | Validation Total Loss 3.850536
+Iter 1000 | Validation Reconstruction Loss 2.810578
+Iter 1000 | Validation Supervised Loss 1.039958
+Iter 1100 | Training Total Loss 5.433594
+Iter 1100 | Training Reconstruction Loss 2.319618
+Iter 1100 | Training Supervised Loss 0.598002
+Iter 1100 | Training Helper Loss 2.515975
+Iter 1100 | Training Linear Helper Loss 67.496101
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.3905)
+treated post error tensor(0.5379)
+Iter 1100 | Validation Total Loss 3.549010
+Iter 1100 | Validation Reconstruction Loss 2.584780
+Iter 1100 | Validation Supervised Loss 0.964230
+Iter 1200 | Training Total Loss 3.754417
+Iter 1200 | Training Reconstruction Loss 1.433839
+Iter 1200 | Training Supervised Loss 0.490032
+Iter 1200 | Training Helper Loss 1.830546
+Iter 1200 | Training Linear Helper Loss 68.856003
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.2913)
+treated post error tensor(0.5319)
+Iter 1200 | Validation Total Loss 3.282923
+Iter 1200 | Validation Reconstruction Loss 2.371313
+Iter 1200 | Validation Supervised Loss 0.911609
+Iter 1300 | Training Total Loss 3.935344
+Iter 1300 | Training Reconstruction Loss 1.482368
+Iter 1300 | Training Supervised Loss 0.576104
+Iter 1300 | Training Helper Loss 1.876872
+Iter 1300 | Training Linear Helper Loss 64.237274
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.2679)
+treated post error tensor(0.5012)
+Iter 1300 | Validation Total Loss 3.041019
+Iter 1300 | Validation Reconstruction Loss 2.156458
+Iter 1300 | Validation Supervised Loss 0.884561
+Iter 1400 | Training Total Loss 5.288997
+Iter 1400 | Training Reconstruction Loss 2.001329
+Iter 1400 | Training Supervised Loss 0.784685
+Iter 1400 | Training Helper Loss 2.502982
+Iter 1400 | Training Linear Helper Loss 64.240112
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.1720)
+treated post error tensor(0.5122)
+Iter 1400 | Validation Total Loss 2.821730
+Iter 1400 | Validation Reconstruction Loss 1.979642
+Iter 1400 | Validation Supervised Loss 0.842087
+Iter 1500 | Training Total Loss 3.260172
+Iter 1500 | Training Reconstruction Loss 1.088088
+Iter 1500 | Training Supervised Loss 0.665261
+Iter 1500 | Training Helper Loss 1.506823
+Iter 1500 | Training Linear Helper Loss 66.545868
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.1473)
+treated post error tensor(0.4735)
+Iter 1500 | Validation Total Loss 2.616211
+Iter 1500 | Validation Reconstruction Loss 1.805809
+Iter 1500 | Validation Supervised Loss 0.810403
+Iter 1600 | Training Total Loss 4.297651
+Iter 1600 | Training Reconstruction Loss 1.487103
+Iter 1600 | Training Supervised Loss 0.760768
+Iter 1600 | Training Helper Loss 2.049780
+Iter 1600 | Training Linear Helper Loss 62.040710
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.1011)
+treated post error tensor(0.4683)
+Iter 1600 | Validation Total Loss 2.441352
+Iter 1600 | Validation Reconstruction Loss 1.656617
+Iter 1600 | Validation Supervised Loss 0.784735
+Iter 1700 | Training Total Loss 3.362268
+Iter 1700 | Training Reconstruction Loss 1.092650
+Iter 1700 | Training Supervised Loss 0.570273
+Iter 1700 | Training Helper Loss 1.699345
+Iter 1700 | Training Linear Helper Loss 62.210823
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.0447)
+treated post error tensor(0.4972)
+Iter 1700 | Validation Total Loss 2.288375
+Iter 1700 | Validation Reconstruction Loss 1.517422
+Iter 1700 | Validation Supervised Loss 0.770954
+Iter 1800 | Training Total Loss 4.193330
+Iter 1800 | Training Reconstruction Loss 1.433193
+Iter 1800 | Training Supervised Loss 0.991086
+Iter 1800 | Training Helper Loss 1.769051
+Iter 1800 | Training Linear Helper Loss 60.000332
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9889)
+treated post error tensor(0.4927)
+Iter 1800 | Validation Total Loss 2.164584
+Iter 1800 | Validation Reconstruction Loss 1.423790
+Iter 1800 | Validation Supervised Loss 0.740794
+Iter 1900 | Training Total Loss 3.566920
+Iter 1900 | Training Reconstruction Loss 1.210510
+Iter 1900 | Training Supervised Loss 0.597240
+Iter 1900 | Training Helper Loss 1.759170
+Iter 1900 | Training Linear Helper Loss 59.819637
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9785)
+treated post error tensor(0.4765)
+Iter 1900 | Validation Total Loss 2.036903
+Iter 1900 | Validation Reconstruction Loss 1.309404
+Iter 1900 | Validation Supervised Loss 0.727500
+Iter 2000 | Training Total Loss 3.852003
+Iter 2000 | Training Reconstruction Loss 1.161469
+Iter 2000 | Training Supervised Loss 1.030876
+Iter 2000 | Training Helper Loss 1.659658
+Iter 2000 | Training Linear Helper Loss 59.055695
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9757)
+treated post error tensor(0.4411)
+Iter 2000 | Validation Total Loss 1.999423
+Iter 2000 | Validation Reconstruction Loss 1.290982
+Iter 2000 | Validation Supervised Loss 0.708441
+Iter 2100 | Training Total Loss 3.944943
+Iter 2100 | Training Reconstruction Loss 1.466342
+Iter 2100 | Training Supervised Loss 0.789308
+Iter 2100 | Training Helper Loss 1.689294
+Iter 2100 | Training Linear Helper Loss 57.671188
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9357)
+treated post error tensor(0.4762)
+Iter 2100 | Validation Total Loss 1.916123
+Iter 2100 | Validation Reconstruction Loss 1.210186
+Iter 2100 | Validation Supervised Loss 0.705937
+Iter 2200 | Training Total Loss 3.109993
+Iter 2200 | Training Reconstruction Loss 1.016229
+Iter 2200 | Training Supervised Loss 0.718727
+Iter 2200 | Training Helper Loss 1.375036
+Iter 2200 | Training Linear Helper Loss 54.487217
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9116)
+treated post error tensor(0.4707)
+Iter 2200 | Validation Total Loss 1.807458
+Iter 2200 | Validation Reconstruction Loss 1.116295
+Iter 2200 | Validation Supervised Loss 0.691163
+Iter 2300 | Training Total Loss 3.133914
+Iter 2300 | Training Reconstruction Loss 0.965662
+Iter 2300 | Training Supervised Loss 0.760750
+Iter 2300 | Training Helper Loss 1.407502
+Iter 2300 | Training Linear Helper Loss 57.619949
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.9176)
+treated post error tensor(0.4516)
+Iter 2300 | Validation Total Loss 1.724672
+Iter 2300 | Validation Reconstruction Loss 1.040046
+Iter 2300 | Validation Supervised Loss 0.684626
+Iter 2400 | Training Total Loss 3.253932
+Iter 2400 | Training Reconstruction Loss 1.049942
+Iter 2400 | Training Supervised Loss 0.591482
+Iter 2400 | Training Helper Loss 1.612508
+Iter 2400 | Training Linear Helper Loss 50.827122
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8890)
+treated post error tensor(0.4805)
+Iter 2400 | Validation Total Loss 1.684103
+Iter 2400 | Validation Reconstruction Loss 0.999367
+Iter 2400 | Validation Supervised Loss 0.684737
+Iter 2500 | Training Total Loss 2.530091
+Iter 2500 | Training Reconstruction Loss 0.777578
+Iter 2500 | Training Supervised Loss 0.573981
+Iter 2500 | Training Helper Loss 1.178531
+Iter 2500 | Training Linear Helper Loss 49.672699
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8838)
+treated post error tensor(0.4676)
+Iter 2500 | Validation Total Loss 1.633523
+Iter 2500 | Validation Reconstruction Loss 0.957836
+Iter 2500 | Validation Supervised Loss 0.675688
+Iter 2600 | Training Total Loss 2.684565
+Iter 2600 | Training Reconstruction Loss 0.915904
+Iter 2600 | Training Supervised Loss 0.535599
+Iter 2600 | Training Helper Loss 1.233061
+Iter 2600 | Training Linear Helper Loss 49.667847
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8712)
+treated post error tensor(0.4854)
+Iter 2600 | Validation Total Loss 1.635962
+Iter 2600 | Validation Reconstruction Loss 0.957622
+Iter 2600 | Validation Supervised Loss 0.678340
+Iter 2700 | Training Total Loss 2.327568
+Iter 2700 | Training Reconstruction Loss 0.740667
+Iter 2700 | Training Supervised Loss 0.476029
+Iter 2700 | Training Helper Loss 1.110872
+Iter 2700 | Training Linear Helper Loss 50.500122
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8341)
+treated post error tensor(0.5130)
+Iter 2700 | Validation Total Loss 1.565871
+Iter 2700 | Validation Reconstruction Loss 0.892320
+Iter 2700 | Validation Supervised Loss 0.673551
+Iter 2800 | Training Total Loss 2.762977
+Iter 2800 | Training Reconstruction Loss 0.764716
+Iter 2800 | Training Supervised Loss 0.888617
+Iter 2800 | Training Helper Loss 1.109643
+Iter 2800 | Training Linear Helper Loss 49.334057
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8135)
+treated post error tensor(0.5095)
+Iter 2800 | Validation Total Loss 1.517408
+Iter 2800 | Validation Reconstruction Loss 0.855878
+Iter 2800 | Validation Supervised Loss 0.661530
+Iter 2900 | Training Total Loss 2.347904
+Iter 2900 | Training Reconstruction Loss 0.719084
+Iter 2900 | Training Supervised Loss 0.579821
+Iter 2900 | Training Helper Loss 1.049000
+Iter 2900 | Training Linear Helper Loss 48.394497
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8750)
+treated post error tensor(0.4394)
+Iter 2900 | Validation Total Loss 1.489620
+Iter 2900 | Validation Reconstruction Loss 0.832466
+Iter 2900 | Validation Supervised Loss 0.657154
+Iter 3000 | Training Total Loss 2.337937
+Iter 3000 | Training Reconstruction Loss 0.677328
+Iter 3000 | Training Supervised Loss 0.563235
+Iter 3000 | Training Helper Loss 1.097373
+Iter 3000 | Training Linear Helper Loss 45.511436
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8265)
+treated post error tensor(0.4980)
+Iter 3000 | Validation Total Loss 1.534998
+Iter 3000 | Validation Reconstruction Loss 0.872729
+Iter 3000 | Validation Supervised Loss 0.662269
+Iter 3100 | Training Total Loss 2.562788
+Iter 3100 | Training Reconstruction Loss 0.710056
+Iter 3100 | Training Supervised Loss 0.744550
+Iter 3100 | Training Helper Loss 1.108183
+Iter 3100 | Training Linear Helper Loss 45.219048
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7942)
+treated post error tensor(0.5118)
+Iter 3100 | Validation Total Loss 1.466816
+Iter 3100 | Validation Reconstruction Loss 0.813789
+Iter 3100 | Validation Supervised Loss 0.653027
+Iter 3200 | Training Total Loss 2.887800
+Iter 3200 | Training Reconstruction Loss 0.857659
+Iter 3200 | Training Supervised Loss 0.719469
+Iter 3200 | Training Helper Loss 1.310671
+Iter 3200 | Training Linear Helper Loss 41.954082
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7436)
+treated post error tensor(0.5434)
+Iter 3200 | Validation Total Loss 1.416240
+Iter 3200 | Validation Reconstruction Loss 0.772713
+Iter 3200 | Validation Supervised Loss 0.643527
+Iter 3300 | Training Total Loss 2.478475
+Iter 3300 | Training Reconstruction Loss 0.770366
+Iter 3300 | Training Supervised Loss 0.604419
+Iter 3300 | Training Helper Loss 1.103690
+Iter 3300 | Training Linear Helper Loss 42.523628
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7771)
+treated post error tensor(0.5312)
+Iter 3300 | Validation Total Loss 1.434208
+Iter 3300 | Validation Reconstruction Loss 0.780058
+Iter 3300 | Validation Supervised Loss 0.654150
+Iter 3400 | Training Total Loss 2.297471
+Iter 3400 | Training Reconstruction Loss 0.735079
+Iter 3400 | Training Supervised Loss 0.554753
+Iter 3400 | Training Helper Loss 1.007639
+Iter 3400 | Training Linear Helper Loss 42.858704
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7799)
+treated post error tensor(0.4997)
+Iter 3400 | Validation Total Loss 1.395332
+Iter 3400 | Validation Reconstruction Loss 0.755523
+Iter 3400 | Validation Supervised Loss 0.639809
+Iter 3500 | Training Total Loss 2.285453
+Iter 3500 | Training Reconstruction Loss 0.685960
+Iter 3500 | Training Supervised Loss 0.588860
+Iter 3500 | Training Helper Loss 1.010633
+Iter 3500 | Training Linear Helper Loss 40.812233
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7909)
+treated post error tensor(0.5018)
+Iter 3500 | Validation Total Loss 1.405923
+Iter 3500 | Validation Reconstruction Loss 0.759539
+Iter 3500 | Validation Supervised Loss 0.646384
+Iter 3600 | Training Total Loss 2.458343
+Iter 3600 | Training Reconstruction Loss 0.675652
+Iter 3600 | Training Supervised Loss 0.733761
+Iter 3600 | Training Helper Loss 1.048930
+Iter 3600 | Training Linear Helper Loss 41.175327
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7761)
+treated post error tensor(0.5183)
+Iter 3600 | Validation Total Loss 1.367059
+Iter 3600 | Validation Reconstruction Loss 0.719845
+Iter 3600 | Validation Supervised Loss 0.647213
+Iter 3700 | Training Total Loss 2.266556
+Iter 3700 | Training Reconstruction Loss 0.735246
+Iter 3700 | Training Supervised Loss 0.426272
+Iter 3700 | Training Helper Loss 1.105038
+Iter 3700 | Training Linear Helper Loss 40.765030
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7749)
+treated post error tensor(0.5132)
+Iter 3700 | Validation Total Loss 1.348757
+Iter 3700 | Validation Reconstruction Loss 0.704719
+Iter 3700 | Validation Supervised Loss 0.644038
+Iter 3800 | Training Total Loss 2.283270
+Iter 3800 | Training Reconstruction Loss 0.668075
+Iter 3800 | Training Supervised Loss 0.582256
+Iter 3800 | Training Helper Loss 1.032939
+Iter 3800 | Training Linear Helper Loss 38.789276
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7512)
+treated post error tensor(0.5384)
+Iter 3800 | Validation Total Loss 1.350433
+Iter 3800 | Validation Reconstruction Loss 0.705610
+Iter 3800 | Validation Supervised Loss 0.644824
+Iter 3900 | Training Total Loss 2.218389
+Iter 3900 | Training Reconstruction Loss 0.636034
+Iter 3900 | Training Supervised Loss 0.607671
+Iter 3900 | Training Helper Loss 0.974684
+Iter 3900 | Training Linear Helper Loss 38.188141
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7625)
+treated post error tensor(0.5226)
+Iter 3900 | Validation Total Loss 1.344641
+Iter 3900 | Validation Reconstruction Loss 0.702097
+Iter 3900 | Validation Supervised Loss 0.642544
+Iter 4000 | Training Total Loss 2.165815
+Iter 4000 | Training Reconstruction Loss 0.618775
+Iter 4000 | Training Supervised Loss 0.581015
+Iter 4000 | Training Helper Loss 0.966025
+Iter 4000 | Training Linear Helper Loss 35.151779
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8034)
+treated post error tensor(0.4870)
+Iter 4000 | Validation Total Loss 1.354188
+Iter 4000 | Validation Reconstruction Loss 0.709022
+Iter 4000 | Validation Supervised Loss 0.645167
+Iter 4100 | Training Total Loss 2.302701
+Iter 4100 | Training Reconstruction Loss 0.629102
+Iter 4100 | Training Supervised Loss 0.779427
+Iter 4100 | Training Helper Loss 0.894172
+Iter 4100 | Training Linear Helper Loss 35.013653
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7988)
+treated post error tensor(0.4773)
+Iter 4100 | Validation Total Loss 1.320273
+Iter 4100 | Validation Reconstruction Loss 0.682178
+Iter 4100 | Validation Supervised Loss 0.638095
+Iter 4200 | Training Total Loss 1.990047
+Iter 4200 | Training Reconstruction Loss 0.616199
+Iter 4200 | Training Supervised Loss 0.504285
+Iter 4200 | Training Helper Loss 0.869564
+Iter 4200 | Training Linear Helper Loss 34.752430
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7790)
+treated post error tensor(0.5048)
+Iter 4200 | Validation Total Loss 1.322856
+Iter 4200 | Validation Reconstruction Loss 0.680943
+Iter 4200 | Validation Supervised Loss 0.641913
+Iter 4300 | Training Total Loss 1.948547
+Iter 4300 | Training Reconstruction Loss 0.577740
+Iter 4300 | Training Supervised Loss 0.402518
+Iter 4300 | Training Helper Loss 0.968289
+Iter 4300 | Training Linear Helper Loss 32.322937
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7884)
+treated post error tensor(0.5073)
+Iter 4300 | Validation Total Loss 1.338793
+Iter 4300 | Validation Reconstruction Loss 0.690936
+Iter 4300 | Validation Supervised Loss 0.647857
+Iter 4400 | Training Total Loss 2.122814
+Iter 4400 | Training Reconstruction Loss 0.626604
+Iter 4400 | Training Supervised Loss 0.567240
+Iter 4400 | Training Helper Loss 0.928970
+Iter 4400 | Training Linear Helper Loss 31.136547
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7992)
+treated post error tensor(0.5025)
+Iter 4400 | Validation Total Loss 1.312922
+Iter 4400 | Validation Reconstruction Loss 0.662062
+Iter 4400 | Validation Supervised Loss 0.650860
+Iter 4500 | Training Total Loss 2.293044
+Iter 4500 | Training Reconstruction Loss 0.666947
+Iter 4500 | Training Supervised Loss 0.732727
+Iter 4500 | Training Helper Loss 0.893370
+Iter 4500 | Training Linear Helper Loss 30.220886
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7594)
+treated post error tensor(0.5181)
+Iter 4500 | Validation Total Loss 1.323350
+Iter 4500 | Validation Reconstruction Loss 0.684592
+Iter 4500 | Validation Supervised Loss 0.638758
+Iter 4600 | Training Total Loss 2.034343
+Iter 4600 | Training Reconstruction Loss 0.622214
+Iter 4600 | Training Supervised Loss 0.525954
+Iter 4600 | Training Helper Loss 0.886174
+Iter 4600 | Training Linear Helper Loss 31.081753
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7993)
+treated post error tensor(0.4811)
+Iter 4600 | Validation Total Loss 1.306870
+Iter 4600 | Validation Reconstruction Loss 0.666711
+Iter 4600 | Validation Supervised Loss 0.640159
+Iter 4700 | Training Total Loss 2.047199
+Iter 4700 | Training Reconstruction Loss 0.608340
+Iter 4700 | Training Supervised Loss 0.567391
+Iter 4700 | Training Helper Loss 0.871468
+Iter 4700 | Training Linear Helper Loss 28.617994
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7575)
+treated post error tensor(0.5259)
+Iter 4700 | Validation Total Loss 1.289395
+Iter 4700 | Validation Reconstruction Loss 0.647729
+Iter 4700 | Validation Supervised Loss 0.641666
+Iter 4800 | Training Total Loss 2.172883
+Iter 4800 | Training Reconstruction Loss 0.624923
+Iter 4800 | Training Supervised Loss 0.559431
+Iter 4800 | Training Helper Loss 0.988529
+Iter 4800 | Training Linear Helper Loss 28.390129
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7141)
+treated post error tensor(0.5636)
+Iter 4800 | Validation Total Loss 1.297707
+Iter 4800 | Validation Reconstruction Loss 0.658861
+Iter 4800 | Validation Supervised Loss 0.638846
+Iter 4900 | Training Total Loss 2.019121
+Iter 4900 | Training Reconstruction Loss 0.583126
+Iter 4900 | Training Supervised Loss 0.641713
+Iter 4900 | Training Helper Loss 0.794282
+Iter 4900 | Training Linear Helper Loss 27.283936
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7681)
+treated post error tensor(0.5119)
+Iter 4900 | Validation Total Loss 1.289164
+Iter 4900 | Validation Reconstruction Loss 0.649174
+Iter 4900 | Validation Supervised Loss 0.639990
+Iter 5000 | Training Total Loss 2.055576
+Iter 5000 | Training Reconstruction Loss 0.580202
+Iter 5000 | Training Supervised Loss 0.567650
+Iter 5000 | Training Helper Loss 0.907724
+Iter 5000 | Training Linear Helper Loss 26.248308
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7448)
+treated post error tensor(0.5264)
+Iter 5000 | Validation Total Loss 1.262871
+Iter 5000 | Validation Reconstruction Loss 0.627253
+Iter 5000 | Validation Supervised Loss 0.635618
+Iter 5100 | Training Total Loss 2.445967
+Iter 5100 | Training Reconstruction Loss 0.785476
+Iter 5100 | Training Supervised Loss 0.631905
+Iter 5100 | Training Helper Loss 1.028586
+Iter 5100 | Training Linear Helper Loss 26.026094
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7654)
+treated post error tensor(0.5272)
+Iter 5100 | Validation Total Loss 1.297344
+Iter 5100 | Validation Reconstruction Loss 0.651017
+Iter 5100 | Validation Supervised Loss 0.646327
+Iter 5200 | Training Total Loss 1.996508
+Iter 5200 | Training Reconstruction Loss 0.568497
+Iter 5200 | Training Supervised Loss 0.556250
+Iter 5200 | Training Helper Loss 0.871762
+Iter 5200 | Training Linear Helper Loss 24.790859
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7450)
+treated post error tensor(0.5334)
+Iter 5200 | Validation Total Loss 1.277817
+Iter 5200 | Validation Reconstruction Loss 0.638602
+Iter 5200 | Validation Supervised Loss 0.639215
+Iter 5300 | Training Total Loss 2.048651
+Iter 5300 | Training Reconstruction Loss 0.590955
+Iter 5300 | Training Supervised Loss 0.559332
+Iter 5300 | Training Helper Loss 0.898363
+Iter 5300 | Training Linear Helper Loss 23.328197
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7088)
+treated post error tensor(0.5764)
+Iter 5300 | Validation Total Loss 1.303392
+Iter 5300 | Validation Reconstruction Loss 0.660762
+Iter 5300 | Validation Supervised Loss 0.642630
+Iter 5400 | Training Total Loss 1.918130
+Iter 5400 | Training Reconstruction Loss 0.591315
+Iter 5400 | Training Supervised Loss 0.442139
+Iter 5400 | Training Helper Loss 0.884676
+Iter 5400 | Training Linear Helper Loss 23.599335
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7730)
+treated post error tensor(0.5069)
+Iter 5400 | Validation Total Loss 1.269902
+Iter 5400 | Validation Reconstruction Loss 0.629938
+Iter 5400 | Validation Supervised Loss 0.639964
+Iter 5500 | Training Total Loss 1.920271
+Iter 5500 | Training Reconstruction Loss 0.603794
+Iter 5500 | Training Supervised Loss 0.475086
+Iter 5500 | Training Helper Loss 0.841391
+Iter 5500 | Training Linear Helper Loss 22.059061
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8080)
+treated post error tensor(0.4900)
+Iter 5500 | Validation Total Loss 1.275984
+Iter 5500 | Validation Reconstruction Loss 0.627023
+Iter 5500 | Validation Supervised Loss 0.648960
+Iter 5600 | Training Total Loss 2.040400
+Iter 5600 | Training Reconstruction Loss 0.590423
+Iter 5600 | Training Supervised Loss 0.496395
+Iter 5600 | Training Helper Loss 0.953582
+Iter 5600 | Training Linear Helper Loss 21.899691
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7472)
+treated post error tensor(0.5357)
+Iter 5600 | Validation Total Loss 1.273131
+Iter 5600 | Validation Reconstruction Loss 0.631706
+Iter 5600 | Validation Supervised Loss 0.641425
+Iter 5700 | Training Total Loss 1.992115
+Iter 5700 | Training Reconstruction Loss 0.603809
+Iter 5700 | Training Supervised Loss 0.515502
+Iter 5700 | Training Helper Loss 0.872803
+Iter 5700 | Training Linear Helper Loss 21.761005
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7495)
+treated post error tensor(0.5263)
+Iter 5700 | Validation Total Loss 1.265271
+Iter 5700 | Validation Reconstruction Loss 0.627376
+Iter 5700 | Validation Supervised Loss 0.637896
+Iter 5800 | Training Total Loss 1.965963
+Iter 5800 | Training Reconstruction Loss 0.586440
+Iter 5800 | Training Supervised Loss 0.507339
+Iter 5800 | Training Helper Loss 0.872184
+Iter 5800 | Training Linear Helper Loss 18.844643
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7875)
+treated post error tensor(0.5137)
+Iter 5800 | Validation Total Loss 1.298530
+Iter 5800 | Validation Reconstruction Loss 0.647979
+Iter 5800 | Validation Supervised Loss 0.650551
+Iter 5900 | Training Total Loss 1.941199
+Iter 5900 | Training Reconstruction Loss 0.561898
+Iter 5900 | Training Supervised Loss 0.557143
+Iter 5900 | Training Helper Loss 0.822157
+Iter 5900 | Training Linear Helper Loss 19.409470
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.8046)
+treated post error tensor(0.4817)
+Iter 5900 | Validation Total Loss 1.265680
+Iter 5900 | Validation Reconstruction Loss 0.622541
+Iter 5900 | Validation Supervised Loss 0.643139
+Iter 6000 | Training Total Loss 1.845816
+Iter 6000 | Training Reconstruction Loss 0.567530
+Iter 6000 | Training Supervised Loss 0.488605
+Iter 6000 | Training Helper Loss 0.789681
+Iter 6000 | Training Linear Helper Loss 19.130194
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.7912)
+treated post error tensor(0.5132)
+Iter 6000 | Validation Total Loss 1.285450
+Iter 6000 | Validation Reconstruction Loss 0.633279
+Iter 6000 | Validation Supervised Loss 0.652170
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.001008
+--- Training done in 359.82756781578064 seconds ---
+Control Y MAE: 0.11318499594926834
+Testing
+Iteration 0
+After Lasso procedure | Total Loss 0.001054
+Best model: 0
+Treatment effect MAE: (0.1238107735411636, 0.007160441383699772)
+Control Y MAE: 0.11072104424238205
+Gini 0.483 (0.010)
+Ent nan (nan)
+N Matched 2.750 (0.048)
+MIS 0.180 (0.027)
+Wrong proba 0.142 (0.018)
+Average Training Time: 359.82756781578064
+Std Training Time: 0.0

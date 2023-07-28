@@ -133,8 +133,6 @@ def pre_train_reconstruction_prognostic_loss(
             x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
 
         C = nsc.get_representation(x, t, mask)
-        print('C shape', C.shape)
-        print('x shape', x.shape)
         x_hat = nsc.get_reconstruction(C, t, mask)
         loss_X = nsc.reconstruction_loss(x, x_hat, mask)
         
@@ -281,7 +279,7 @@ def pre_train_reconstruction_prognostic_loss_linear_helper(
             loss_Y = nsc.prognostic_loss2(y, y_hat, y_mask, y_pre_hat=y_pre_hat, y_pre_full=y_pre, robust=robust, use_treated=use_treated, verbose=False)
 
             errZ = (nsc.decoder(linear_helper(x,t,mask),t,mask) - x)*mask
-            loss_Z = torch.sum(errZ**2) / torch.sum(mask)
+            loss_Z = torch.sum(errZ**2) / torch.sum(mask)*lam_helper
 
             loss1 = loss_X + loss_Y + loss_Z
             loss1.backward()
@@ -304,7 +302,7 @@ def pre_train_reconstruction_prognostic_loss_linear_helper(
             else:
                 x, t, mask, y, y_mask, y_pre = x_full, t_full, mask_full, y_full, y_mask_full, y_pre_full
 
-            C = nsc.get_representation(x, t, mask)
+            C = nsc.get_representation(x, t, mask).detach()
             loss2 = torch.sum((linear_helper(x,t,mask) - C)**2)
             loss2.backward()
             optimizer2.step()

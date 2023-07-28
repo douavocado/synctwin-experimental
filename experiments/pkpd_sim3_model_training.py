@@ -208,6 +208,7 @@ for i in range(itr):
                 batch_size=batch_size,
                 robust=robustness,
                 linear_helper=linear_helper,
+                lam_helper=40
             )
 
     if not reduced_fine_tune:

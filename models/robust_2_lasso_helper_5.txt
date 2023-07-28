@@ -1,0 +1,902 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+Iter 0100 | Training Total Loss 66.473175
+Iter 0100 | Training Reconstruction Loss 34.614094
+Iter 0100 | Training Supervised Loss 7.710733
+Iter 0100 | Training Helper Loss 24.148354
+Iter 0100 | Training Linear Helper Loss 348.530914
+control post error tensor(10.3482)
+treated post error tensor(6.4584)
+pre error tensor(0.7300)
+Iter 0100 | Validation Total Loss 47.603462
+Iter 0100 | Validation Reconstruction Loss 38.470154
+Iter 0100 | Validation Supervised Loss 9.133307
+Iter 0200 | Training Total Loss 42.094124
+Iter 0200 | Training Reconstruction Loss 20.746254
+Iter 0200 | Training Supervised Loss 5.617096
+Iter 0200 | Training Helper Loss 15.730776
+Iter 0200 | Training Linear Helper Loss 250.062347
+control post error tensor(6.6981)
+treated post error tensor(2.9798)
+pre error tensor(0.4558)
+Iter 0200 | Validation Total Loss 27.393419
+Iter 0200 | Validation Reconstruction Loss 22.098606
+Iter 0200 | Validation Supervised Loss 5.294814
+Iter 0300 | Training Total Loss 21.454262
+Iter 0300 | Training Reconstruction Loss 10.537098
+Iter 0300 | Training Supervised Loss 3.099542
+Iter 0300 | Training Helper Loss 7.817620
+Iter 0300 | Training Linear Helper Loss 163.867172
+control post error tensor(4.2793)
+treated post error tensor(1.4086)
+pre error tensor(0.2855)
+Iter 0300 | Validation Total Loss 20.320498
+Iter 0300 | Validation Reconstruction Loss 17.191040
+Iter 0300 | Validation Supervised Loss 3.129458
+Iter 0400 | Training Total Loss 19.353338
+Iter 0400 | Training Reconstruction Loss 9.469726
+Iter 0400 | Training Supervised Loss 2.962576
+Iter 0400 | Training Helper Loss 6.921037
+Iter 0400 | Training Linear Helper Loss 142.095764
+control post error tensor(3.1910)
+treated post error tensor(1.0134)
+pre error tensor(0.1944)
+Iter 0400 | Validation Total Loss 14.349761
+Iter 0400 | Validation Reconstruction Loss 12.053214
+Iter 0400 | Validation Supervised Loss 2.296547
+Iter 0500 | Training Total Loss 10.264301
+Iter 0500 | Training Reconstruction Loss 4.656341
+Iter 0500 | Training Supervised Loss 1.441319
+Iter 0500 | Training Helper Loss 4.166642
+Iter 0500 | Training Linear Helper Loss 107.221695
+control post error tensor(2.5213)
+treated post error tensor(0.8282)
+pre error tensor(0.1474)
+Iter 0500 | Validation Total Loss 8.559279
+Iter 0500 | Validation Reconstruction Loss 6.737109
+Iter 0500 | Validation Supervised Loss 1.822170
+Iter 0600 | Training Total Loss 10.453117
+Iter 0600 | Training Reconstruction Loss 4.765597
+Iter 0600 | Training Supervised Loss 1.401090
+Iter 0600 | Training Helper Loss 4.286431
+Iter 0600 | Training Linear Helper Loss 95.813919
+control post error tensor(2.2229)
+treated post error tensor(0.7726)
+pre error tensor(0.1213)
+Iter 0600 | Validation Total Loss 6.765059
+Iter 0600 | Validation Reconstruction Loss 5.146012
+Iter 0600 | Validation Supervised Loss 1.619047
+Iter 0700 | Training Total Loss 7.361232
+Iter 0700 | Training Reconstruction Loss 3.323844
+Iter 0700 | Training Supervised Loss 0.799866
+Iter 0700 | Training Helper Loss 3.237522
+Iter 0700 | Training Linear Helper Loss 95.344543
+control post error tensor(1.9908)
+treated post error tensor(0.7207)
+pre error tensor(0.1018)
+Iter 0700 | Validation Total Loss 5.628836
+Iter 0700 | Validation Reconstruction Loss 4.171292
+Iter 0700 | Validation Supervised Loss 1.457543
+Iter 0800 | Training Total Loss 7.389452
+Iter 0800 | Training Reconstruction Loss 3.015714
+Iter 0800 | Training Supervised Loss 1.701550
+Iter 0800 | Training Helper Loss 2.672189
+Iter 0800 | Training Linear Helper Loss 79.925293
+control post error tensor(1.8128)
+treated post error tensor(0.6412)
+pre error tensor(0.0853)
+Iter 0800 | Validation Total Loss 4.890275
+Iter 0800 | Validation Reconstruction Loss 3.578001
+Iter 0800 | Validation Supervised Loss 1.312274
+Iter 0900 | Training Total Loss 7.397149
+Iter 0900 | Training Reconstruction Loss 3.118628
+Iter 0900 | Training Supervised Loss 1.080480
+Iter 0900 | Training Helper Loss 3.198040
+Iter 0900 | Training Linear Helper Loss 78.424835
+control post error tensor(1.6143)
+treated post error tensor(0.6280)
+pre error tensor(0.0720)
+Iter 0900 | Validation Total Loss 4.349599
+Iter 0900 | Validation Reconstruction Loss 3.156405
+Iter 0900 | Validation Supervised Loss 1.193194
+Iter 1000 | Training Total Loss 6.008262
+Iter 1000 | Training Reconstruction Loss 2.501580
+Iter 1000 | Training Supervised Loss 0.778832
+Iter 1000 | Training Helper Loss 2.727849
+Iter 1000 | Training Linear Helper Loss 77.224312
+control post error tensor(1.5049)
+treated post error tensor(0.5710)
+pre error tensor(0.0634)
+Iter 1000 | Validation Total Loss 3.927016
+Iter 1000 | Validation Reconstruction Loss 2.825669
+Iter 1000 | Validation Supervised Loss 1.101347
+Iter 1100 | Training Total Loss 5.499423
+Iter 1100 | Training Reconstruction Loss 2.334700
+Iter 1100 | Training Supervised Loss 0.649567
+Iter 1100 | Training Helper Loss 2.515157
+Iter 1100 | Training Linear Helper Loss 68.717911
+control post error tensor(1.3710)
+treated post error tensor(0.5528)
+pre error tensor(0.0567)
+Iter 1100 | Validation Total Loss 3.628644
+Iter 1100 | Validation Reconstruction Loss 2.610104
+Iter 1100 | Validation Supervised Loss 1.018539
+Iter 1200 | Training Total Loss 3.814583
+Iter 1200 | Training Reconstruction Loss 1.445676
+Iter 1200 | Training Supervised Loss 0.530000
+Iter 1200 | Training Helper Loss 1.838907
+Iter 1200 | Training Linear Helper Loss 70.311066
+control post error tensor(1.2728)
+treated post error tensor(0.5458)
+pre error tensor(0.0491)
+Iter 1200 | Validation Total Loss 3.359009
+Iter 1200 | Validation Reconstruction Loss 2.400604
+Iter 1200 | Validation Supervised Loss 0.958405
+Iter 1300 | Training Total Loss 3.996507
+Iter 1300 | Training Reconstruction Loss 1.500317
+Iter 1300 | Training Supervised Loss 0.599914
+Iter 1300 | Training Helper Loss 1.896275
+Iter 1300 | Training Linear Helper Loss 65.895554
+control post error tensor(1.2502)
+treated post error tensor(0.5113)
+pre error tensor(0.0444)
+Iter 1300 | Validation Total Loss 3.119887
+Iter 1300 | Validation Reconstruction Loss 2.194787
+Iter 1300 | Validation Supervised Loss 0.925099
+Iter 1400 | Training Total Loss 5.347289
+Iter 1400 | Training Reconstruction Loss 2.030024
+Iter 1400 | Training Supervised Loss 0.821470
+Iter 1400 | Training Helper Loss 2.495795
+Iter 1400 | Training Linear Helper Loss 65.420067
+control post error tensor(1.1559)
+treated post error tensor(0.5208)
+pre error tensor(0.0385)
+Iter 1400 | Validation Total Loss 2.890285
+Iter 1400 | Validation Reconstruction Loss 2.013504
+Iter 1400 | Validation Supervised Loss 0.876780
+Iter 1500 | Training Total Loss 3.303814
+Iter 1500 | Training Reconstruction Loss 1.099719
+Iter 1500 | Training Supervised Loss 0.691720
+Iter 1500 | Training Helper Loss 1.512375
+Iter 1500 | Training Linear Helper Loss 67.737617
+control post error tensor(1.1320)
+treated post error tensor(0.4779)
+pre error tensor(0.0349)
+Iter 1500 | Validation Total Loss 2.680236
+Iter 1500 | Validation Reconstruction Loss 1.840360
+Iter 1500 | Validation Supervised Loss 0.839877
+Iter 1600 | Training Total Loss 4.376206
+Iter 1600 | Training Reconstruction Loss 1.519914
+Iter 1600 | Training Supervised Loss 0.797588
+Iter 1600 | Training Helper Loss 2.058705
+Iter 1600 | Training Linear Helper Loss 64.024925
+control post error tensor(1.0906)
+treated post error tensor(0.4713)
+pre error tensor(0.0299)
+Iter 1600 | Validation Total Loss 2.494555
+Iter 1600 | Validation Reconstruction Loss 1.683696
+Iter 1600 | Validation Supervised Loss 0.810859
+Iter 1700 | Training Total Loss 3.399733
+Iter 1700 | Training Reconstruction Loss 1.099675
+Iter 1700 | Training Supervised Loss 0.589579
+Iter 1700 | Training Helper Loss 1.710479
+Iter 1700 | Training Linear Helper Loss 63.962967
+control post error tensor(1.0356)
+treated post error tensor(0.4991)
+pre error tensor(0.0267)
+Iter 1700 | Validation Total Loss 2.340463
+Iter 1700 | Validation Reconstruction Loss 1.546387
+Iter 1700 | Validation Supervised Loss 0.794075
+Iter 1800 | Training Total Loss 4.240749
+Iter 1800 | Training Reconstruction Loss 1.467025
+Iter 1800 | Training Supervised Loss 1.006304
+Iter 1800 | Training Helper Loss 1.767421
+Iter 1800 | Training Linear Helper Loss 61.731480
+control post error tensor(0.9807)
+treated post error tensor(0.4950)
+pre error tensor(0.0238)
+Iter 1800 | Validation Total Loss 2.207895
+Iter 1800 | Validation Reconstruction Loss 1.446293
+Iter 1800 | Validation Supervised Loss 0.761601
+Iter 1900 | Training Total Loss 3.626518
+Iter 1900 | Training Reconstruction Loss 1.237570
+Iter 1900 | Training Supervised Loss 0.623417
+Iter 1900 | Training Helper Loss 1.765531
+Iter 1900 | Training Linear Helper Loss 61.238346
+control post error tensor(0.9734)
+treated post error tensor(0.4766)
+pre error tensor(0.0220)
+Iter 1900 | Validation Total Loss 2.078015
+Iter 1900 | Validation Reconstruction Loss 1.330989
+Iter 1900 | Validation Supervised Loss 0.747026
+Iter 2000 | Training Total Loss 3.861809
+Iter 2000 | Training Reconstruction Loss 1.165726
+Iter 2000 | Training Supervised Loss 1.043706
+Iter 2000 | Training Helper Loss 1.652377
+Iter 2000 | Training Linear Helper Loss 60.512081
+control post error tensor(0.9693)
+treated post error tensor(0.4430)
+pre error tensor(0.0203)
+Iter 2000 | Validation Total Loss 2.032480
+Iter 2000 | Validation Reconstruction Loss 1.306046
+Iter 2000 | Validation Supervised Loss 0.726434
+Iter 2100 | Training Total Loss 4.023072
+Iter 2100 | Training Reconstruction Loss 1.500149
+Iter 2100 | Training Supervised Loss 0.797979
+Iter 2100 | Training Helper Loss 1.724945
+Iter 2100 | Training Linear Helper Loss 59.705112
+control post error tensor(0.9301)
+treated post error tensor(0.4784)
+pre error tensor(0.0191)
+Iter 2100 | Validation Total Loss 1.957500
+Iter 2100 | Validation Reconstruction Loss 1.234164
+Iter 2100 | Validation Supervised Loss 0.723335
+Iter 2200 | Training Total Loss 3.152679
+Iter 2200 | Training Reconstruction Loss 1.032806
+Iter 2200 | Training Supervised Loss 0.732978
+Iter 2200 | Training Helper Loss 1.386895
+Iter 2200 | Training Linear Helper Loss 56.145641
+control post error tensor(0.9105)
+treated post error tensor(0.4706)
+pre error tensor(0.0179)
+Iter 2200 | Validation Total Loss 1.841537
+Iter 2200 | Validation Reconstruction Loss 1.133066
+Iter 2200 | Validation Supervised Loss 0.708471
+Iter 2300 | Training Total Loss 3.154139
+Iter 2300 | Training Reconstruction Loss 0.963876
+Iter 2300 | Training Supervised Loss 0.779181
+Iter 2300 | Training Helper Loss 1.411081
+Iter 2300 | Training Linear Helper Loss 59.366714
+control post error tensor(0.9164)
+treated post error tensor(0.4517)
+pre error tensor(0.0175)
+Iter 2300 | Validation Total Loss 1.751625
+Iter 2300 | Validation Reconstruction Loss 1.050065
+Iter 2300 | Validation Supervised Loss 0.701561
+Iter 2400 | Training Total Loss 3.297623
+Iter 2400 | Training Reconstruction Loss 1.069497
+Iter 2400 | Training Supervised Loss 0.613813
+Iter 2400 | Training Helper Loss 1.614312
+Iter 2400 | Training Linear Helper Loss 51.741188
+control post error tensor(0.8835)
+treated post error tensor(0.4830)
+pre error tensor(0.0172)
+Iter 2400 | Validation Total Loss 1.709022
+Iter 2400 | Validation Reconstruction Loss 1.008529
+Iter 2400 | Validation Supervised Loss 0.700492
+Iter 2500 | Training Total Loss 2.550095
+Iter 2500 | Training Reconstruction Loss 0.781586
+Iter 2500 | Training Supervised Loss 0.582970
+Iter 2500 | Training Helper Loss 1.185539
+Iter 2500 | Training Linear Helper Loss 51.318794
+control post error tensor(0.8799)
+treated post error tensor(0.4703)
+pre error tensor(0.0164)
+Iter 2500 | Validation Total Loss 1.658714
+Iter 2500 | Validation Reconstruction Loss 0.967203
+Iter 2500 | Validation Supervised Loss 0.691511
+Iter 2600 | Training Total Loss 2.691139
+Iter 2600 | Training Reconstruction Loss 0.916158
+Iter 2600 | Training Supervised Loss 0.531971
+Iter 2600 | Training Helper Loss 1.243010
+Iter 2600 | Training Linear Helper Loss 51.128742
+control post error tensor(0.8738)
+treated post error tensor(0.4834)
+pre error tensor(0.0165)
+Iter 2600 | Validation Total Loss 1.662811
+Iter 2600 | Validation Reconstruction Loss 0.967707
+Iter 2600 | Validation Supervised Loss 0.695104
+Iter 2700 | Training Total Loss 2.337789
+Iter 2700 | Training Reconstruction Loss 0.743183
+Iter 2700 | Training Supervised Loss 0.486804
+Iter 2700 | Training Helper Loss 1.107802
+Iter 2700 | Training Linear Helper Loss 51.878189
+control post error tensor(0.8316)
+treated post error tensor(0.5150)
+pre error tensor(0.0162)
+Iter 2700 | Validation Total Loss 1.586916
+Iter 2700 | Validation Reconstruction Loss 0.897410
+Iter 2700 | Validation Supervised Loss 0.689506
+Iter 2800 | Training Total Loss 2.806355
+Iter 2800 | Training Reconstruction Loss 0.768057
+Iter 2800 | Training Supervised Loss 0.907602
+Iter 2800 | Training Helper Loss 1.130695
+Iter 2800 | Training Linear Helper Loss 50.981762
+control post error tensor(0.8154)
+treated post error tensor(0.5081)
+pre error tensor(0.0158)
+Iter 2800 | Validation Total Loss 1.536303
+Iter 2800 | Validation Reconstruction Loss 0.858779
+Iter 2800 | Validation Supervised Loss 0.677524
+Iter 2900 | Training Total Loss 2.384965
+Iter 2900 | Training Reconstruction Loss 0.718079
+Iter 2900 | Training Supervised Loss 0.597208
+Iter 2900 | Training Helper Loss 1.069678
+Iter 2900 | Training Linear Helper Loss 49.523247
+control post error tensor(0.8740)
+treated post error tensor(0.4425)
+pre error tensor(0.0156)
+Iter 2900 | Validation Total Loss 1.523480
+Iter 2900 | Validation Reconstruction Loss 0.849641
+Iter 2900 | Validation Supervised Loss 0.673839
+Iter 3000 | Training Total Loss 2.361934
+Iter 3000 | Training Reconstruction Loss 0.678711
+Iter 3000 | Training Supervised Loss 0.580923
+Iter 3000 | Training Helper Loss 1.102300
+Iter 3000 | Training Linear Helper Loss 46.622444
+control post error tensor(0.8307)
+treated post error tensor(0.4945)
+pre error tensor(0.0162)
+Iter 3000 | Validation Total Loss 1.571532
+Iter 3000 | Validation Reconstruction Loss 0.892773
+Iter 3000 | Validation Supervised Loss 0.678759
+Iter 3100 | Training Total Loss 2.607691
+Iter 3100 | Training Reconstruction Loss 0.727912
+Iter 3100 | Training Supervised Loss 0.759235
+Iter 3100 | Training Helper Loss 1.120544
+Iter 3100 | Training Linear Helper Loss 46.150398
+control post error tensor(0.7963)
+treated post error tensor(0.5085)
+pre error tensor(0.0153)
+Iter 3100 | Validation Total Loss 1.461655
+Iter 3100 | Validation Reconstruction Loss 0.793887
+Iter 3100 | Validation Supervised Loss 0.667768
+Iter 3200 | Training Total Loss 2.916612
+Iter 3200 | Training Reconstruction Loss 0.870608
+Iter 3200 | Training Supervised Loss 0.734466
+Iter 3200 | Training Helper Loss 1.311538
+Iter 3200 | Training Linear Helper Loss 43.032471
+control post error tensor(0.7496)
+treated post error tensor(0.5424)
+pre error tensor(0.0153)
+Iter 3200 | Validation Total Loss 1.439933
+Iter 3200 | Validation Reconstruction Loss 0.778616
+Iter 3200 | Validation Supervised Loss 0.661317
+Iter 3300 | Training Total Loss 2.511569
+Iter 3300 | Training Reconstruction Loss 0.773321
+Iter 3300 | Training Supervised Loss 0.623266
+Iter 3300 | Training Helper Loss 1.114982
+Iter 3300 | Training Linear Helper Loss 43.496361
+control post error tensor(0.7747)
+treated post error tensor(0.5368)
+pre error tensor(0.0157)
+Iter 3300 | Validation Total Loss 1.439020
+Iter 3300 | Validation Reconstruction Loss 0.767602
+Iter 3300 | Validation Supervised Loss 0.671417
+Iter 3400 | Training Total Loss 2.321114
+Iter 3400 | Training Reconstruction Loss 0.737336
+Iter 3400 | Training Supervised Loss 0.573668
+Iter 3400 | Training Helper Loss 1.010109
+Iter 3400 | Training Linear Helper Loss 43.708885
+control post error tensor(0.7809)
+treated post error tensor(0.5000)
+pre error tensor(0.0147)
+Iter 3400 | Validation Total Loss 1.422131
+Iter 3400 | Validation Reconstruction Loss 0.766997
+Iter 3400 | Validation Supervised Loss 0.655133
+Iter 3500 | Training Total Loss 2.314997
+Iter 3500 | Training Reconstruction Loss 0.686312
+Iter 3500 | Training Supervised Loss 0.606789
+Iter 3500 | Training Helper Loss 1.021895
+Iter 3500 | Training Linear Helper Loss 41.633648
+control post error tensor(0.7878)
+treated post error tensor(0.5055)
+pre error tensor(0.0147)
+Iter 3500 | Validation Total Loss 1.418771
+Iter 3500 | Validation Reconstruction Loss 0.757448
+Iter 3500 | Validation Supervised Loss 0.661323
+Iter 3600 | Training Total Loss 2.457811
+Iter 3600 | Training Reconstruction Loss 0.666449
+Iter 3600 | Training Supervised Loss 0.746086
+Iter 3600 | Training Helper Loss 1.045276
+Iter 3600 | Training Linear Helper Loss 42.291950
+control post error tensor(0.7748)
+treated post error tensor(0.5205)
+pre error tensor(0.0152)
+Iter 3600 | Validation Total Loss 1.377977
+Iter 3600 | Validation Reconstruction Loss 0.715165
+Iter 3600 | Validation Supervised Loss 0.662813
+Iter 3700 | Training Total Loss 2.292618
+Iter 3700 | Training Reconstruction Loss 0.725245
+Iter 3700 | Training Supervised Loss 0.438317
+Iter 3700 | Training Helper Loss 1.129055
+Iter 3700 | Training Linear Helper Loss 41.821476
+control post error tensor(0.7692)
+treated post error tensor(0.5196)
+pre error tensor(0.0151)
+Iter 3700 | Validation Total Loss 1.357101
+Iter 3700 | Validation Reconstruction Loss 0.697567
+Iter 3700 | Validation Supervised Loss 0.659534
+Iter 3800 | Training Total Loss 2.304037
+Iter 3800 | Training Reconstruction Loss 0.661649
+Iter 3800 | Training Supervised Loss 0.596680
+Iter 3800 | Training Helper Loss 1.045708
+Iter 3800 | Training Linear Helper Loss 39.779613
+control post error tensor(0.7505)
+treated post error tensor(0.5396)
+pre error tensor(0.0149)
+Iter 3800 | Validation Total Loss 1.360966
+Iter 3800 | Validation Reconstruction Loss 0.700990
+Iter 3800 | Validation Supervised Loss 0.659976
+Iter 3900 | Training Total Loss 2.239408
+Iter 3900 | Training Reconstruction Loss 0.637206
+Iter 3900 | Training Supervised Loss 0.624900
+Iter 3900 | Training Helper Loss 0.977302
+Iter 3900 | Training Linear Helper Loss 39.031456
+control post error tensor(0.7604)
+treated post error tensor(0.5261)
+pre error tensor(0.0149)
+Iter 3900 | Validation Total Loss 1.352201
+Iter 3900 | Validation Reconstruction Loss 0.693997
+Iter 3900 | Validation Supervised Loss 0.658204
+Iter 4000 | Training Total Loss 2.210914
+Iter 4000 | Training Reconstruction Loss 0.625580
+Iter 4000 | Training Supervised Loss 0.604661
+Iter 4000 | Training Helper Loss 0.980673
+Iter 4000 | Training Linear Helper Loss 36.056679
+control post error tensor(0.8064)
+treated post error tensor(0.4857)
+pre error tensor(0.0154)
+Iter 4000 | Validation Total Loss 1.366980
+Iter 4000 | Validation Reconstruction Loss 0.705573
+Iter 4000 | Validation Supervised Loss 0.661407
+Iter 4100 | Training Total Loss 2.309937
+Iter 4100 | Training Reconstruction Loss 0.626385
+Iter 4100 | Training Supervised Loss 0.797885
+Iter 4100 | Training Helper Loss 0.885668
+Iter 4100 | Training Linear Helper Loss 36.094231
+control post error tensor(0.7969)
+treated post error tensor(0.4780)
+pre error tensor(0.0148)
+Iter 4100 | Validation Total Loss 1.330968
+Iter 4100 | Validation Reconstruction Loss 0.678716
+Iter 4100 | Validation Supervised Loss 0.652252
+Iter 4200 | Training Total Loss 2.025521
+Iter 4200 | Training Reconstruction Loss 0.616996
+Iter 4200 | Training Supervised Loss 0.522860
+Iter 4200 | Training Helper Loss 0.885665
+Iter 4200 | Training Linear Helper Loss 35.796768
+control post error tensor(0.7752)
+treated post error tensor(0.5084)
+pre error tensor(0.0151)
+Iter 4200 | Validation Total Loss 1.331984
+Iter 4200 | Validation Reconstruction Loss 0.675041
+Iter 4200 | Validation Supervised Loss 0.656943
+Iter 4300 | Training Total Loss 1.968054
+Iter 4300 | Training Reconstruction Loss 0.578488
+Iter 4300 | Training Supervised Loss 0.415654
+Iter 4300 | Training Helper Loss 0.973912
+Iter 4300 | Training Linear Helper Loss 33.397865
+control post error tensor(0.7856)
+treated post error tensor(0.5092)
+pre error tensor(0.0154)
+Iter 4300 | Validation Total Loss 1.351172
+Iter 4300 | Validation Reconstruction Loss 0.688372
+Iter 4300 | Validation Supervised Loss 0.662800
+Iter 4400 | Training Total Loss 2.146496
+Iter 4400 | Training Reconstruction Loss 0.626490
+Iter 4400 | Training Supervised Loss 0.581330
+Iter 4400 | Training Helper Loss 0.938675
+Iter 4400 | Training Linear Helper Loss 32.315052
+control post error tensor(0.7949)
+treated post error tensor(0.5048)
+pre error tensor(0.0150)
+Iter 4400 | Validation Total Loss 1.317229
+Iter 4400 | Validation Reconstruction Loss 0.652343
+Iter 4400 | Validation Supervised Loss 0.664886
+Iter 4500 | Training Total Loss 2.312020
+Iter 4500 | Training Reconstruction Loss 0.662139
+Iter 4500 | Training Supervised Loss 0.749620
+Iter 4500 | Training Helper Loss 0.900261
+Iter 4500 | Training Linear Helper Loss 31.374229
+control post error tensor(0.7615)
+treated post error tensor(0.5150)
+pre error tensor(0.0150)
+Iter 4500 | Validation Total Loss 1.328764
+Iter 4500 | Validation Reconstruction Loss 0.675491
+Iter 4500 | Validation Supervised Loss 0.653273
+Iter 4600 | Training Total Loss 2.046491
+Iter 4600 | Training Reconstruction Loss 0.617142
+Iter 4600 | Training Supervised Loss 0.545024
+Iter 4600 | Training Helper Loss 0.884325
+Iter 4600 | Training Linear Helper Loss 32.199638
+control post error tensor(0.7977)
+treated post error tensor(0.4798)
+pre error tensor(0.0142)
+Iter 4600 | Validation Total Loss 1.312806
+Iter 4600 | Validation Reconstruction Loss 0.659815
+Iter 4600 | Validation Supervised Loss 0.652990
+Iter 4700 | Training Total Loss 2.060598
+Iter 4700 | Training Reconstruction Loss 0.603134
+Iter 4700 | Training Supervised Loss 0.576154
+Iter 4700 | Training Helper Loss 0.881310
+Iter 4700 | Training Linear Helper Loss 29.887558
+control post error tensor(0.7587)
+treated post error tensor(0.5252)
+pre error tensor(0.0147)
+Iter 4700 | Validation Total Loss 1.296819
+Iter 4700 | Validation Reconstruction Loss 0.640154
+Iter 4700 | Validation Supervised Loss 0.656665
+Iter 4800 | Training Total Loss 2.182467
+Iter 4800 | Training Reconstruction Loss 0.626159
+Iter 4800 | Training Supervised Loss 0.577964
+Iter 4800 | Training Helper Loss 0.978344
+Iter 4800 | Training Linear Helper Loss 29.665983
+control post error tensor(0.7179)
+treated post error tensor(0.5608)
+pre error tensor(0.0148)
+Iter 4800 | Validation Total Loss 1.299595
+Iter 4800 | Validation Reconstruction Loss 0.645375
+Iter 4800 | Validation Supervised Loss 0.654219
+Iter 4900 | Training Total Loss 2.047712
+Iter 4900 | Training Reconstruction Loss 0.583933
+Iter 4900 | Training Supervised Loss 0.658805
+Iter 4900 | Training Helper Loss 0.804974
+Iter 4900 | Training Linear Helper Loss 28.549519
+control post error tensor(0.7646)
+treated post error tensor(0.5104)
+pre error tensor(0.0144)
+Iter 4900 | Validation Total Loss 1.289623
+Iter 4900 | Validation Reconstruction Loss 0.637736
+Iter 4900 | Validation Supervised Loss 0.651887
+Iter 5000 | Training Total Loss 2.072208
+Iter 5000 | Training Reconstruction Loss 0.576349
+Iter 5000 | Training Supervised Loss 0.588448
+Iter 5000 | Training Helper Loss 0.907411
+Iter 5000 | Training Linear Helper Loss 27.760561
+control post error tensor(0.7389)
+treated post error tensor(0.5321)
+pre error tensor(0.0148)
+Iter 5000 | Validation Total Loss 1.272004
+Iter 5000 | Validation Reconstruction Loss 0.621658
+Iter 5000 | Validation Supervised Loss 0.650346
+Iter 5100 | Training Total Loss 2.444751
+Iter 5100 | Training Reconstruction Loss 0.767958
+Iter 5100 | Training Supervised Loss 0.650823
+Iter 5100 | Training Helper Loss 1.025970
+Iter 5100 | Training Linear Helper Loss 27.457539
+control post error tensor(0.7528)
+treated post error tensor(0.5325)
+pre error tensor(0.0151)
+Iter 5100 | Validation Total Loss 1.307478
+Iter 5100 | Validation Reconstruction Loss 0.649701
+Iter 5100 | Validation Supervised Loss 0.657777
+Iter 5200 | Training Total Loss 2.017232
+Iter 5200 | Training Reconstruction Loss 0.563389
+Iter 5200 | Training Supervised Loss 0.576558
+Iter 5200 | Training Helper Loss 0.877284
+Iter 5200 | Training Linear Helper Loss 26.229025
+control post error tensor(0.7430)
+treated post error tensor(0.5354)
+pre error tensor(0.0146)
+Iter 5200 | Validation Total Loss 1.278268
+Iter 5200 | Validation Reconstruction Loss 0.624499
+Iter 5200 | Validation Supervised Loss 0.653769
+Iter 5300 | Training Total Loss 2.066379
+Iter 5300 | Training Reconstruction Loss 0.586132
+Iter 5300 | Training Supervised Loss 0.577630
+Iter 5300 | Training Helper Loss 0.902616
+Iter 5300 | Training Linear Helper Loss 25.032085
+control post error tensor(0.7110)
+treated post error tensor(0.5758)
+pre error tensor(0.0148)
+Iter 5300 | Validation Total Loss 1.305959
+Iter 5300 | Validation Reconstruction Loss 0.647699
+Iter 5300 | Validation Supervised Loss 0.658260
+Iter 5400 | Training Total Loss 1.921754
+Iter 5400 | Training Reconstruction Loss 0.583665
+Iter 5400 | Training Supervised Loss 0.462075
+Iter 5400 | Training Helper Loss 0.876015
+Iter 5400 | Training Linear Helper Loss 25.199581
+control post error tensor(0.7646)
+treated post error tensor(0.5103)
+pre error tensor(0.0146)
+Iter 5400 | Validation Total Loss 1.277130
+Iter 5400 | Validation Reconstruction Loss 0.625071
+Iter 5400 | Validation Supervised Loss 0.652059
+Iter 5500 | Training Total Loss 1.926116
+Iter 5500 | Training Reconstruction Loss 0.599302
+Iter 5500 | Training Supervised Loss 0.492201
+Iter 5500 | Training Helper Loss 0.834613
+Iter 5500 | Training Linear Helper Loss 23.577473
+control post error tensor(0.7952)
+treated post error tensor(0.4947)
+pre error tensor(0.0150)
+Iter 5500 | Validation Total Loss 1.283164
+Iter 5500 | Validation Reconstruction Loss 0.623267
+Iter 5500 | Validation Supervised Loss 0.659896
+Iter 5600 | Training Total Loss 2.056173
+Iter 5600 | Training Reconstruction Loss 0.591540
+Iter 5600 | Training Supervised Loss 0.509674
+Iter 5600 | Training Helper Loss 0.954959
+Iter 5600 | Training Linear Helper Loss 23.714573
+control post error tensor(0.7511)
+treated post error tensor(0.5289)
+pre error tensor(0.0144)
+Iter 5600 | Validation Total Loss 1.276763
+Iter 5600 | Validation Reconstruction Loss 0.622402
+Iter 5600 | Validation Supervised Loss 0.654361
+Iter 5700 | Training Total Loss 1.993979
+Iter 5700 | Training Reconstruction Loss 0.595706
+Iter 5700 | Training Supervised Loss 0.530988
+Iter 5700 | Training Helper Loss 0.867285
+Iter 5700 | Training Linear Helper Loss 23.488823
+control post error tensor(0.7431)
+treated post error tensor(0.5242)
+pre error tensor(0.0145)
+Iter 5700 | Validation Total Loss 1.269282
+Iter 5700 | Validation Reconstruction Loss 0.621130
+Iter 5700 | Validation Supervised Loss 0.648151
+Iter 5800 | Training Total Loss 1.990014
+Iter 5800 | Training Reconstruction Loss 0.581918
+Iter 5800 | Training Supervised Loss 0.536923
+Iter 5800 | Training Helper Loss 0.871173
+Iter 5800 | Training Linear Helper Loss 20.306671
+control post error tensor(0.7776)
+treated post error tensor(0.5121)
+pre error tensor(0.0147)
+Iter 5800 | Validation Total Loss 1.295916
+Iter 5800 | Validation Reconstruction Loss 0.636423
+Iter 5800 | Validation Supervised Loss 0.659493
+Iter 5900 | Training Total Loss 1.963514
+Iter 5900 | Training Reconstruction Loss 0.555173
+Iter 5900 | Training Supervised Loss 0.586495
+Iter 5900 | Training Helper Loss 0.821846
+Iter 5900 | Training Linear Helper Loss 21.019098
+control post error tensor(0.8010)
+treated post error tensor(0.4791)
+pre error tensor(0.0145)
+Iter 5900 | Validation Total Loss 1.271768
+Iter 5900 | Validation Reconstruction Loss 0.617173
+Iter 5900 | Validation Supervised Loss 0.654594
+Iter 6000 | Training Total Loss 1.850936
+Iter 6000 | Training Reconstruction Loss 0.561518
+Iter 6000 | Training Supervised Loss 0.511447
+Iter 6000 | Training Helper Loss 0.777971
+Iter 6000 | Training Linear Helper Loss 20.418444
+control post error tensor(0.7805)
+treated post error tensor(0.5156)
+pre error tensor(0.0152)
+Iter 6000 | Validation Total Loss 1.297568
+Iter 6000 | Validation Reconstruction Loss 0.634359
+Iter 6000 | Validation Supervised Loss 0.663209
+Iter 6100 | Training Total Loss 2.035297
+Iter 6100 | Training Reconstruction Loss 0.642486
+Iter 6100 | Training Supervised Loss 0.636472
+Iter 6100 | Training Helper Loss 0.756339
+Iter 6100 | Training Linear Helper Loss 19.924332
+control post error tensor(0.7992)
+treated post error tensor(0.5018)
+pre error tensor(0.0145)
+Iter 6100 | Validation Total Loss 1.272038
+Iter 6100 | Validation Reconstruction Loss 0.607031
+Iter 6100 | Validation Supervised Loss 0.665008
+Iter 6200 | Training Total Loss 1.977577
+Iter 6200 | Training Reconstruction Loss 0.595461
+Iter 6200 | Training Supervised Loss 0.555429
+Iter 6200 | Training Helper Loss 0.826688
+Iter 6200 | Training Linear Helper Loss 19.171848
+control post error tensor(0.7206)
+treated post error tensor(0.5565)
+pre error tensor(0.0153)
+Iter 6200 | Validation Total Loss 1.269426
+Iter 6200 | Validation Reconstruction Loss 0.615571
+Iter 6200 | Validation Supervised Loss 0.653855
+Iter 6300 | Training Total Loss 1.947260
+Iter 6300 | Training Reconstruction Loss 0.553012
+Iter 6300 | Training Supervised Loss 0.545410
+Iter 6300 | Training Helper Loss 0.848838
+Iter 6300 | Training Linear Helper Loss 17.918516
+control post error tensor(0.7719)
+treated post error tensor(0.5092)
+pre error tensor(0.0147)
+Iter 6300 | Validation Total Loss 1.276502
+Iter 6300 | Validation Reconstruction Loss 0.621280
+Iter 6300 | Validation Supervised Loss 0.655222
+Iter 6400 | Training Total Loss 1.957190
+Iter 6400 | Training Reconstruction Loss 0.553680
+Iter 6400 | Training Supervised Loss 0.566417
+Iter 6400 | Training Helper Loss 0.837094
+Iter 6400 | Training Linear Helper Loss 18.387455
+control post error tensor(0.7418)
+treated post error tensor(0.5582)
+pre error tensor(0.0147)
+Iter 6400 | Validation Total Loss 1.269332
+Iter 6400 | Validation Reconstruction Loss 0.604646
+Iter 6400 | Validation Supervised Loss 0.664686
+Iter 6500 | Training Total Loss 2.114651
+Iter 6500 | Training Reconstruction Loss 0.570232
+Iter 6500 | Training Supervised Loss 0.672117
+Iter 6500 | Training Helper Loss 0.872302
+Iter 6500 | Training Linear Helper Loss 20.652002
+control post error tensor(0.7765)
+treated post error tensor(0.5167)
+pre error tensor(0.0150)
+Iter 6500 | Validation Total Loss 1.286313
+Iter 6500 | Validation Reconstruction Loss 0.624730
+Iter 6500 | Validation Supervised Loss 0.661583
+Iter 6600 | Training Total Loss 1.808339
+Iter 6600 | Training Reconstruction Loss 0.578374
+Iter 6600 | Training Supervised Loss 0.422699
+Iter 6600 | Training Helper Loss 0.807265
+Iter 6600 | Training Linear Helper Loss 18.476131
+control post error tensor(0.7983)
+treated post error tensor(0.4780)
+pre error tensor(0.0143)
+Iter 6600 | Validation Total Loss 1.281751
+Iter 6600 | Validation Reconstruction Loss 0.629249
+Iter 6600 | Validation Supervised Loss 0.652502
+Iter 6700 | Training Total Loss 2.162241
+Iter 6700 | Training Reconstruction Loss 0.608542
+Iter 6700 | Training Supervised Loss 0.744303
+Iter 6700 | Training Helper Loss 0.809395
+Iter 6700 | Training Linear Helper Loss 17.666260
+control post error tensor(0.7669)
+treated post error tensor(0.5271)
+pre error tensor(0.0146)
+Iter 6700 | Validation Total Loss 1.259747
+Iter 6700 | Validation Reconstruction Loss 0.598090
+Iter 6700 | Validation Supervised Loss 0.661657
+Iter 6800 | Training Total Loss 1.991783
+Iter 6800 | Training Reconstruction Loss 0.574399
+Iter 6800 | Training Supervised Loss 0.596824
+Iter 6800 | Training Helper Loss 0.820560
+Iter 6800 | Training Linear Helper Loss 15.344267
+control post error tensor(0.7377)
+treated post error tensor(0.5823)
+pre error tensor(0.0144)
+Iter 6800 | Validation Total Loss 1.284827
+Iter 6800 | Validation Reconstruction Loss 0.610439
+Iter 6800 | Validation Supervised Loss 0.674388
+Iter 6900 | Training Total Loss 1.905817
+Iter 6900 | Training Reconstruction Loss 0.558256
+Iter 6900 | Training Supervised Loss 0.536679
+Iter 6900 | Training Helper Loss 0.810882
+Iter 6900 | Training Linear Helper Loss 16.716415
+control post error tensor(0.8000)
+treated post error tensor(0.5148)
+pre error tensor(0.0145)
+Iter 6900 | Validation Total Loss 1.280015
+Iter 6900 | Validation Reconstruction Loss 0.608115
+Iter 6900 | Validation Supervised Loss 0.671900
+Iter 7000 | Training Total Loss 1.927814
+Iter 7000 | Training Reconstruction Loss 0.562760
+Iter 7000 | Training Supervised Loss 0.594903
+Iter 7000 | Training Helper Loss 0.770151
+Iter 7000 | Training Linear Helper Loss 16.561752
+control post error tensor(0.7675)
+treated post error tensor(0.5134)
+pre error tensor(0.0141)
+Iter 7000 | Validation Total Loss 1.275466
+Iter 7000 | Validation Reconstruction Loss 0.620905
+Iter 7000 | Validation Supervised Loss 0.654561
+Iter 7100 | Training Total Loss 2.213594
+Iter 7100 | Training Reconstruction Loss 0.594779
+Iter 7100 | Training Supervised Loss 0.753064
+Iter 7100 | Training Helper Loss 0.865751
+Iter 7100 | Training Linear Helper Loss 16.853668
+control post error tensor(0.7648)
+treated post error tensor(0.5321)
+pre error tensor(0.0142)
+Iter 7100 | Validation Total Loss 1.319751
+Iter 7100 | Validation Reconstruction Loss 0.657025
+Iter 7100 | Validation Supervised Loss 0.662726
+Iter 7200 | Training Total Loss 1.868684
+Iter 7200 | Training Reconstruction Loss 0.571388
+Iter 7200 | Training Supervised Loss 0.546082
+Iter 7200 | Training Helper Loss 0.751214
+Iter 7200 | Training Linear Helper Loss 15.030972
+control post error tensor(0.7499)
+treated post error tensor(0.5477)
+pre error tensor(0.0148)
+Iter 7200 | Validation Total Loss 1.289461
+Iter 7200 | Validation Reconstruction Loss 0.625878
+Iter 7200 | Validation Supervised Loss 0.663583
+Iter 7300 | Training Total Loss 2.146436
+Iter 7300 | Training Reconstruction Loss 0.616379
+Iter 7300 | Training Supervised Loss 0.684542
+Iter 7300 | Training Helper Loss 0.845515
+Iter 7300 | Training Linear Helper Loss 15.364046
+control post error tensor(0.7777)
+treated post error tensor(0.5378)
+pre error tensor(0.0145)
+Iter 7300 | Validation Total Loss 1.278798
+Iter 7300 | Validation Reconstruction Loss 0.606597
+Iter 7300 | Validation Supervised Loss 0.672201
+Iter 7400 | Training Total Loss 1.913180
+Iter 7400 | Training Reconstruction Loss 0.569945
+Iter 7400 | Training Supervised Loss 0.513266
+Iter 7400 | Training Helper Loss 0.829969
+Iter 7400 | Training Linear Helper Loss 15.964970
+control post error tensor(0.8302)
+treated post error tensor(0.4890)
+pre error tensor(0.0142)
+Iter 7400 | Validation Total Loss 1.279234
+Iter 7400 | Validation Reconstruction Loss 0.605426
+Iter 7400 | Validation Supervised Loss 0.673808
+Iter 7500 | Training Total Loss 1.617322
+Iter 7500 | Training Reconstruction Loss 0.530501
+Iter 7500 | Training Supervised Loss 0.434926
+Iter 7500 | Training Helper Loss 0.651895
+Iter 7500 | Training Linear Helper Loss 14.806391
+control post error tensor(0.7666)
+treated post error tensor(0.5526)
+pre error tensor(0.0144)
+Iter 7500 | Validation Total Loss 1.263983
+Iter 7500 | Validation Reconstruction Loss 0.590016
+Iter 7500 | Validation Supervised Loss 0.673968
+Iter 7600 | Training Total Loss 1.797787
+Iter 7600 | Training Reconstruction Loss 0.556978
+Iter 7600 | Training Supervised Loss 0.521292
+Iter 7600 | Training Helper Loss 0.719518
+Iter 7600 | Training Linear Helper Loss 13.611379
+control post error tensor(0.7901)
+treated post error tensor(0.5382)
+pre error tensor(0.0146)
+Iter 7600 | Validation Total Loss 1.295338
+Iter 7600 | Validation Reconstruction Loss 0.616578
+Iter 7600 | Validation Supervised Loss 0.678759
+Iter 7700 | Training Total Loss 1.839812
+Iter 7700 | Training Reconstruction Loss 0.573115
+Iter 7700 | Training Supervised Loss 0.476099
+Iter 7700 | Training Helper Loss 0.790598
+Iter 7700 | Training Linear Helper Loss 15.268099
+control post error tensor(0.8180)
+treated post error tensor(0.5113)
+pre error tensor(0.0144)
+Iter 7700 | Validation Total Loss 1.285159
+Iter 7700 | Validation Reconstruction Loss 0.606067
+Iter 7700 | Validation Supervised Loss 0.679092
+Iter 7800 | Training Total Loss 1.834492
+Iter 7800 | Training Reconstruction Loss 0.559437
+Iter 7800 | Training Supervised Loss 0.484861
+Iter 7800 | Training Helper Loss 0.790195
+Iter 7800 | Training Linear Helper Loss 13.651694
+control post error tensor(0.8453)
+treated post error tensor(0.4734)
+pre error tensor(0.0142)
+Iter 7800 | Validation Total Loss 1.263793
+Iter 7800 | Validation Reconstruction Loss 0.590193
+Iter 7800 | Validation Supervised Loss 0.673600
+Iter 7900 | Training Total Loss 1.752582
+Iter 7900 | Training Reconstruction Loss 0.551922
+Iter 7900 | Training Supervised Loss 0.430365
+Iter 7900 | Training Helper Loss 0.770295
+Iter 7900 | Training Linear Helper Loss 13.659631
+control post error tensor(0.8075)
+treated post error tensor(0.5005)
+pre error tensor(0.0144)
+Iter 7900 | Validation Total Loss 1.260725
+Iter 7900 | Validation Reconstruction Loss 0.592313
+Iter 7900 | Validation Supervised Loss 0.668412
+Iter 8000 | Training Total Loss 1.711465
+Iter 8000 | Training Reconstruction Loss 0.600464
+Iter 8000 | Training Supervised Loss 0.378841
+Iter 8000 | Training Helper Loss 0.732161
+Iter 8000 | Training Linear Helper Loss 13.291236
+control post error tensor(0.7618)
+treated post error tensor(0.5398)
+pre error tensor(0.0146)
+Iter 8000 | Validation Total Loss 1.281721
+Iter 8000 | Validation Reconstruction Loss 0.616323
+Iter 8000 | Validation Supervised Loss 0.665398
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.000992
+--- Training done in 482.654244184494 seconds ---
+Control Y MAE: 0.11796590685844421
+Testing
+Iteration 0
+After Lasso procedure | Total Loss 0.001024
+Best model: 0
+Treatment effect MAE: (0.12967940601454586, 0.007348629370360392)
+Control Y MAE: 0.11733715236186981
+Gini 0.477 (0.010)
+Ent nan (nan)
+N Matched 2.725 (0.050)
+MIS 0.180 (0.027)
+Wrong proba 0.149 (0.019)
+Average Training Time: 482.654244184494
+Std Training Time: 0.0

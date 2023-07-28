@@ -11,6 +11,8 @@ sample_size: 10, extrapolate: False, robust: 1, lasso: True, helper: False
 Consistency: 0.49250000000000016 (0.03592227334429465) 
 sample_size: 10, extrapolate: False, robust: 2, lasso: True, helper: False
 Consistency: 0.4811666666666668 (0.03703275952150715) 
+
+
 sample_size: 20, extrapolate: False, robust: 0, lasso: True, helper: True
 Consistency: 0.3573333333333333 (0.03567626039196871) 
 sample_size: 20, extrapolate: False, robust: 1, lasso: True, helper: True
@@ -23,6 +25,8 @@ sample_size: 20, extrapolate: False, robust: 1, lasso: True, helper: False
 Consistency: 0.38666666666666677 (0.03946728603117609) 
 sample_size: 20, extrapolate: False, robust: 2, lasso: True, helper: False
 Consistency: 0.3211666666666666 (0.036146196203750126) 
+
+
 sample_size: 40, extrapolate: False, robust: 0, lasso: True, helper: True
 Consistency: 0.2453333333333333 (0.032564534218822924) 
 sample_size: 40, extrapolate: False, robust: 1, lasso: True, helper: True
@@ -34,7 +38,9 @@ Consistency: 0.20016666666666663 (0.02963715292219098)
 sample_size: 40, extrapolate: False, robust: 1, lasso: True, helper: False
 Consistency: 0.13116666666666665 (0.02039560818738518) 
 sample_size: 40, extrapolate: False, robust: 2, lasso: True, helper: False
-Consistency: 0.14750000000000002 (0.0273570781009636) 
+Consistency: 0.14750000000000002 (0.0273570781009636)
+
+ 
 sample_size: 80, extrapolate: False, robust: 0, lasso: True, helper: True
 Consistency: 0.2081666666666667 (0.03027695768512198) 
 sample_size: 80, extrapolate: False, robust: 1, lasso: True, helper: True
@@ -47,6 +53,8 @@ sample_size: 80, extrapolate: False, robust: 1, lasso: True, helper: False
 Consistency: 0.08116666666666666 (0.017517697400692308) 
 sample_size: 80, extrapolate: False, robust: 2, lasso: True, helper: False
 Consistency: 0.11283333333333331 (0.025677330036002137) 
+
+
 sample_size: 160, extrapolate: False, robust: 0, lasso: True, helper: True
 Consistency: 0.11749999999999998 (0.025443155595693445) 
 sample_size: 160, extrapolate: False, robust: 1, lasso: True, helper: True
@@ -59,6 +67,8 @@ sample_size: 160, extrapolate: False, robust: 1, lasso: True, helper: False
 Consistency: 0.08616666666666666 (0.020511588865267796) 
 sample_size: 160, extrapolate: False, robust: 2, lasso: True, helper: False
 Consistency: 0.0775 (0.018190924171746253) 
+
+
 sample_size: 10, extrapolate: True, robust: 0, lasso: True, helper: True
 Consistency: 0.5666666666666668 (0.04159994658116229) 
 sample_size: 10, extrapolate: True, robust: 1, lasso: True, helper: True
@@ -71,6 +81,8 @@ sample_size: 10, extrapolate: True, robust: 1, lasso: True, helper: False
 Consistency: 0.6383333333333333 (0.03638566567573921) 
 sample_size: 10, extrapolate: True, robust: 2, lasso: True, helper: False
 Consistency: 0.5258333333333334 (0.037019045398581286) 
+
+
 sample_size: 20, extrapolate: True, robust: 0, lasso: True, helper: True
 Consistency: 0.47000000000000014 (0.040629080991602826) 
 sample_size: 20, extrapolate: True, robust: 1, lasso: True, helper: True
@@ -83,18 +95,22 @@ sample_size: 20, extrapolate: True, robust: 1, lasso: True, helper: False
 Consistency: 0.39483333333333326 (0.04102146795683125) 
 sample_size: 20, extrapolate: True, robust: 2, lasso: True, helper: False
 Consistency: 0.37816666666666665 (0.03792074703319484) 
+
+
 sample_size: 40, extrapolate: True, robust: 0, lasso: True, helper: True
 Consistency: 0.39283333333333337 (0.0382842112800216) 
 sample_size: 40, extrapolate: True, robust: 1, lasso: True, helper: True
 Consistency: 0.35316666666666663 (0.037987348039987094) 
 sample_size: 40, extrapolate: True, robust: 2, lasso: True, helper: True
-Consistency: 0.26849999999999996 (0.0334862285126289) 
+Consistency: 0.36849999999999996 (0.0334862285126289) 
 sample_size: 40, extrapolate: True, robust: 0, lasso: True, helper: False
 Consistency: 0.38 (0.037987571066804934) 
 sample_size: 40, extrapolate: True, robust: 1, lasso: True, helper: False
 Consistency: 0.25916666666666666 (0.036588837854673054) 
 sample_size: 40, extrapolate: True, robust: 2, lasso: True, helper: False
 Consistency: 0.30633333333333335 (0.03768714782404091) 
+
+
 sample_size: 80, extrapolate: True, robust: 0, lasso: True, helper: True
 Consistency: 0.315 (0.04020053896819462) 
 sample_size: 80, extrapolate: True, robust: 1, lasso: True, helper: True
@@ -107,6 +123,8 @@ sample_size: 80, extrapolate: True, robust: 1, lasso: True, helper: False
 Consistency: 0.16450000000000004 (0.02657657176286412) 
 sample_size: 80, extrapolate: True, robust: 2, lasso: True, helper: False
 Consistency: 0.174 (0.029901988042417664) 
+
+
 sample_size: 160, extrapolate: True, robust: 0, lasso: True, helper: True
 Consistency: 0.22983333333333333 (0.03534928492126035) 
 sample_size: 160, extrapolate: True, robust: 1, lasso: True, helper: True
