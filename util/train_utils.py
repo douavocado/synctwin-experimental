@@ -90,7 +90,7 @@ def pre_train_reconstruction_prognostic_loss(
     y_pre_full=None,
     y_pre_full_val=None,
     niters=5000,
-    model_path="models/sync/{}.pth",
+    model_path=None,
     batch_size=None,
     robust=0,
     use_treated=False,
@@ -189,12 +189,12 @@ def pre_train_reconstruction_prognostic_loss(
                 print("Iter {:04d} | Supervised Loss {:.6f}".format(itr, loss_Y.item()))
                 if loss < best_loss:
                     best_loss = loss
-
-                    torch.save(enc.state_dict(), model_path.format("encoder.pth"))
-                    torch.save(dec.state_dict(), model_path.format("decoder.pth"))
-                    torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
-                    if robust == 2:
-                        torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+                    if model_path is not None:
+                        torch.save(enc.state_dict(), model_path.format("encoder.pth"))
+                        torch.save(dec.state_dict(), model_path.format("decoder.pth"))
+                        torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+                        if robust == 2:
+                            torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     return best_loss
 
 def pre_train_reconstruction_prognostic_loss_linear_helper(
@@ -212,7 +212,7 @@ def pre_train_reconstruction_prognostic_loss_linear_helper(
     y_pre_full=None,
     y_pre_full_val=None,
     niters=5000,
-    model_path="models/sync/{}.pth",
+    model_path=None,
     batch_size=None,
     robust=0,
     use_treated=False,
@@ -251,11 +251,12 @@ def pre_train_reconstruction_prognostic_loss_linear_helper(
     y_mask_full = torch.stack([y_mask_full], dim=0).unsqueeze(-1)
 
     best_loss = 1e9
-    torch.save(enc.state_dict(), model_path.format("encoder.pth"))
-    torch.save(dec.state_dict(), model_path.format("decoder.pth"))
-    torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
-    if robust == 2:
-        torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+    if model_path is not None:
+        torch.save(enc.state_dict(), model_path.format("encoder.pth"))
+        torch.save(dec.state_dict(), model_path.format("decoder.pth"))
+        torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+        if robust == 2:
+            torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     for over_itr in range(1, niters//itr_phase1 + 1):
         # first train the encoder/ decoder keeping linear helper as fixed
         for itr1 in range(1, itr_phase1 + 1):
@@ -351,12 +352,12 @@ def pre_train_reconstruction_prognostic_loss_linear_helper(
             print("Iter {:04d} | Validation Supervised Loss {:.6f}".format(total_itr, loss_Y.item()))
             if loss < best_loss:
                 best_loss = loss
-
-                torch.save(enc.state_dict(), model_path.format("encoder.pth"))
-                torch.save(dec.state_dict(), model_path.format("decoder.pth"))
-                torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
-                if robust == 2:
-                    torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
+                if model_path is not None:
+                    torch.save(enc.state_dict(), model_path.format("encoder.pth"))
+                    torch.save(dec.state_dict(), model_path.format("decoder.pth"))
+                    torch.save(dec_Y.state_dict(), model_path.format("decoder_Y.pth"))
+                    if robust == 2:
+                        torch.save(pre_dec_Y.state_dict(), model_path.format("pre_decoder_Y.pth"))
     return best_loss
 
 
@@ -458,7 +459,7 @@ def train_B_self_expressive(
     mask_full,
     batch_ind_full,
     niters=20000,
-    model_path="models/sync/{}.pth",
+    model_path=None,
     batch_size=None,
     lr=1e-3,
     test_freq=1000,
@@ -494,7 +495,8 @@ def train_B_self_expressive(
                     return 1
                 if loss < best_loss:
                     best_loss = loss
-                    torch.save(nsc.state_dict(), model_path.format("nsc.pth"))
+                    if model_path is not None:
+                        torch.save(nsc.state_dict(), model_path.format("nsc.pth"))
     return 0
 
 def train_B_self_expressive_lasso(

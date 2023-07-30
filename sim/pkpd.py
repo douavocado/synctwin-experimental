@@ -61,6 +61,25 @@ def get_Kin(step=30, n_basis=12):
     return Kin_list, Kin_b
 
 
+def get_clustered_Kin2(Kin_b, n_sample_total, confound_bias=0.5):
+    n_basis = Kin_b.shape[1]
+    mu_1 = np.zeros(n_basis)
+    mu_2 = np.ones(n_basis) *3
+    cov_1 = np.eye(n_basis)
+    cov_2 = np.eye(n_basis)
+
+
+    Kin_list = []
+    for j in range(n_sample_total):
+        if np.random.rand() < confound_bias:
+            Kin = np.matmul(Kin_b, np.random.multivariate_normal(mu_1, cov_1))
+        else:
+            Kin = np.matmul(Kin_b, np.random.multivariate_normal(mu_2, cov_2))
+        Kin_list.append(Kin)
+
+    Kin_b = np.stack(Kin_list, axis=-1)
+    return Kin_list, Kin_b
+
 def get_clustered_Kin(Kin_b, n_cluster, n_sample_total):
     n_basis = Kin_b.shape[1]
 
@@ -190,7 +209,7 @@ def get_treatment_effect(treat_res_arr, treat_counterfactual_arr, train_step, m,
     m = m[2:3].item()
     sd = sd[2:3].item()
 
-    treat_res_arr = (treat_res_arr - m) / sd
-    treat_counterfactual_arr = (treat_counterfactual_arr - m) / sd
+    treat_res_arr_ = (treat_res_arr - m) / sd
+    treat_counterfactual_arr_ = (treat_counterfactual_arr - m) / sd
 
-    return torch.tensor(treat_res_arr - treat_counterfactual_arr, device=device).permute((1, 2, 0))[train_step:, :, 1:2]
+    return torch.tensor(treat_res_arr_ - treat_counterfactual_arr_, device=device).permute((1, 2, 0))[train_step:, :, 1:2]

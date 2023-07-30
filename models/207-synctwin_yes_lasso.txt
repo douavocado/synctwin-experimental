@@ -1,0 +1,42 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+control post error tensor(228.3984)
+Iter 0100 | Total Loss 234.928482
+Iter 0100 | Reconstruction Loss 6.530085
+Iter 0100 | Supervised Loss 228.398392
+control post error tensor(149.0578)
+Iter 0200 | Total Loss 155.449738
+Iter 0200 | Reconstruction Loss 6.391960
+Iter 0200 | Supervised Loss 149.057770
+control post error tensor(118.5911)
+Iter 0300 | Total Loss 124.946198
+Iter 0300 | Reconstruction Loss 6.355058
+Iter 0300 | Supervised Loss 118.591141
+control post error tensor(101.7755)
+Iter 0400 | Total Loss 108.117447
+Iter 0400 | Reconstruction Loss 6.341921
+Iter 0400 | Supervised Loss 101.775528
+control post error tensor(90.6764)
+Iter 0500 | Total Loss 97.015656
+Iter 0500 | Reconstruction Loss 6.339287
+Iter 0500 | Supervised Loss 90.676369
+Eval
+Matching on validation set
+After Lasso procedure | Total Loss 0.000116
+--- Training done in 17.94549822807312 seconds ---
+Control Y MAE: 0.22377285361289978
+Testing
+Iteration 0
+After Lasso procedure | Total Loss 0.000114
+Best model: 0
+Treatment effect MAE: (0.253526508808136, 0.061358131076267815)
+Control Y MAE: 0.1949872523546219
+Gini 0.414 (0.085)
+Ent 0.750 (0.156)
+N Matched 2.700 (0.375)
+MIS 0.000 (0.000)
+Wrong proba 0.249 (0.052)
+Average Training Time: 17.94549822807312
+Std Training Time: 0.0

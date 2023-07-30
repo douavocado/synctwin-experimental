@@ -19,6 +19,8 @@ parser.add_argument("--control_sample", type=str, default="200")
 parser.add_argument("--treatment_sample", type=str, default="200")
 parser.add_argument("--save_data", type=str, choices=["False", "True"], default="True")
 parser.add_argument("--hidden_confounder", type=str, choices=["0", "1", "2", "3"], default="0")
+parser.add_argument("--bias", type=str, default="0.5")
+
 args = parser.parse_args()
 seed = int(args.seed)
 save_data = args.save_data == "True"
@@ -28,6 +30,7 @@ step = int(args.step)
 control_sample = int(args.control_sample)
 treatment_sample = int(args.treatment_sample)
 hidden_confounder = int(args.hidden_confounder)
+confounding_bias = float(args.bias)
 
 assert treatment_sample <= control_sample
 
@@ -46,11 +49,13 @@ data_path = base_path_data + "/{}-{}.{}"
 
 for fold in ["test", "val", "train"]:
     Kin_list, Kin_b = pkpd.get_Kin(step=step, n_basis=n_basis)
-    control_Kin_list, control_Kin_b = pkpd.get_clustered_Kin(Kin_b, n_cluster=n_cluster, n_sample_total=control_sample)
-    treat_Kin_list, treat_Kin_b = pkpd.get_clustered_Kin(Kin_b, n_cluster=n_cluster, n_sample_total=control_sample * 2)
-    treat_Kin_list = treat_Kin_list[:treatment_sample]
-    treat_Kin_b = treat_Kin_b[:, :treatment_sample]
-
+    # control_Kin_list, control_Kin_b = pkpd.get_clustered_Kin(Kin_b, n_cluster=n_cluster, n_sample_total=control_sample)
+    # treat_Kin_list, treat_Kin_b = pkpd.get_clustered_Kin(Kin_b, n_cluster=n_cluster, n_sample_total=control_sample * 2)
+    # treat_Kin_list = treat_Kin_list[:treatment_sample]
+    # treat_Kin_b = treat_Kin_b[:, :treatment_sample]
+    control_Kin_list, control_Kin_b = pkpd.get_clustered_Kin2(Kin_b, n_sample_total=control_sample, confound_bias=confounding_bias)
+    treat_Kin_list, treat_Kin_b = pkpd.get_clustered_Kin2(Kin_b, n_sample_total=treatment_sample, confound_bias=1)
+    
     K_list = [0.18]
     P0_list = [0.5]
     R0_list = [0.5]

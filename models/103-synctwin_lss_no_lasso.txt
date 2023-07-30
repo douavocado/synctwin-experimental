@@ -1,0 +1,360 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+control post error tensor(1.9492)
+treated post error tensor(0.6177)
+pre error tensor(0.1691)
+Iter 0100 | Total Loss 20.777721
+Iter 0100 | Reconstruction Loss 19.325125
+Iter 0100 | Supervised Loss 1.452597
+control post error tensor(0.7385)
+treated post error tensor(0.3794)
+pre error tensor(0.0822)
+Iter 0200 | Total Loss 7.095175
+Iter 0200 | Reconstruction Loss 6.453983
+Iter 0200 | Supervised Loss 0.641192
+control post error tensor(0.6534)
+treated post error tensor(0.3490)
+pre error tensor(0.0730)
+Iter 0300 | Total Loss 4.894847
+Iter 0300 | Reconstruction Loss 4.320662
+Iter 0300 | Supervised Loss 0.574185
+control post error tensor(0.5379)
+treated post error tensor(0.3792)
+pre error tensor(0.0677)
+Iter 0400 | Total Loss 3.377252
+Iter 0400 | Reconstruction Loss 2.850992
+Iter 0400 | Supervised Loss 0.526260
+control post error tensor(0.5091)
+treated post error tensor(0.3717)
+pre error tensor(0.0614)
+Iter 0500 | Total Loss 2.764399
+Iter 0500 | Reconstruction Loss 2.262586
+Iter 0500 | Supervised Loss 0.501813
+control post error tensor(0.5209)
+treated post error tensor(0.3563)
+pre error tensor(0.0538)
+Iter 0600 | Total Loss 2.410118
+Iter 0600 | Reconstruction Loss 1.917672
+Iter 0600 | Supervised Loss 0.492446
+control post error tensor(0.5181)
+treated post error tensor(0.3667)
+pre error tensor(0.0448)
+Iter 0700 | Total Loss 2.209270
+Iter 0700 | Reconstruction Loss 1.722060
+Iter 0700 | Supervised Loss 0.487209
+control post error tensor(0.5055)
+treated post error tensor(0.3522)
+pre error tensor(0.0360)
+Iter 0800 | Total Loss 2.032271
+Iter 0800 | Reconstruction Loss 1.567434
+Iter 0800 | Supervised Loss 0.464837
+control post error tensor(0.5164)
+treated post error tensor(0.3724)
+pre error tensor(0.0286)
+Iter 0900 | Total Loss 1.933534
+Iter 0900 | Reconstruction Loss 1.460558
+Iter 0900 | Supervised Loss 0.472976
+control post error tensor(0.4922)
+treated post error tensor(0.3631)
+pre error tensor(0.0238)
+Iter 1000 | Total Loss 1.856513
+Iter 1000 | Reconstruction Loss 1.404979
+Iter 1000 | Supervised Loss 0.451534
+control post error tensor(0.5373)
+treated post error tensor(0.3388)
+pre error tensor(0.0213)
+Iter 1100 | Total Loss 1.783432
+Iter 1100 | Reconstruction Loss 1.324033
+Iter 1100 | Supervised Loss 0.459400
+control post error tensor(0.4843)
+treated post error tensor(0.3989)
+pre error tensor(0.0223)
+Iter 1200 | Total Loss 1.795478
+Iter 1200 | Reconstruction Loss 1.331568
+Iter 1200 | Supervised Loss 0.463910
+control post error tensor(0.4932)
+treated post error tensor(0.4551)
+pre error tensor(0.0235)
+Iter 1300 | Total Loss 1.924094
+Iter 1300 | Reconstruction Loss 1.426386
+Iter 1300 | Supervised Loss 0.497708
+control post error tensor(0.4801)
+treated post error tensor(0.3702)
+pre error tensor(0.0196)
+Iter 1400 | Total Loss 1.666260
+Iter 1400 | Reconstruction Loss 1.221543
+Iter 1400 | Supervised Loss 0.444717
+control post error tensor(0.5091)
+treated post error tensor(0.4036)
+pre error tensor(0.0210)
+Iter 1500 | Total Loss 1.715784
+Iter 1500 | Reconstruction Loss 1.238382
+Iter 1500 | Supervised Loss 0.477401
+control post error tensor(0.4730)
+treated post error tensor(0.4167)
+pre error tensor(0.0207)
+Iter 1600 | Total Loss 1.675788
+Iter 1600 | Reconstruction Loss 1.210169
+Iter 1600 | Supervised Loss 0.465619
+control post error tensor(0.5520)
+treated post error tensor(0.3205)
+pre error tensor(0.0200)
+Iter 1700 | Total Loss 1.684340
+Iter 1700 | Reconstruction Loss 1.228125
+Iter 1700 | Supervised Loss 0.456215
+control post error tensor(0.4965)
+treated post error tensor(0.4042)
+pre error tensor(0.0205)
+Iter 1800 | Total Loss 1.611408
+Iter 1800 | Reconstruction Loss 1.140590
+Iter 1800 | Supervised Loss 0.470817
+control post error tensor(0.4824)
+treated post error tensor(0.4066)
+pre error tensor(0.0215)
+Iter 1900 | Total Loss 1.613672
+Iter 1900 | Reconstruction Loss 1.147644
+Iter 1900 | Supervised Loss 0.466028
+control post error tensor(0.5115)
+treated post error tensor(0.3751)
+pre error tensor(0.0204)
+Iter 2000 | Total Loss 1.580936
+Iter 2000 | Reconstruction Loss 1.117277
+Iter 2000 | Supervised Loss 0.463660
+control post error tensor(0.5258)
+treated post error tensor(0.3464)
+pre error tensor(0.0201)
+Iter 2100 | Total Loss 1.562601
+Iter 2100 | Reconstruction Loss 1.106381
+Iter 2100 | Supervised Loss 0.456220
+control post error tensor(0.4340)
+treated post error tensor(0.4259)
+pre error tensor(0.0208)
+Iter 2200 | Total Loss 1.490379
+Iter 2200 | Reconstruction Loss 1.039639
+Iter 2200 | Supervised Loss 0.450740
+control post error tensor(0.4831)
+treated post error tensor(0.3690)
+pre error tensor(0.0191)
+Iter 2300 | Total Loss 1.491345
+Iter 2300 | Reconstruction Loss 1.046193
+Iter 2300 | Supervised Loss 0.445152
+control post error tensor(0.4469)
+treated post error tensor(0.4064)
+pre error tensor(0.0195)
+Iter 2400 | Total Loss 1.474026
+Iter 2400 | Reconstruction Loss 1.027846
+Iter 2400 | Supervised Loss 0.446180
+control post error tensor(0.5113)
+treated post error tensor(0.3863)
+pre error tensor(0.0214)
+Iter 2500 | Total Loss 1.465178
+Iter 2500 | Reconstruction Loss 0.994917
+Iter 2500 | Supervised Loss 0.470261
+control post error tensor(0.5125)
+treated post error tensor(0.3264)
+pre error tensor(0.0181)
+Iter 2600 | Total Loss 1.437042
+Iter 2600 | Reconstruction Loss 0.999505
+Iter 2600 | Supervised Loss 0.437537
+control post error tensor(0.4526)
+treated post error tensor(0.4279)
+pre error tensor(0.0178)
+Iter 2700 | Total Loss 1.393050
+Iter 2700 | Reconstruction Loss 0.934995
+Iter 2700 | Supervised Loss 0.458055
+control post error tensor(0.4288)
+treated post error tensor(0.4346)
+pre error tensor(0.0186)
+Iter 2800 | Total Loss 1.404200
+Iter 2800 | Reconstruction Loss 0.953872
+Iter 2800 | Supervised Loss 0.450328
+control post error tensor(0.4384)
+treated post error tensor(0.4079)
+pre error tensor(0.0184)
+Iter 2900 | Total Loss 1.361440
+Iter 2900 | Reconstruction Loss 0.919863
+Iter 2900 | Supervised Loss 0.441577
+control post error tensor(0.4164)
+treated post error tensor(0.4562)
+pre error tensor(0.0173)
+Iter 3000 | Total Loss 1.432648
+Iter 3000 | Reconstruction Loss 0.979073
+Iter 3000 | Supervised Loss 0.453575
+control post error tensor(0.4451)
+treated post error tensor(0.4148)
+pre error tensor(0.0197)
+Iter 3100 | Total Loss 1.396438
+Iter 3100 | Reconstruction Loss 0.946766
+Iter 3100 | Supervised Loss 0.449672
+control post error tensor(0.3898)
+treated post error tensor(0.4745)
+pre error tensor(0.0184)
+Iter 3200 | Total Loss 1.411885
+Iter 3200 | Reconstruction Loss 0.961359
+Iter 3200 | Supervised Loss 0.450527
+control post error tensor(0.4900)
+treated post error tensor(0.3399)
+pre error tensor(0.0174)
+Iter 3300 | Total Loss 1.444616
+Iter 3300 | Reconstruction Loss 1.012203
+Iter 3300 | Supervised Loss 0.432413
+control post error tensor(0.4276)
+treated post error tensor(0.4208)
+pre error tensor(0.0169)
+Iter 3400 | Total Loss 1.433228
+Iter 3400 | Reconstruction Loss 0.992142
+Iter 3400 | Supervised Loss 0.441087
+control post error tensor(0.3981)
+treated post error tensor(0.4438)
+pre error tensor(0.0177)
+Iter 3500 | Total Loss 1.441529
+Iter 3500 | Reconstruction Loss 1.002832
+Iter 3500 | Supervised Loss 0.438697
+control post error tensor(0.4009)
+treated post error tensor(0.4230)
+pre error tensor(0.0168)
+Iter 3600 | Total Loss 1.379647
+Iter 3600 | Reconstruction Loss 0.950901
+Iter 3600 | Supervised Loss 0.428747
+control post error tensor(0.4424)
+treated post error tensor(0.3994)
+pre error tensor(0.0179)
+Iter 3700 | Total Loss 1.394467
+Iter 3700 | Reconstruction Loss 0.955719
+Iter 3700 | Supervised Loss 0.438748
+control post error tensor(0.4015)
+treated post error tensor(0.4228)
+pre error tensor(0.0175)
+Iter 3800 | Total Loss 1.391703
+Iter 3800 | Reconstruction Loss 0.962109
+Iter 3800 | Supervised Loss 0.429593
+control post error tensor(0.4407)
+treated post error tensor(0.4051)
+pre error tensor(0.0171)
+Iter 3900 | Total Loss 1.398019
+Iter 3900 | Reconstruction Loss 0.958006
+Iter 3900 | Supervised Loss 0.440014
+control post error tensor(0.3758)
+treated post error tensor(0.4369)
+pre error tensor(0.0176)
+Iter 4000 | Total Loss 1.407558
+Iter 4000 | Reconstruction Loss 0.983625
+Iter 4000 | Supervised Loss 0.423933
+control post error tensor(0.3996)
+treated post error tensor(0.4740)
+pre error tensor(0.0177)
+Iter 4100 | Total Loss 1.486976
+Iter 4100 | Reconstruction Loss 1.032454
+Iter 4100 | Supervised Loss 0.454522
+control post error tensor(0.5127)
+treated post error tensor(0.4062)
+pre error tensor(0.0174)
+Iter 4200 | Total Loss 1.455547
+Iter 4200 | Reconstruction Loss 0.978622
+Iter 4200 | Supervised Loss 0.476925
+control post error tensor(0.4408)
+treated post error tensor(0.4263)
+pre error tensor(0.0184)
+Iter 4300 | Total Loss 1.352465
+Iter 4300 | Reconstruction Loss 0.900511
+Iter 4300 | Supervised Loss 0.451954
+control post error tensor(0.4513)
+treated post error tensor(0.4382)
+pre error tensor(0.0180)
+Iter 4400 | Total Loss 1.391084
+Iter 4400 | Reconstruction Loss 0.928335
+Iter 4400 | Supervised Loss 0.462750
+control post error tensor(0.4498)
+treated post error tensor(0.4403)
+pre error tensor(0.0173)
+Iter 4500 | Total Loss 1.394042
+Iter 4500 | Reconstruction Loss 0.931638
+Iter 4500 | Supervised Loss 0.462405
+control post error tensor(0.4381)
+treated post error tensor(0.4598)
+pre error tensor(0.0170)
+Iter 4600 | Total Loss 1.368618
+Iter 4600 | Reconstruction Loss 0.902704
+Iter 4600 | Supervised Loss 0.465913
+control post error tensor(0.4157)
+treated post error tensor(0.5011)
+pre error tensor(0.0175)
+Iter 4700 | Total Loss 1.399653
+Iter 4700 | Reconstruction Loss 0.923782
+Iter 4700 | Supervised Loss 0.475870
+control post error tensor(0.4235)
+treated post error tensor(0.4923)
+pre error tensor(0.0186)
+Iter 4800 | Total Loss 1.482914
+Iter 4800 | Reconstruction Loss 1.006406
+Iter 4800 | Supervised Loss 0.476508
+control post error tensor(0.3935)
+treated post error tensor(0.5262)
+pre error tensor(0.0174)
+Iter 4900 | Total Loss 1.472052
+Iter 4900 | Reconstruction Loss 0.994812
+Iter 4900 | Supervised Loss 0.477241
+control post error tensor(0.4565)
+treated post error tensor(0.4786)
+pre error tensor(0.0187)
+Iter 5000 | Total Loss 1.428649
+Iter 5000 | Reconstruction Loss 0.942390
+Iter 5000 | Supervised Loss 0.486259
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.075578
+Iter 2000 | Total Loss 0.062856
+Iter 3000 | Total Loss 0.058035
+Iter 4000 | Total Loss 0.047241
+Iter 5000 | Total Loss 0.038531
+Iter 6000 | Total Loss 0.033491
+Iter 7000 | Total Loss 0.028429
+Iter 8000 | Total Loss 0.023448
+Iter 9000 | Total Loss 0.019754
+Iter 10000 | Total Loss 0.017250
+Iter 11000 | Total Loss 0.013630
+Iter 12000 | Total Loss 0.011872
+Iter 13000 | Total Loss 0.011674
+Iter 14000 | Total Loss 0.009074
+Iter 15000 | Total Loss 0.007893
+Iter 16000 | Total Loss 0.007649
+Iter 17000 | Total Loss 0.007049
+Iter 18000 | Total Loss 0.005472
+Iter 19000 | Total Loss 0.006394
+Iter 20000 | Total Loss 0.005237
+--- Training done in 417.5342381000519 seconds ---
+Control Y MAE: 0.16543687880039215
+Testing
+Iteration 0
+Iter 1000 | Total Loss 0.077307
+Iter 2000 | Total Loss 0.063626
+Iter 3000 | Total Loss 0.057213
+Iter 4000 | Total Loss 0.045768
+Iter 5000 | Total Loss 0.038810
+Iter 6000 | Total Loss 0.034421
+Iter 7000 | Total Loss 0.027924
+Iter 8000 | Total Loss 0.024514
+Iter 9000 | Total Loss 0.019975
+Iter 10000 | Total Loss 0.016003
+Iter 11000 | Total Loss 0.013677
+Iter 12000 | Total Loss 0.011258
+Iter 13000 | Total Loss 0.008580
+Iter 14000 | Total Loss 0.009248
+Iter 15000 | Total Loss 0.007975
+Iter 16000 | Total Loss 0.006464
+Iter 17000 | Total Loss 0.005526
+Iter 18000 | Total Loss 0.006264
+Iter 19000 | Total Loss 0.005650
+Iter 20000 | Total Loss 0.004880
+Best model: 0
+Treatment effect MAE: (0.15304933420770372, 0.011549425508902608)
+Control Y MAE: 0.16767166554927826
+Gini 0.641 (0.019)
+Ent 1.880 (0.063)
+N Matched 3.545 (0.113)
+MIS 0.540 (0.035)
+Wrong proba 0.535 (0.021)
+Average Training Time: 417.5342381000519
+Std Training Time: 0.0

@@ -79,6 +79,7 @@ class SyncTwin(nn.Module):
     def get_representation(self, x, t, mask):
         # get representation C: B(atch size), D(im hidden)
         x, t, mask = self.check_device(x, t, mask)  # pylint: disable=unbalanced-tuple-unpacking
+        
         C = self.encoder(x, t, mask)
         return C
 

@@ -1,0 +1,360 @@
+Running simulation with seed 100
+loading data
+Iteration 0
+Pretrain
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(1.5058)
+treated post error tensor(0.6585)
+Iter 0100 | Total Loss 17.993427
+Iter 0100 | Reconstruction Loss 16.911251
+Iter 0100 | Supervised Loss 1.082175
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.5582)
+treated post error tensor(0.3881)
+Iter 0200 | Total Loss 5.727195
+Iter 0200 | Reconstruction Loss 5.254014
+Iter 0200 | Supervised Loss 0.473181
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.5374)
+treated post error tensor(0.3274)
+Iter 0300 | Total Loss 4.074791
+Iter 0300 | Reconstruction Loss 3.642409
+Iter 0300 | Supervised Loss 0.432383
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4533)
+treated post error tensor(0.3658)
+Iter 0400 | Total Loss 3.062896
+Iter 0400 | Reconstruction Loss 2.653322
+Iter 0400 | Supervised Loss 0.409574
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4510)
+treated post error tensor(0.3285)
+Iter 0500 | Total Loss 2.535654
+Iter 0500 | Reconstruction Loss 2.145902
+Iter 0500 | Supervised Loss 0.389751
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4526)
+treated post error tensor(0.3143)
+Iter 0600 | Total Loss 2.282754
+Iter 0600 | Reconstruction Loss 1.899276
+Iter 0600 | Supervised Loss 0.383478
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4499)
+treated post error tensor(0.3082)
+Iter 0700 | Total Loss 2.091835
+Iter 0700 | Reconstruction Loss 1.712783
+Iter 0700 | Supervised Loss 0.379053
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4323)
+treated post error tensor(0.3366)
+Iter 0800 | Total Loss 2.009129
+Iter 0800 | Reconstruction Loss 1.624646
+Iter 0800 | Supervised Loss 0.384483
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4214)
+treated post error tensor(0.3396)
+Iter 0900 | Total Loss 1.850231
+Iter 0900 | Reconstruction Loss 1.469758
+Iter 0900 | Supervised Loss 0.380473
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4219)
+treated post error tensor(0.3064)
+Iter 1000 | Total Loss 1.759573
+Iter 1000 | Reconstruction Loss 1.395408
+Iter 1000 | Supervised Loss 0.364164
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4689)
+treated post error tensor(0.2879)
+Iter 1100 | Total Loss 1.625253
+Iter 1100 | Reconstruction Loss 1.246855
+Iter 1100 | Supervised Loss 0.378398
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4541)
+treated post error tensor(0.3143)
+Iter 1200 | Total Loss 1.587074
+Iter 1200 | Reconstruction Loss 1.202846
+Iter 1200 | Supervised Loss 0.384227
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4234)
+treated post error tensor(0.3600)
+Iter 1300 | Total Loss 1.641148
+Iter 1300 | Reconstruction Loss 1.249470
+Iter 1300 | Supervised Loss 0.391678
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4519)
+treated post error tensor(0.3051)
+Iter 1400 | Total Loss 1.560675
+Iter 1400 | Reconstruction Loss 1.182182
+Iter 1400 | Supervised Loss 0.378494
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4341)
+treated post error tensor(0.3635)
+Iter 1500 | Total Loss 1.523778
+Iter 1500 | Reconstruction Loss 1.124988
+Iter 1500 | Supervised Loss 0.398789
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3846)
+treated post error tensor(0.3998)
+Iter 1600 | Total Loss 1.543499
+Iter 1600 | Reconstruction Loss 1.151304
+Iter 1600 | Supervised Loss 0.392194
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4564)
+treated post error tensor(0.2879)
+Iter 1700 | Total Loss 1.447911
+Iter 1700 | Reconstruction Loss 1.075759
+Iter 1700 | Supervised Loss 0.372152
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4022)
+treated post error tensor(0.3762)
+Iter 1800 | Total Loss 1.484534
+Iter 1800 | Reconstruction Loss 1.095315
+Iter 1800 | Supervised Loss 0.389219
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3903)
+treated post error tensor(0.3438)
+Iter 1900 | Total Loss 1.441323
+Iter 1900 | Reconstruction Loss 1.074252
+Iter 1900 | Supervised Loss 0.367071
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4029)
+treated post error tensor(0.3176)
+Iter 2000 | Total Loss 1.385995
+Iter 2000 | Reconstruction Loss 1.025723
+Iter 2000 | Supervised Loss 0.360272
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4076)
+treated post error tensor(0.2945)
+Iter 2100 | Total Loss 1.395527
+Iter 2100 | Reconstruction Loss 1.044498
+Iter 2100 | Supervised Loss 0.351030
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3678)
+treated post error tensor(0.3205)
+Iter 2200 | Total Loss 1.328457
+Iter 2200 | Reconstruction Loss 0.984276
+Iter 2200 | Supervised Loss 0.344181
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3951)
+treated post error tensor(0.2533)
+Iter 2300 | Total Loss 1.312248
+Iter 2300 | Reconstruction Loss 0.988062
+Iter 2300 | Supervised Loss 0.324187
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3776)
+treated post error tensor(0.2580)
+Iter 2400 | Total Loss 1.336210
+Iter 2400 | Reconstruction Loss 1.018404
+Iter 2400 | Supervised Loss 0.317807
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3874)
+treated post error tensor(0.3060)
+Iter 2500 | Total Loss 1.306023
+Iter 2500 | Reconstruction Loss 0.959312
+Iter 2500 | Supervised Loss 0.346711
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4178)
+treated post error tensor(0.2485)
+Iter 2600 | Total Loss 1.248778
+Iter 2600 | Reconstruction Loss 0.915608
+Iter 2600 | Supervised Loss 0.333170
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3981)
+treated post error tensor(0.2472)
+Iter 2700 | Total Loss 1.223713
+Iter 2700 | Reconstruction Loss 0.901076
+Iter 2700 | Supervised Loss 0.322638
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3600)
+treated post error tensor(0.3086)
+Iter 2800 | Total Loss 1.285874
+Iter 2800 | Reconstruction Loss 0.951596
+Iter 2800 | Supervised Loss 0.334278
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3767)
+treated post error tensor(0.2710)
+Iter 2900 | Total Loss 1.191370
+Iter 2900 | Reconstruction Loss 0.867517
+Iter 2900 | Supervised Loss 0.323854
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3744)
+treated post error tensor(0.2804)
+Iter 3000 | Total Loss 1.211790
+Iter 3000 | Reconstruction Loss 0.884382
+Iter 3000 | Supervised Loss 0.327407
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3799)
+treated post error tensor(0.2606)
+Iter 3100 | Total Loss 1.151586
+Iter 3100 | Reconstruction Loss 0.831333
+Iter 3100 | Supervised Loss 0.320253
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3927)
+treated post error tensor(0.2636)
+Iter 3200 | Total Loss 1.181668
+Iter 3200 | Reconstruction Loss 0.853527
+Iter 3200 | Supervised Loss 0.328141
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3997)
+treated post error tensor(0.2516)
+Iter 3300 | Total Loss 1.192020
+Iter 3300 | Reconstruction Loss 0.866366
+Iter 3300 | Supervised Loss 0.325654
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3973)
+treated post error tensor(0.2609)
+Iter 3400 | Total Loss 1.152615
+Iter 3400 | Reconstruction Loss 0.823519
+Iter 3400 | Supervised Loss 0.329096
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4092)
+treated post error tensor(0.2549)
+Iter 3500 | Total Loss 1.134042
+Iter 3500 | Reconstruction Loss 0.802012
+Iter 3500 | Supervised Loss 0.332030
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3773)
+treated post error tensor(0.3152)
+Iter 3600 | Total Loss 1.235873
+Iter 3600 | Reconstruction Loss 0.889627
+Iter 3600 | Supervised Loss 0.346245
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3859)
+treated post error tensor(0.3208)
+Iter 3700 | Total Loss 1.180079
+Iter 3700 | Reconstruction Loss 0.826750
+Iter 3700 | Supervised Loss 0.353329
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3906)
+treated post error tensor(0.3058)
+Iter 3800 | Total Loss 1.166471
+Iter 3800 | Reconstruction Loss 0.818276
+Iter 3800 | Supervised Loss 0.348196
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3703)
+treated post error tensor(0.3115)
+Iter 3900 | Total Loss 1.149546
+Iter 3900 | Reconstruction Loss 0.808654
+Iter 3900 | Supervised Loss 0.340892
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3778)
+treated post error tensor(0.2783)
+Iter 4000 | Total Loss 1.132473
+Iter 4000 | Reconstruction Loss 0.804433
+Iter 4000 | Supervised Loss 0.328040
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3890)
+treated post error tensor(0.3060)
+Iter 4100 | Total Loss 1.150419
+Iter 4100 | Reconstruction Loss 0.802924
+Iter 4100 | Supervised Loss 0.347495
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3782)
+treated post error tensor(0.3275)
+Iter 4200 | Total Loss 1.168146
+Iter 4200 | Reconstruction Loss 0.815282
+Iter 4200 | Supervised Loss 0.352864
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3781)
+treated post error tensor(0.3430)
+Iter 4300 | Total Loss 1.213090
+Iter 4300 | Reconstruction Loss 0.852539
+Iter 4300 | Supervised Loss 0.360551
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.4052)
+treated post error tensor(0.3102)
+Iter 4400 | Total Loss 1.178080
+Iter 4400 | Reconstruction Loss 0.820371
+Iter 4400 | Supervised Loss 0.357710
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3865)
+treated post error tensor(0.3316)
+Iter 4500 | Total Loss 1.150370
+Iter 4500 | Reconstruction Loss 0.791335
+Iter 4500 | Supervised Loss 0.359035
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3914)
+treated post error tensor(0.2965)
+Iter 4600 | Total Loss 1.120270
+Iter 4600 | Reconstruction Loss 0.776357
+Iter 4600 | Supervised Loss 0.343914
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3733)
+treated post error tensor(0.3185)
+Iter 4700 | Total Loss 1.120218
+Iter 4700 | Reconstruction Loss 0.774342
+Iter 4700 | Supervised Loss 0.345876
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3790)
+treated post error tensor(0.2642)
+Iter 4800 | Total Loss 1.063740
+Iter 4800 | Reconstruction Loss 0.742107
+Iter 4800 | Supervised Loss 0.321633
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3620)
+treated post error tensor(0.3533)
+Iter 4900 | Total Loss 1.127260
+Iter 4900 | Reconstruction Loss 0.769576
+Iter 4900 | Supervised Loss 0.357684
+tensor(200.) torch.Size([400]) torch.Size([5, 400, 1])
+control post error tensor(0.3741)
+treated post error tensor(0.3126)
+Iter 5000 | Total Loss 1.101816
+Iter 5000 | Reconstruction Loss 0.758430
+Iter 5000 | Supervised Loss 0.343386
+Eval
+Matching on validation set
+Iter 1000 | Total Loss 0.073030
+Iter 2000 | Total Loss 0.062068
+Iter 3000 | Total Loss 0.057459
+Iter 4000 | Total Loss 0.045059
+Iter 5000 | Total Loss 0.037942
+Iter 6000 | Total Loss 0.031380
+Iter 7000 | Total Loss 0.026579
+Iter 8000 | Total Loss 0.022699
+Iter 9000 | Total Loss 0.018571
+Iter 10000 | Total Loss 0.016489
+Iter 11000 | Total Loss 0.012405
+Iter 12000 | Total Loss 0.010822
+Iter 13000 | Total Loss 0.010641
+Iter 14000 | Total Loss 0.008572
+Iter 15000 | Total Loss 0.007096
+Iter 16000 | Total Loss 0.006961
+Iter 17000 | Total Loss 0.006143
+Iter 18000 | Total Loss 0.004881
+Iter 19000 | Total Loss 0.005520
+Iter 20000 | Total Loss 0.004627
+--- Training done in 457.7831861972809 seconds ---
+Control Y MAE: 0.14993786811828613
+Testing
+Iteration 0
+Iter 1000 | Total Loss 0.072401
+Iter 2000 | Total Loss 0.061586
+Iter 3000 | Total Loss 0.054075
+Iter 4000 | Total Loss 0.043766
+Iter 5000 | Total Loss 0.036792
+Iter 6000 | Total Loss 0.032784
+Iter 7000 | Total Loss 0.027475
+Iter 8000 | Total Loss 0.023621
+Iter 9000 | Total Loss 0.019698
+Iter 10000 | Total Loss 0.016385
+Iter 11000 | Total Loss 0.013547
+Iter 12000 | Total Loss 0.011105
+Iter 13000 | Total Loss 0.008848
+Iter 14000 | Total Loss 0.009246
+Iter 15000 | Total Loss 0.008459
+Iter 16000 | Total Loss 0.006714
+Iter 17000 | Total Loss 0.006319
+Iter 18000 | Total Loss 0.006422
+Iter 19000 | Total Loss 0.006663
+Iter 20000 | Total Loss 0.005290
+Best model: 0
+Treatment effect MAE: (0.18397548533644956, 0.013932579327956489)
+Control Y MAE: 0.16859927773475647
+Gini 0.554 (0.018)
+Ent 1.505 (0.053)
+N Matched 3.005 (0.106)
+MIS 0.675 (0.033)
+Wrong proba 0.642 (0.022)
+Average Training Time: 457.7831861972809
+Std Training Time: 0.0
